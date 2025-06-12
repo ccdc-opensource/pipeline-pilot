@@ -1,0 +1,2 @@
+ErrorText	success	inference
+Screening Set file has SDF extension but is not valid SD file.	true	Expected validation error.

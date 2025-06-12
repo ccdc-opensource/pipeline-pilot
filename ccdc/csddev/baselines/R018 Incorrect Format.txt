@@ -1,0 +1,2 @@
+success	inference
+True	Correctly rejected temp file with correct message

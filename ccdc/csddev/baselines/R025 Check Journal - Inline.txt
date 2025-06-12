@@ -1,0 +1,4 @@
+journal	is_valid
+J.Med.Chem.	true
+Journal of Medicinal Chemistry	false
+J. Med. Chem.	false

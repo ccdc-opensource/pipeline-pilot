@@ -1,0 +1,2 @@
+success	inference
+true	PYTHON HOME override parameter configured correctly.

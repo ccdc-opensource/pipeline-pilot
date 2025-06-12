@@ -1,0 +1,1065 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sci:data xmlns:sci="http://www.SciTegic.com/" object="SciTegic.Protocol.1" format="8.0.0">
+	<sci:dbitem>
+		<sci:component name="01 Queries Identified by File Screening Example" version="2">
+			<sci:arg name="Tempfiles" type="StringType" required="false" visibility="visible" multi="false" uimpl="true">
+				<sci:help>&lt;p&gt;A comma delimited list of global properties, each of which will automatically hold the name of a file in the job&apos;s temporary folder, whose name is guaranteed to be unique.&lt;/p&gt;
+
+&lt;p&gt;For each global name, an additional global is created (with the suffix &lt;i&gt;_Filename&lt;/i&gt;) that hold just the leaf file name of the temporary file.&lt;/p&gt;</sci:help>
+			</sci:arg>
+			<sci:arg name="Protocol Form" type="ProtocolType" required="false" visibility="visible" multi="false" uimpl="true">
+				<sci:help>&lt;p&gt;The path to a protocol that will render an HTML user interface for this protocol.  This optional parameter is used by Web Port to provide a custom user interface for a protocol.&lt;/p&gt;</sci:help>
+			</sci:arg>
+			<sci:arg name="Advanced Options" type="GroupType" required="false" visibility="visible" multi="false" expanded="true" legalvalsenforced="false" uimpl="true">
+				<sci:member>__PoolID</sci:member>
+			</sci:arg>
+			<sci:arg name="__PoolID" type="StringType" required="false" visibility="visible" multi="false" uimpl="true">
+				<sci:help>&lt;p&gt;&lt;i&gt;__PoolID&lt;/i&gt; is a case insensitive string that can optionally be set to optimize the speed of execution for quick running protocols.  Multiple protocols with the same value for &lt;i&gt;__PoolID&lt;/i&gt; can share expensive resources such as database connections, Java VMs, memory, etc. reducing the execution time by 1 to 2 seconds per run.  This can give a large speed improvement to protocols that run in a few seconds such as web applications and interactive reports.  Longer running protocols will not see much benefit.  Generally, it is a good idea to use the same &lt;i&gt;__PoolID&lt;/i&gt; for all protocols within a single application such as an interactive report since many of the components, databases, and data structures will be similar.&lt;/p&gt;
+
+&lt;p&gt;&lt;i&gt;__PoolID&lt;/i&gt; can also be specified by the client when the protocol is launched.  If &lt;i&gt;__PoolID&lt;/i&gt; is specified both as a parameter by the client and as a parameter stored within the protocol, the client&apos;s value overrides the stored value.&lt;/p&gt;</sci:help>
+			</sci:arg>
+			<sci:arg name="Reporting" type="GroupType" required="false" visibility="visible" multi="false" expanded="true" uimpl="true">
+				<sci:help>This group contains parameters specific to protocols containing Reporting components.</sci:help>
+				<sci:member>Reporting Stylesheet</sci:member>
+			</sci:arg>
+			<sci:arg name="Reporting Stylesheet" type="StylesheetType" required="false" visibility="visible" multi="false" expanded="true" uimpl="true">
+				<sci:help>Specifies the name of a Stylesheet to be used by this protocol if any of the Reporting components have a Style selected in the &lt;i&gt;Format&lt;/i&gt; and &lt;i&gt;Position&lt;/i&gt; parameters.</sci:help>
+				<sci:value>{44C6ECA7-D7C8-4BD8-A0C6-450FF605F58B}</sci:value>
+			</sci:arg>
+			<sci:arg name="Run On Grid" type="BoolType" required="false" visibility="visible" multi="false" uimpl="true">
+				<sci:help>The Run On Grid parameter tells the server to run the protocol on the grid engine if SES is configured to run with grid integration.</sci:help>
+				<sci:member>Queue Name</sci:member>
+				<sci:member>Grid Options</sci:member>
+				<sci:legalval>True</sci:legalval>
+				<sci:legalval selected="true">False</sci:legalval>
+			</sci:arg>
+			<sci:arg name="Queue Name" type="StringType" required="false" visibility="visible" multi="false" legalvalsenforced="false" uimpl="true">
+				<sci:help>The Queue Name allows you to specify the name of the queue on the grid engine to submit the job to. Leave blank to specify the default queue.</sci:help>
+				<sci:enabledscript>parameter(&apos;Run On Grid&apos;);</sci:enabledscript>
+			</sci:arg>
+			<sci:arg name="Grid Options" type="StringType" required="false" visibility="visible" multi="false" legalvalsenforced="false" uimpl="true">
+				<sci:help>Grid Options allows you to specify options to the grid engine submit command. Leave blank to specify the default options.</sci:help>
+				<sci:enabledscript>parameter(&apos;Run On Grid&apos;);</sci:enabledscript>
+			</sci:arg>
+			<sci:arg name="ComponentAttributes" type="StringType" required="false" visibility="hidden" multi="true">
+				<sci:help>Component Attributes</sci:help>
+				<sci:legalval>ComponentTakesInput</sci:legalval>
+				<sci:legalval>ComponentReturnsPass</sci:legalval>
+				<sci:legalval>ComponentReturnsFail</sci:legalval>
+				<sci:legalval>ComponentRunsLocal</sci:legalval>
+			</sci:arg>
+			<sci:arg name="OnDataTypeError" type="StringType" required="true" visibility="hidden" multi="false">
+				<sci:legalval selected="true">Halt</sci:legalval>
+				<sci:legalval>Fail</sci:legalval>
+				<sci:legalval>Pass</sci:legalval>
+			</sci:arg>
+			<sci:arg name="OnGeneralError" type="StringType" required="true" visibility="hidden" multi="false">
+				<sci:legalval selected="true">Halt</sci:legalval>
+				<sci:legalval>Fail</sci:legalval>
+				<sci:legalval>Pass</sci:legalval>
+			</sci:arg>
+			<sci:arg name="CustomErrorText" type="StringType" required="false" visibility="nevershow" multi="false"/>
+			<sci:arg name="WebExports" type="StringType" required="false" visibility="nevershow" multi="false" uimpl="true">
+				<sci:help>&lt;p&gt;A comma delimited list of global properties which will be automatically 
+exported if this protocol is published as a web service.&lt;/p&gt;
+
+&lt;p&gt;Each global property in the list is created with an empty value at the start of the protocol run.&lt;/p&gt;</sci:help>
+			</sci:arg>
+			<sci:arg name="Keep Alive" type="BoolType" required="false" visibility="nevershow" multi="false" uimpl="true">
+				<sci:help>&lt;p&gt;Specifies if the process where this protocol is run should stay around for later use.&lt;/p&gt;</sci:help>
+				<sci:legalval selected="true">True</sci:legalval>
+				<sci:legalval>False</sci:legalval>
+			</sci:arg>
+			<sci:arg name="Registrant" type="StringType" required="false" visibility="nevershow" multi="false">
+				<sci:help>The user who registered this component.</sci:help>
+				<sci:value>ccdc/csd</sci:value>
+			</sci:arg>
+			<sci:arg name="RegistrationDate" type="StringType" required="false" visibility="nevershow" multi="false">
+				<sci:help>The date this component was registered.</sci:help>
+				<sci:value>Fri Nov 22 11:04:06 2019</sci:value>
+			</sci:arg>
+			<sci:arg name="RegistrationVersion" type="StringType" required="false" visibility="nevershow" multi="false">
+				<sci:help>The server version when this component was registered</sci:help>
+				<sci:value>19.1.0.1963</sci:value>
+			</sci:arg>
+			<sci:arg name="ComponentDisplayName" type="StringType" required="false" visibility="nevershow" multi="false">
+				<sci:value>Actives Identified by File Screening Example</sci:value>
+			</sci:arg>
+			<sci:arg name="ProtocolAutoLayout" type="BoolType" required="false" visibility="nevershow" multi="false">
+				<sci:help>Protocol AutoLayout</sci:help>
+				<sci:value>1</sci:value>
+			</sci:arg>
+			<sci:arg name="ComponentIcon" type="StringType" required="true" visibility="nevershow" multi="false">
+				<sci:value>PROTOCOLNODE</sci:value>
+			</sci:arg>
+			<sci:arg name="ComponentRevision" type="LongType" required="true" visibility="nevershow" multi="false">
+				<sci:help>Component Revision</sci:help>
+				<sci:value>790</sci:value>
+			</sci:arg>
+			<sci:arg name="ComponentGUID" type="StringType" required="false" visibility="nevershow" multi="false">
+				<sci:value>{9F3F5A02-3ED8-480A-AA6E-8F9A7E235884}</sci:value>
+			</sci:arg>
+			<sci:arg name="ByReference" type="BoolType" required="false" visibility="nevershow" multi="false">
+				<sci:help>By Ref</sci:help>
+				<sci:value>0</sci:value>
+			</sci:arg>
+			<sci:arg name="ComponentHelp" type="StringType" required="false" visibility="nevershow" multi="true">
+				<sci:value>100</sci:value>
+				<sci:value>01 Queries Identified by File Screening Example</sci:value>
+				<sci:value>&lt;p&gt;Takes a stream of incoming molecules, and screens against a query set identified by file. &lt;/p&gt;</sci:value>
+				<sci:value>None</sci:value>
+				<sci:value/>
+				<sci:value>None</sci:value>
+				<sci:value/>
+				<sci:value>None</sci:value>
+				<sci:value/>
+			</sci:arg>
+			<sci:arg name="Component Sticky Notes" type="StringType" required="false" visibility="nevershow" multi="false"/>
+			<sci:arg name="ProtocolScale2" type="LongType" required="false" visibility="nevershow" multi="false">
+				<sci:help>Protocol Scale</sci:help>
+				<sci:value>75</sci:value>
+			</sci:arg>
+			<sci:arg name="Protocol Sticky Notes" type="StringType" required="false" visibility="nevershow" multi="false">
+				<sci:help>Protocol Sticky Notes</sci:help>
+				<sci:value>%VERSION 3%</sci:value>
+				<sci:value>648 -945 866 414</sci:value>
+				<sci:value>255 255 0</sci:value>
+				<sci:value>01 Queries Identified by File Screening Example
+
+Takes a stream of incoming molecules, and screens against a query set identified by file. </sci:value>
+			</sci:arg>
+			<sci:arg name="Protocol Options" type="StringType" required="false" visibility="nevershow" multi="false">
+				<sci:help>Protocol Options</sci:help>
+				<sci:legalval>Owner Access Only</sci:legalval>
+			</sci:arg>
+			<sci:arg name="ComponentDisabled" type="LongType" required="false" visibility="nevershow" multi="false">
+				<sci:value>0</sci:value>
+			</sci:arg>
+			<sci:arg name="ComponentLocalID" type="LongType" required="false" visibility="nevershow" multi="false">
+				<sci:help>Local Component Identifier</sci:help>
+				<sci:value>-1</sci:value>
+			</sci:arg>
+			<sci:arg name="ComponentPoint" type="StringType" required="false" visibility="nevershow" multi="false">
+				<sci:value>50 -50</sci:value>
+			</sci:arg>
+			<sci:arg name="Component Path" type="StringType" required="false" visibility="nevershow" multi="false">
+				<sci:help>The original path within the database of this component.</sci:help>
+				<sci:value>fatkinson\ccdc\csd\xml\Protocols\CSD\Virtual Screening and Conformer\01 Queries Identified by File Screening Example</sci:value>
+			</sci:arg>
+		</sci:component>
+		<sci:protocol>
+			<sci:data object="SciTegic.MDLSDReader.1">
+				<sci:component name="SD Reader" version="2">
+					<sci:arg name="Source" type="URLType" required="true" visibility="visible" multi="false" expanded="true">
+						<sci:help>The file or URL source to read</sci:help>
+						<sci:member>Maximum</sci:member>
+						<sci:member>SourceTag</sci:member>
+						<sci:member>Keep Properties</sci:member>
+						<sci:member>UTF-8 Auto Detect</sci:member>
+						<sci:value>data\Python API Example Data\P28845_actives.sdf</sci:value>
+					</sci:arg>
+					<sci:arg name="Maximum" type="LongType" required="false" visibility="visible" multi="false">
+						<sci:help>The maximum number of data records to read (all if value is empty)</sci:help>
+					</sci:arg>
+					<sci:arg name="SourceTag" type="StringType" required="true" visibility="visible" multi="false">
+						<sci:help>&lt;p&gt;The type of tag to create to identify the source of data records. A property called 
+&lt;b&gt;SourceTag&lt;/b&gt; is created and holds the value indicated.&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;b&gt;None&lt;/b&gt;: 
+No SourceTag property is created and any existing ones are removed.&lt;/li&gt;&lt;li&gt;&lt;b&gt;Filename&lt;/b&gt;: 
+The name of the file read.&lt;/li&gt;&lt;li&gt;&lt;b&gt;FilenameAndExtension&lt;/b&gt;: The name of the 
+file read with its file extension.&lt;/li&gt;&lt;li&gt;&lt;b&gt;FullFilename&lt;/b&gt;: The name of the 
+file read, including the directory path.&lt;/li&gt;&lt;li&gt;&lt;b&gt;ZipFilename&lt;/b&gt;: When reading 
+a compressed zip file, the filename within the compressed archive.&lt;/li&gt;&lt;li&gt;&lt;b&gt;Number&lt;/b&gt;: 
+When multiple files are read in this component, they are numbered 1,2,3...&lt;/li&gt;&lt;li&gt;&lt;b&gt;Letter&lt;/b&gt;: 
+When multiple files are read in this component, they are lettered A, B, C...&lt;/li&gt;&lt;li&gt;&lt;b&gt;KeepCurrent&lt;/b&gt;: 
+Keeps the current value of SourceTag.&lt;/li&gt;&lt;/ul&gt;</sci:help>
+						<sci:legalval selected="true">None</sci:legalval>
+						<sci:legalval>Filename</sci:legalval>
+						<sci:legalval>FilenameAndExtension</sci:legalval>
+						<sci:legalval>FullFilename</sci:legalval>
+						<sci:legalval>ZipFilename</sci:legalval>
+						<sci:legalval>Number</sci:legalval>
+						<sci:legalval>Letter</sci:legalval>
+						<sci:legalval>KeepCurrent</sci:legalval>
+					</sci:arg>
+					<sci:arg name="Keep Properties" type="PropertyPreviewType" required="false" visibility="visible" multi="false">
+						<sci:help>A list of properties the reader should retain for each data record that is output. If a value is not defined, retains all properties. If the parameter contains the value &quot;-&quot; (minus sign), properties are not retained.</sci:help>
+					</sci:arg>
+					<sci:arg name="UTF-8 Auto Detect" type="BoolType" required="false" visibility="visible" multi="false" legalvalsenforced="false" uimpl="false">
+						<sci:help>&lt;p&gt;UTF-8 is a type of character encoding used to represent international characters with multiple bytes whereas basic Latin characters remain as a single byte.  Files can be stored with a Byte Order Mark (BOM) to indicate that the type of character encoding.&lt;/p&gt;
+&lt;p&gt;When reading files that do not have a BOM, this parameter allows the reader to attempt to automatically detect UTF-8 encodings and convert as needed.  However, be aware that automatic detection is not always reliable.  In some cases, valid text stored in different character encodings can appear to be valid UTF-8.  In these cases, the automatic detection will result in garbled text.  When this occurs, you can consider using the &lt;a href=&quot;javascript:DoLink(&apos;{B0B1B56C-3DF6-444C-BB78-B43211188F63}&apos;)&quot;&gt;Binary Reader&lt;/a&gt; to read the file, then converting using the Pilotscript function &lt;b&gt;ConvertBytesToString&lt;/b&gt;&lt;/p&gt;</sci:help>
+						<sci:legalval>True</sci:legalval>
+						<sci:legalval selected="true">False</sci:legalval>
+					</sci:arg>
+					<sci:arg name="Additional Options" type="GroupType" required="false" visibility="visible" multi="false" legalvalsenforced="false">
+						<sci:help>Contains less commonly used parameters</sci:help>
+						<sci:member>ReadProperties</sci:member>
+						<sci:member>PutNameInProperty</sci:member>
+						<sci:member>ReadQueryInfo</sci:member>
+						<sci:member>PutCommentInProperty</sci:member>
+						<sci:member>SD Format Options</sci:member>
+						<sci:member>Global Templates</sci:member>
+					</sci:arg>
+					<sci:arg name="SD Format Options" type="StringType" required="false" visibility="visible" multi="true">
+						<sci:help>&lt;p&gt;Options available for the SD Reader:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;b&gt;Properties Can Contain $$$$:&lt;/b&gt;  By the CTFile standard, a property can contain a &apos;$$$$&apos;-line.  
+Properties or data field values are terminated by a blank line.  Only then will the &apos;$$$$&apos;-line 
+terminate the full data block.  Setting this option off will terminate the data block upon any read of 
+a &apos;$$$$&apos;-line.  This option is available to provide compatibility with some 3rd Party SD files.&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;One-space Lines Terminate Properties:&lt;/b&gt;  By the CTFile standard, properties or data fields values are 
+terminated by a blank line. Selecting this option will terminate the data block when encountering a line 
+containing a space as the only character in the line.  This option is available to provide compatibility 
+with some 3rd Party SD files.&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;Unwrap Long Property Lines:&lt;/b&gt;  By the CTFile standard, lines in property fields cannot exceed 200 characters.  When this option is selected and a property line of exactly 200 characters is found, the newline character will be ignored and property string will continue on the next line.&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;Read Unknown Stereo Parity:&lt;/b&gt;  When selected, the SD Reader will use the &apos;Atom Parity&apos; value (parity of 
+&apos;3&apos;) to mark unknown stereo centers in 3D mol files.  This will leave these atoms marked as 
+&apos;unknown stereo&apos; and will not calculate the stereo from the coordinates.&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;Process Complex Data Header Lines:&lt;/b&gt; Data header lines are the lines in the SD format that precede the actual data. They can contain the data field name (enclosed in angular brackets &lt;&gt;), the data field number (as DTn), the external registry number (enclosed in parentheses), and other optional information. When this parameter is set to False, only the data field name is parsed and used to set the corresponding property name. All the other information in the line is ignored. When the parameter is set to true, all the information is parsed. The property name is set from either the field name in &lt;&gt; or the DTn. If both are present the field name takes priority and the DTn number is saved as an additional property named &lt;b&gt;FieldName#DTn&lt;/b&gt;. The external registry number is saved as &lt;b&gt;FieldName#ExtRegNum&lt;/b&gt; and any other information is saved as &lt;b&gt;FieldName#OtherDataFieldInfo&lt;/b&gt;. When the molecules are written to an SD file, the data header lines are reconstructed from these properties. The default state of this parameter is False, as parsing, preserving, and eventually writing all the information in the data header lines can be costly, specially for SD files with many data fields.&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;Convert From H2 And H+ Atom Types:&lt;/b&gt; &apos;H2&apos; and &apos;H+&apos; are two non-standard element types that can be assigned to atoms by the Accelrys Draw sketcher. They represent unattached Hydrogen (a Hydrogen molecule) and charged Hydrogen (a proton), respectively. When this parameter is selected, these atom types are converted to standard hydrogen atoms upon reading, with charges of 0 for H2 and +1 for H+. Otherwise, these atoms are read and perceived as unknown atom types, with &apos;H2&apos; and &apos;H+&apos; as the atom labels.&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;Convert Radicals To Pi Systems:&lt;/b&gt; When selected, pi bonds will be perceived between adjacent atoms marked with radicals and any adjacent metal atom.  Once pi bonds are perceived, subsequent exports will represent the pi bonds using the V3000 format and one-to-many coordination bonds (type 9) unless the writer&apos;s &lt;i&gt;Convert Pi Systems To Radicals&lt;/i&gt; option is used to convert the pi systems back. &lt;/li&gt;
+&lt;li&gt;&lt;b&gt;Convert GEN+DAT to Polymer Repeat Units:&lt;/b&gt; When selected, this option will automatically convert input GEN sgroups with linked DAT sgroups having the special fieldname of &apos;rc&apos; and numeric or numeric range data internally into polymer repeat sgroups.  This usage is a special type of NONS (Non-Specific Structure) convention that was prototyped in previous releases.  Disabling this conversion will have a higher likelihood of producing a structure that can be registered into Direct databases. &lt;/li&gt;
+&lt;/ul&gt;</sci:help>
+						<sci:legalval selected="true">Properties Can Contain $$$$</sci:legalval>
+						<sci:legalval>One-space Lines Terminate Properties</sci:legalval>
+						<sci:legalval selected="true">Unwrap Long Property Lines</sci:legalval>
+						<sci:legalval>Read Unknown Stereo Parity</sci:legalval>
+						<sci:legalval>Process Complex Data Header Lines</sci:legalval>
+						<sci:legalval selected="true">Convert From H2 And H+ Atom Types</sci:legalval>
+						<sci:legalval>Convert Radicals To Pi Systems</sci:legalval>
+						<sci:legalval selected="true">Convert GEN+DAT to Polymer Repeat Units</sci:legalval>
+					</sci:arg>
+					<sci:arg name="ReadProperties" type="BoolType" required="true" visibility="visible" multi="false">
+						<sci:help>Select True to read the properties for each molecule (in addition to the structures)</sci:help>
+						<sci:legalval selected="true">True</sci:legalval>
+						<sci:legalval>False</sci:legalval>
+					</sci:arg>
+					<sci:arg name="ReadQueryInfo" type="BoolType" required="true" visibility="visible" multi="false">
+						<sci:help>If properties starting with &quot;QueryInfo&quot; are present, use them to set up query information on the atoms and bonds. (This is how, for example, SMARTS query information can be preserved when writing to an SD format file.) For molecules saved in MOL/SD format, this information only contains information that cannot be written out in the connection table.</sci:help>
+						<sci:legalval>True</sci:legalval>
+						<sci:legalval selected="true">False</sci:legalval>
+					</sci:arg>
+					<sci:arg name="PutNameInProperty" type="StringType" required="false" visibility="visible" multi="false">
+						<sci:help>What to call the property that holds the name of each molecule</sci:help>
+						<sci:value>Name</sci:value>
+					</sci:arg>
+					<sci:arg name="PutCommentInProperty" type="StringType" required="false" visibility="visible" multi="false" expanded="true">
+						<sci:help>What to call the property that holds the comment associated with each molecule</sci:help>
+					</sci:arg>
+					<sci:arg name="Global Templates" type="URLType" required="false" visibility="visible" multi="false">
+						<sci:help>V3000 SD or MOL files containing template definitions for amino acid, nucleic acid or other residues or monomers. These templates can then be refered to by molecules read by the SD reader.&lt;p&gt;
+The default template file included in the Chemistry collection, &lt;i&gt;data\Direct\Direct_templates.mol&lt;/i&gt; contains definitions for 22 amino acids and 8 DNA and RNA templates.</sci:help>
+						<sci:value>data\Direct\Direct_templates.mol</sci:value>
+					</sci:arg>
+					<sci:arg name="ComponentAttributes" type="StringType" required="false" visibility="hidden" multi="true">
+						<sci:help>Component Attributes</sci:help>
+						<sci:legalval>ComponentTakesInput</sci:legalval>
+						<sci:legalval selected="true">ComponentReturnsPass</sci:legalval>
+						<sci:legalval>ComponentReturnsFail</sci:legalval>
+						<sci:legalval>ComponentRunsLocal</sci:legalval>
+					</sci:arg>
+					<sci:arg name="OnDataTypeError" type="StringType" required="true" visibility="hidden" multi="false">
+						<sci:legalval selected="true">Halt</sci:legalval>
+						<sci:legalval>Fail</sci:legalval>
+						<sci:legalval>Pass</sci:legalval>
+					</sci:arg>
+					<sci:arg name="OnGeneralError" type="StringType" required="true" visibility="hidden" multi="false">
+						<sci:legalval selected="true">Halt</sci:legalval>
+						<sci:legalval>Fail</sci:legalval>
+						<sci:legalval>Pass</sci:legalval>
+					</sci:arg>
+					<sci:arg name="CustomErrorText" type="StringType" required="false" visibility="nevershow" multi="false"/>
+					<sci:arg name="HasConvertPiSystemOption" type="BoolType" required="false" visibility="nevershow" multi="false" legalvalsenforced="false">
+						<sci:help>Hidden flag specifying the presence of the &quot;Convert Radicals To Pi Systems&quot; option.</sci:help>
+						<sci:legalval selected="true">True</sci:legalval>
+						<sci:legalval>False</sci:legalval>
+					</sci:arg>
+					<sci:arg name="AllowUnknownDoubleBondsFromCoordinates" type="BoolType" required="false" visibility="nevershow" multi="false">
+						<sci:help>According to the CTfile specifications, the cis/trans character of double bonds with bond stereo set to zero is determined from the coordinates. This parameter controls whether or not to assign unknown bond stereo to double bonds for which the stereo could not be determined from the coordinates, either because there are no coordinates or because of colinearity issues.  When the parameter is set to False and the stereo could not be determined, no specific stereo configuration is assigned to the double bond, but it is not marked as unknown stereo.</sci:help>
+						<sci:legalval selected="true">True</sci:legalval>
+						<sci:legalval>False</sci:legalval>
+					</sci:arg>
+					<sci:arg name="Registrant" type="StringType" required="false" visibility="nevershow" multi="false">
+						<sci:help>The user who registered this component.</sci:help>
+						<sci:value>scitegic/chemistry</sci:value>
+					</sci:arg>
+					<sci:arg name="RegistrationDate" type="StringType" required="false" visibility="nevershow" multi="false">
+						<sci:help>The date this component was registered.</sci:help>
+						<sci:value>Thu May 30 14:34:37 2013</sci:value>
+					</sci:arg>
+					<sci:arg name="ComponentDisplayName" type="StringType" required="false" visibility="nevershow" multi="false">
+						<sci:value>Read Screen Compounds</sci:value>
+					</sci:arg>
+					<sci:arg name="ComponentIcon" type="StringType" required="true" visibility="nevershow" multi="false">
+						<sci:value>DOCUMENTNODE</sci:value>
+					</sci:arg>
+					<sci:arg name="ComponentGUID" type="StringType" required="false" visibility="nevershow" multi="false">
+						<sci:value>{CA65B896-4FE6-4E3A-B884-DC16B53B8D26}</sci:value>
+					</sci:arg>
+					<sci:arg name="DerivedFrom" type="StringType" required="false" visibility="nevershow" multi="false">
+						<sci:help>The component this component is based upon.</sci:help>
+						<sci:value>SD Reader</sci:value>
+					</sci:arg>
+					<sci:arg name="ComponentDisabled" type="LongType" required="false" visibility="nevershow" multi="false">
+						<sci:value>0</sci:value>
+					</sci:arg>
+					<sci:arg name="ComponentPoint" type="StringType" required="false" visibility="nevershow" multi="false">
+						<sci:value>90 -95</sci:value>
+					</sci:arg>
+					<sci:arg name="ComponentHelp" type="StringType" required="false" visibility="nevershow" multi="true">
+						<sci:value>100</sci:value>
+						<sci:value>Reads MOL (molecule CTAB) files and SD (structured data) files</sci:value>
+						<sci:value>&lt;p&gt;Creates a molecular data record for each molecule represented in the &lt;i&gt;Source&lt;/i&gt; 
+data file.  All properties contained in the file are read into the data records.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Note:&lt;/b&gt;&lt;p&gt;&lt;ul&gt;&lt;li&gt;This 
+component can also read zipped (.zip) and URL-based files.&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;b&gt;See 
+Also:&lt;/b&gt;&lt;p&gt;&lt;ul&gt;&lt;li&gt;To write files in MOL or SD format, use the &lt;a href=&quot;javascript:DoLink(&apos;{DC8EE7B0-0620-42FE-944C-B4CD1E79480E}&apos;)&quot;&gt;SD 
+Writer&lt;/a&gt;.&lt;/li&gt;&lt;li&gt;To convert a molecule to and from between text properties in CTAB 
+format, use &lt;a href=&quot;javascript:DoLink(&apos;{E622FBD9-9FA9-451A-A102-1800B5F28B6D}&apos;)&quot;&gt;Molecule 
+to CTAB&lt;/a&gt; and &lt;a href=&quot;javascript:DoLink(&apos;{7D354B65-DDD8-4EA4-83A7-21501A8A6852}&apos;)&quot;&gt;Molecule 
+from CTAB&lt;/a&gt;.&lt;/li&gt;&lt;li&gt;Other related CTFile format file readers include &lt;a href=&quot;javascript:DoLink(&apos;{169AB4E5-A470-477B-AA65-50464411036C}&apos;)&quot;&gt;RG 
+Reader&lt;/a&gt;, &lt;a href=&quot;javascript:DoLink(&apos;{036731AA-0015-4606-9750-7D9D020F21C8}&apos;)&quot;&gt;RXN 
+Reader&lt;/a&gt; and &lt;a href=&quot;javascript:DoLink(&apos;{55431CCB-06EA-4741-B95B-633C877E3E9B}&apos;)&quot;&gt;RD 
+Reader&lt;/a&gt;.&lt;/li&gt; &lt;/ul&gt;</sci:value>
+						<sci:value>None</sci:value>
+						<sci:value/>
+						<sci:value>Molecule</sci:value>
+						<sci:value>Data fields in the SD file will be added to the property fields</sci:value>
+						<sci:value>None</sci:value>
+						<sci:value/>
+					</sci:arg>
+					<sci:arg name="Component Sticky Notes" type="StringType" required="false" visibility="nevershow" multi="false"/>
+					<sci:arg name="RegistrationVersion" type="StringType" required="false" visibility="nevershow" multi="false">
+						<sci:help>The server version when this component was registered</sci:help>
+						<sci:value>9.0.1.28</sci:value>
+					</sci:arg>
+					<sci:arg name="ComponentLocalID" type="LongType" required="false" visibility="nevershow" multi="false">
+						<sci:help>Local Component Identifier</sci:help>
+						<sci:value>4</sci:value>
+					</sci:arg>
+					<sci:arg name="Component Path" type="StringType" required="false" visibility="nevershow" multi="false">
+						<sci:help>The original path within the database of this component.</sci:help>
+						<sci:value>Components\Chemistry\Data Access and Manipulation\Readers\SD Reader</sci:value>
+					</sci:arg>
+				</sci:component>
+			</sci:data>
+			<sci:data object="SciTegic.Protocol.1">
+				<sci:component name="Perform Virtual Screening" version="2">
+					<sci:arg name="Query Source" type="StringType" required="false" visibility="visible" multi="false" expanded="true" uimpl="false">
+						<sci:metaproplist>
+							<sci:mpropval name="SCI_PromotedFrom" ishidden="true" type="StringType">
+								<sci:value>Query Source</sci:value>
+							</sci:mpropval>
+							<sci:propval name="SCI_PromotionRenameRule" ishidden="true">UsingParent</sci:propval>
+						</sci:metaproplist>
+						<sci:help>The source of queries:
+&lt;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;b&gt;From Tag:&lt;/b&gt; Queries are molecules in the input stream that have been tagged with the property name specified by the &lt;i&gt;Query Tag&lt;/i&gt;  parameter. Queries must occur in the input stream before targets.&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;From File:&lt;/b&gt; Queries are read from the list of files specified by the &lt;i&gt;Source&lt;/i&gt; parameter.&lt;/li&gt;
+&lt;/ul&gt;</sci:help>
+						<sci:member>Source</sci:member>
+						<sci:member>Test for Query</sci:member>
+						<sci:legalval selected="true">From File</sci:legalval>
+						<sci:legalval>From Tag</sci:legalval>
+					</sci:arg>
+					<sci:arg name="Source" type="URLType" required="true" visibility="visible" multi="false" expanded="true" legalvalsenforced="false" uimpl="false">
+						<sci:metaproplist>
+							<sci:mpropval name="SCI_PromotedFrom" ishidden="true" type="StringType">
+								<sci:value>Source</sci:value>
+							</sci:mpropval>
+						</sci:metaproplist>
+						<sci:help>The file specifying the substructure(s) to search for.</sci:help>
+						<sci:validscript>#source := Parameter();
+#source RLike &apos;\.sdf$&apos; Or #source RLike &apos;\.mol2$&apos;</sci:validscript>
+						<sci:enabledscript>parameter(&quot;Query Source&quot;) eq &quot;From File&quot;</sci:enabledscript>
+						<sci:value>data\Python API Example Data\P28845.sdf</sci:value>
+					</sci:arg>
+					<sci:arg name="Test for Query" type="ExpressionType" required="true" visibility="visible" multi="false" legalvalsenforced="false">
+						<sci:metaproplist>
+							<sci:mpropval name="SCI_PromotedFrom" type="StringType">
+								<sci:value>Expression</sci:value>
+							</sci:mpropval>
+							<sci:propval name="SCI_PromotionRenameRule">UsingParent</sci:propval>
+						</sci:metaproplist>
+						<sci:help>The PilotScript expression used to distinguish between the query records and the screening records.</sci:help>
+						<sci:enabledscript>Parameter(&apos;Query Source&apos;) Eq &apos;From Tag&apos;</sci:enabledscript>
+						<sci:value>IsQuery Is Defined</sci:value>
+					</sci:arg>
+					<sci:arg name="Screening Options" type="GroupType" required="false" visibility="visible" multi="false" expanded="true" legalvalsenforced="false">
+						<sci:metaproplist>
+							<sci:mpropval name="SCI_PromotedFrom" type="StringType">
+								<sci:value>Screening Options</sci:value>
+							</sci:mpropval>
+							<sci:propval name="SCI_PromotionRenameRule">UsingParent</sci:propval>
+						</sci:metaproplist>
+						<sci:help>The options for the screening routine.</sci:help>
+						<sci:member>Max Number of Conformers</sci:member>
+						<sci:member>Number of Threads</sci:member>
+					</sci:arg>
+					<sci:arg name="Number of Threads" type="LongType" required="true" visibility="visible" multi="false">
+						<sci:metaproplist>
+							<sci:mpropval name="SCI_PromotedFrom" type="StringType">
+								<sci:value>Number of Threads</sci:value>
+							</sci:mpropval>
+						</sci:metaproplist>
+						<sci:help>Number of threads. The default is 1.</sci:help>
+						<sci:validscript>Parameter() &gt; 0</sci:validscript>
+						<sci:value>1</sci:value>
+					</sci:arg>
+					<sci:arg name="Max Number of Conformers" type="LongType" required="true" visibility="visible" multi="false">
+						<sci:metaproplist>
+							<sci:mpropval name="SCI_PromotedFrom" type="StringType">
+								<sci:value>Max Number of Conformers</sci:value>
+							</sci:mpropval>
+						</sci:metaproplist>
+						<sci:help>Maximum number of conformers. The default is 200.</sci:help>
+						<sci:validscript>Parameter() &gt; 0 And Parameter() &lt;= 200</sci:validscript>
+						<sci:value>25</sci:value>
+					</sci:arg>
+					<sci:arg name="Output Options" type="GroupType" required="false" visibility="visible" multi="false" expanded="true" legalvalsenforced="false">
+						<sci:metaproplist>
+							<sci:propval name="SCI_PromotionRenameRule" ishidden="true">UsingParent</sci:propval>
+							<sci:mpropval name="SCI_PromotedFrom" ishidden="true" type="StringType">
+								<sci:value>Output Options</sci:value>
+							</sci:mpropval>
+						</sci:metaproplist>
+						<sci:help>The options controlling the output.</sci:help>
+						<sci:member>Screening Score Property</sci:member>
+						<sci:member>Ranked Score File</sci:member>
+					</sci:arg>
+					<sci:arg name="Screening Score Property" type="StringType" required="true" visibility="visible" multi="false">
+						<sci:metaproplist>
+							<sci:mpropval name="SCI_PromotedFrom" ishidden="true" type="StringType">
+								<sci:value>Screening Score Property</sci:value>
+								<sci:value>Screening Score Property</sci:value>
+							</sci:mpropval>
+							<sci:propval name="SCI_PromotionRenameRule" ishidden="true">UsingParent</sci:propval>
+						</sci:metaproplist>
+						<sci:help>The name for the screening score property.</sci:help>
+						<sci:value>Virtual_Screen_Score</sci:value>
+					</sci:arg>
+					<sci:arg name="Ranked Score File" type="DestinationURLType" required="false" visibility="visible" multi="false" legalvalsenforced="false">
+						<sci:metaproplist>
+							<sci:mpropval name="SCI_PromotedFrom" type="StringType">
+								<sci:value>Ranked Score File</sci:value>
+								<sci:value>Ranked Score File</sci:value>
+							</sci:mpropval>
+							<sci:propval name="SCI_PromotionRenameRule">UsingParent</sci:propval>
+						</sci:metaproplist>
+						<sci:help>The place to write the ranked score file. If not specified, a temporary file will be used instead.</sci:help>
+					</sci:arg>
+					<sci:arg name="Format" type="StringType" required="true" visibility="visible" multi="false" uimpl="true">
+						<sci:metaproplist>
+							<sci:mpropval name="SCI_PromotedFrom" type="StringType">
+								<sci:value>Format</sci:value>
+							</sci:mpropval>
+							<sci:propval name="SCI_PromotionRenameRule">UsingParent</sci:propval>
+						</sci:metaproplist>
+						<sci:help>The format of files to use internally. When the query is defined by tag (Query Source set to &quot;From Tag&quot;), incoming data is written to files of this format. When query is defined from a file (Query Source set to &quot;From File&quot;), the the query file format is kept as the file defined, and the screening set is written to a file of the specified format.</sci:help>
+						<sci:legalval>SDF</sci:legalval>
+						<sci:legalval selected="true">MOL2</sci:legalval>
+					</sci:arg>
+					<sci:arg name="Tempfiles" type="StringType" required="false" visibility="visible" multi="false" uimpl="true">
+						<sci:help>&lt;p&gt;A comma delimited list of global properties, each of which will automatically hold the name of a file in the job&apos;s temporary folder, whose name is guaranteed to be unique.&lt;p/&gt;For each global name, an additional global is created (with the suffix &lt;i&gt;_Filename&lt;/i&gt;) that hold just the leaf file name of the temporary file.&lt;/p&gt;</sci:help>
+						<sci:value>_tmpQuery, _tmpScreening</sci:value>
+					</sci:arg>
+					<sci:arg name="DeclareLocal" type="StringType" required="false" visibility="visible" multi="false" uimpl="true">
+						<sci:help>&lt;p&gt;Lists a set of properties (without the @) to create on the global property list for this subprotocol. Such properties can only be accessed within the scope of this subprotocol and its descendent subprotocols.&lt;p/&gt;Any global property not declared in this way is created on the top level global property list and is accessible from all protocols, but may collide with another property of the same name.&lt;/p&gt;&lt;p&gt;Scoping global properties to the subprotocol where they are used is highly recommended.&lt;/p&gt;</sci:help>
+						<sci:value>_screening_file, _query_file</sci:value>
+					</sci:arg>
+					<sci:arg name="RunToCompletion" type="StringType" required="false" visibility="visible" multi="false" uimpl="true">
+						<sci:help>When &lt;i&gt;RunToCompletion&lt;/i&gt; is set to &quot;True - For Each Data Record&quot;, the subprotocol is re-initialized and executed in its entirety for each individual data record it processes.
+&lt;p&gt;
+When set to &quot;True - For Each Category&quot;, the data records are divided into categories based on the value of the Categorize Using parameter and then the subprotocol is re-initialized and executed in its entirety for each category of data records. When used in conjunction with &lt;i&gt;Parallel Processing Options&lt;/i&gt;, each category of data records will be sent to the remote server as part of one single batch.</sci:help>
+						<sci:member>RunToCompletion Categorize Using</sci:member>
+						<sci:legalval selected="true">False</sci:legalval>
+						<sci:legalval>True - For Each Data Record</sci:legalval>
+						<sci:legalval>True - For Each Category</sci:legalval>
+					</sci:arg>
+					<sci:arg name="RunToCompletion Categorize Using" type="StringType" required="false" visibility="visible" multi="false" uimpl="true">
+						<sci:help>Required when RunToCompletion is set to &lt;i&gt;True - For Each Category&lt;/i&gt;, this parameter specifies the property or properties used to define the categories.</sci:help>
+						<sci:validscript>SetInvalidDetails(&apos;This parameter is required when RunToCompletion is set to True - For Each Category&apos;);
+Parameter() ne &apos;&apos;;</sci:validscript>
+						<sci:enabledscript>SetDisabledDetails(&apos;To Enable, Set RunToCompletion to True - For Each Category&apos;);
+Parameter(&apos;RunToCompletion&apos;) eq &apos;True - For Each Category&apos;;</sci:enabledscript>
+					</sci:arg>
+					<sci:arg name="Parallel Processing Options" type="BoolType" required="false" visibility="visible" multi="false" uimpl="true">
+						<sci:help>&lt;p&gt;
+When set to True, this set of options allow the subprotocol to execute in parallel on one or more independent Pipeline Pilot servers, running local or remote.  Additional parameters control the number of data records to send in each process batch, the list of Pipeline Pilot servers to use, the number of protocol processes that can be executed on each server, and whether to preserve the order of the processed data records.
+&lt;/p&gt;&lt;p&gt;
+Use this option judiciously, since it will not increase throughput in all circumstances. In general, it will yield improved performance when the parallelization benefits outweigh the data transfer overhead for the specified batch size.  As a rough guide, performance can be improved when each individual batch requires at least 10 seconds to execute, although this can be affected by the size of each data record.
+&lt;/p&gt;&lt;p&gt;
+When running the protocol with debugging, the subprotocol will provide debugging messages to detail each of the various steps of execution.  Also, components located within the parallel subprotocol will display their debugging messages as well.
+&lt;/p&gt;&lt;p&gt;
+For more information on the parallel subprotocol options, see &lt;a href=&quot;javascript:DoLink(&apos;scihelpdocs/user/subprots/subprot_parallel_processing.htm&apos;)&quot;&gt;Parallel Processing Subprotocols&lt;/a&gt;.
+&lt;/p&gt;
+</sci:help>
+						<sci:member>Parallel Processing Options Batch Size</sci:member>
+						<sci:member>Parallel Processing Options Server</sci:member>
+						<sci:member>Parallel Processing Options Preserve Order</sci:member>
+						<sci:legalval>True</sci:legalval>
+						<sci:legalval selected="true">False</sci:legalval>
+					</sci:arg>
+					<sci:arg name="Parallel Processing Options Batch Size" type="LongType" required="true" visibility="visible" multi="false" uimpl="true">
+						<sci:help>&lt;p&gt;The number of records to send to the remote server(s) for each subprotocol execution.  In general, performance is optimized when the amount of time required to process each batch is at least 10 seconds (note that this can vary depending on the characteristics of the remote server&apos;s hardware).  Use a batch size of -1 to pass all data in a single batch.&lt;/p&gt;
+&lt;p&gt;When &lt;i&gt;RunToCompletion&lt;/i&gt; is set to &quot;True - for each category&quot;, the batch sizes will be determined by the number of records in each individual category.  Therefore, the &lt;i&gt;Batch Size&lt;/i&gt; parameter is not applicable.</sci:help>
+						<sci:enabledscript>#parallel := Parameter(&apos;Parallel Processing Options&apos;);
+#rtcForEachCategory := (Parameter(&apos;RunToCompletion&apos;) eq &apos;True - For Each Category&apos;);
+if (not #parallel) then
+	SetDisabledDetails(&quot;This parameter is only applicable if &apos;Parallel Processing Options&apos; is &apos;True&apos;&quot;);
+elsif (#rtcForEachCategory) then
+	SetDisabledDetails(&quot;This parameter is not applicable when &apos;RunToCompletion&apos; is set to &apos;True - For Each Category&apos;&quot;);
+end if;
+#parallel and not #rtcForEachCategory;</sci:enabledscript>
+					</sci:arg>
+					<sci:arg name="Parallel Processing Options Server" type="StringType" required="false" visibility="visible" multi="true" expanded="true" legalvalsenforced="false" uimpl="true">
+						<sci:help>&lt;p&gt;
+Comma separated list of Pipeline Pilot servers on which to execute the parallel subprotocol.  The server names should be in the same format as the Pipeline Pilot Client&apos;s change server dialog (server-name:port-number).
+&lt;/p&gt;&lt;p&gt;
+Specifying &lt;b&gt;localhost&lt;/b&gt; as a server will cause the subprotocol to use its own Pipeline Pilot server.  This can be helpful on multi-CPU/multi-core systems (where the subprotocol jobs are spawned on the same machine) and Pipeline Pilot Linux clusters (where &apos;localhost&apos; requests spawning the subprotocol jobs on the same cluster).
+&lt;/p&gt;</sci:help>
+						<sci:member>Parallel Processing Options Server Processes</sci:member>
+						<sci:member>Parallel Processing Options Server Run On Grid</sci:member>
+						<sci:validscript>SetInvalidDetails(&apos;This parameter is required.&apos;);
+Parameter() ne &apos;&apos;;</sci:validscript>
+						<sci:enabledscript>SetDisabledDetails(&quot;This parameter is only applicable if &apos;Parallel Processing Options&apos; is &apos;True&apos;&quot;);
+Parameter(&apos;Parallel Processing Options&apos;);</sci:enabledscript>
+					</sci:arg>
+					<sci:arg name="Parallel Processing Options Server Processes" type="StringType" required="false" visibility="visible" multi="false" uimpl="true">
+						<sci:help>Comma separated list of maximum number of batches that can be simultaneously executed on each remote server.  The number of entries in this parameter must equal the number of servers. If &apos;*&apos; is specified as the number of processes, then that server will only launch as many batches as the administrator of the remote server has permitted.</sci:help>
+						<sci:validscript>/* Server Processes must have the same number of comma separated entries as the Server parameter and must have a value*/
+#processes := parameter();
+expand(&apos;,&apos;, #processes);
+#servers := parameter(&apos;Parallel Processing Options Server&apos;);
+expand(&apos;,&apos;, #servers);
+
+if (numvalues(#processes) == 0) then
+	SetInvalidDetails(&apos;This parameter is required.&apos;);
+else
+	SetInvalidDetails(&apos;The number of server processes (&apos; . numvalues(#processes) . &apos;) must equal the number of servers (&apos; . numvalues(#servers) . &apos;).&apos;);
+end if;
+numvalues(#processes) &gt; 0 and numvalues(#processes) == numvalues(#servers);</sci:validscript>
+						<sci:enabledscript>SetDisabledDetails(&quot;This parameter is only applicable if &apos;Parallel Processing Options&apos; is &apos;True&apos;&quot;);
+Parameter(&apos;Parallel Processing Options&apos;);</sci:enabledscript>
+					</sci:arg>
+					<sci:arg name="Parallel Processing Options Server Run On Grid" type="BoolType" required="false" visibility="visible" multi="false" uimpl="true">
+						<sci:help>Run subprotocol on grid engine if available.</sci:help>
+						<sci:member>Parallel Processing Options Server Run On Grid Queue Name</sci:member>
+						<sci:member>Parallel Processing Options Server Run On Grid Grid Options</sci:member>
+						<sci:enabledscript>parameter(&apos;Parallel Processing Options&apos;);</sci:enabledscript>
+						<sci:legalval selected="true">True</sci:legalval>
+						<sci:legalval>False</sci:legalval>
+					</sci:arg>
+					<sci:arg name="Parallel Processing Options Server Run On Grid Queue Name" type="StringType" required="false" visibility="visible" multi="false" legalvalsenforced="false" uimpl="true">
+						<sci:help>Select the queue name on the grid to submit jobs to. Leave blank to use default queue name.</sci:help>
+						<sci:enabledscript>parameter(&apos;Parallel Processing Options Server Run On Grid&apos;);</sci:enabledscript>
+					</sci:arg>
+					<sci:arg name="Parallel Processing Options Server Run On Grid Grid Options" type="StringType" required="false" visibility="visible" multi="false" uimpl="true">
+						<sci:help>Use this to specify grid engine specific command line parameters to the job submission command. Leave blank to use defaults.</sci:help>
+						<sci:enabledscript>parameter(&apos;Parallel Processing Options Server Run On Grid&apos;);</sci:enabledscript>
+					</sci:arg>
+					<sci:arg name="Parallel Processing Options Preserve Order" type="BoolType" required="false" visibility="visible" multi="false" uimpl="true">
+						<sci:help>Whether to preserve the order of the data as it enters and leaves the remote subprotocol.</sci:help>
+						<sci:enabledscript>SetDisabledDetails(&quot;This parameter is only applicable if &apos;Parallel Processing Options&apos; is &apos;True&apos;&quot;);
+Parameter(&apos;Parallel Processing Options&apos;);</sci:enabledscript>
+						<sci:legalval selected="true">True</sci:legalval>
+						<sci:legalval>False</sci:legalval>
+					</sci:arg>
+					<sci:arg name="ComponentAttributes" type="StringType" required="false" visibility="hidden" multi="true">
+						<sci:help>Component Attributes</sci:help>
+						<sci:value>ComponentReturnsPass</sci:value>
+						<sci:legalval selected="true">ComponentTakesInput</sci:legalval>
+						<sci:legalval>ComponentReturnsPass</sci:legalval>
+						<sci:legalval>ComponentReturnsFail</sci:legalval>
+						<sci:legalval>ComponentRunsLocal</sci:legalval>
+					</sci:arg>
+					<sci:arg name="OnDataTypeError" type="StringType" required="true" visibility="hidden" multi="false">
+						<sci:legalval selected="true">Halt</sci:legalval>
+						<sci:legalval>Fail</sci:legalval>
+						<sci:legalval>Pass</sci:legalval>
+					</sci:arg>
+					<sci:arg name="OnGeneralError" type="StringType" required="true" visibility="hidden" multi="false">
+						<sci:legalval selected="true">Halt</sci:legalval>
+						<sci:legalval>Fail</sci:legalval>
+						<sci:legalval>Pass</sci:legalval>
+					</sci:arg>
+					<sci:arg name="CustomErrorText" type="StringType" required="false" visibility="nevershow" multi="false"/>
+					<sci:arg name="ComponentDisplayName" type="StringType" required="false" visibility="nevershow" multi="false">
+						<sci:value>Perform Virtual Screening</sci:value>
+					</sci:arg>
+					<sci:arg name="ProtocolAutoLayout" type="BoolType" required="false" visibility="nevershow" multi="false">
+						<sci:help>Protocol AutoLayout</sci:help>
+						<sci:value>1</sci:value>
+					</sci:arg>
+					<sci:arg name="ComponentDisabled" type="LongType" required="false" visibility="nevershow" multi="false">
+						<sci:value>0</sci:value>
+					</sci:arg>
+					<sci:arg name="ComponentIcon" type="StringType" required="true" visibility="nevershow" multi="false">
+						<sci:value>ComponentNode</sci:value>
+					</sci:arg>
+					<sci:arg name="ComponentRevision" type="LongType" required="true" visibility="nevershow" multi="false">
+						<sci:help>Component Revision</sci:help>
+						<sci:value>790</sci:value>
+					</sci:arg>
+					<sci:arg name="ComponentGUID" type="StringType" required="false" visibility="nevershow" multi="false">
+						<sci:value>{F4B50AC5-CA25-41B8-AB85-F60E9727AC32}</sci:value>
+					</sci:arg>
+					<sci:arg name="ComponentPoint" type="StringType" required="false" visibility="nevershow" multi="false">
+						<sci:value>390 -95</sci:value>
+					</sci:arg>
+					<sci:arg name="ByReference" type="BoolType" required="false" visibility="nevershow" multi="false">
+						<sci:help>By Ref</sci:help>
+						<sci:value>1</sci:value>
+					</sci:arg>
+					<sci:arg name="ComponentHelp" type="StringType" required="false" visibility="nevershow" multi="true">
+						<sci:value>100</sci:value>
+						<sci:value>Perform Virtual Screening</sci:value>
+						<sci:value>&lt;p&gt;This component receives a stream of incoming &quot;screening&quot; records and applies a set of query molecules to that screening set to generate a virtual screening score. The query set may be supplied either as a MOL2 or SD file, specified using the &lt;em&gt;Source&lt;/em&gt; parameter, or, it may receive a stream of query records which are tagged to differentiate them from the screening set. This is achieved by setting the &lt;em&gt;Query Source&lt;/em&gt; parameter to &quot;From Tag&quot; and declaring the PilotScript which differentiates the query records from the screening records.&lt;/p&gt;</sci:value>
+						<sci:value>Molecule</sci:value>
+						<sci:value>Molecules to be scored, and optionally the tagged query molecules (depending on configuration).</sci:value>
+						<sci:value>Molecule</sci:value>
+						<sci:value>Molecule records plus their virtual screening score.</sci:value>
+						<sci:value>None</sci:value>
+						<sci:value>Records passing out of any unconnected fail ports of components inside the subprotocol</sci:value>
+					</sci:arg>
+					<sci:arg name="RegistrationVersion" type="StringType" required="false" visibility="nevershow" multi="false">
+						<sci:help>The server version when this component was registered</sci:help>
+						<sci:value>9.1.0.13</sci:value>
+					</sci:arg>
+					<sci:arg name="Component Sticky Notes" type="StringType" required="false" visibility="nevershow" multi="false"/>
+					<sci:arg name="Protocol Sticky Notes" type="StringType" required="false" visibility="nevershow" multi="false">
+						<sci:help>Protocol Sticky Notes</sci:help>
+					</sci:arg>
+					<sci:arg name="ProtocolScale2" type="LongType" required="false" visibility="nevershow" multi="false">
+						<sci:help>Protocol Scale</sci:help>
+						<sci:value>100</sci:value>
+					</sci:arg>
+					<sci:arg name="Protocol Options" type="StringType" required="false" visibility="nevershow" multi="false">
+						<sci:help>Protocol Options</sci:help>
+						<sci:legalval>Owner Access Only</sci:legalval>
+					</sci:arg>
+					<sci:arg name="Registrant" type="StringType" required="false" visibility="nevershow" multi="false">
+						<sci:help>The user who registered this component.</sci:help>
+						<sci:value>ccdc/csd</sci:value>
+					</sci:arg>
+					<sci:arg name="RegistrationDate" type="StringType" required="false" visibility="nevershow" multi="false">
+						<sci:help>The date this component was registered.</sci:help>
+						<sci:value>Mon Feb 27 15:57:43 2017</sci:value>
+					</sci:arg>
+					<sci:arg name="ComponentLocalID" type="LongType" required="false" visibility="nevershow" multi="false">
+						<sci:help>Local Component Identifier</sci:help>
+						<sci:value>2</sci:value>
+					</sci:arg>
+					<sci:arg name="SubProtocolMadeLinkIntoCopy" type="BoolType" required="false" visibility="nevershow" multi="false">
+						<sci:help>Subprotocol Made Link Into Copy</sci:help>
+						<sci:value>0</sci:value>
+					</sci:arg>
+					<sci:arg name="SubProtocolModified" type="BoolType" required="false" visibility="nevershow" multi="false">
+						<sci:help>Subprotocol Modified</sci:help>
+						<sci:value>0</sci:value>
+					</sci:arg>
+					<sci:arg name="OriginalPackage" type="StringType" required="false" visibility="nevershow" multi="false">
+						<sci:help>OriginalPackage</sci:help>
+						<sci:value>ccdc/csd</sci:value>
+					</sci:arg>
+					<sci:arg name="Component Path" type="StringType" required="false" visibility="nevershow" multi="false">
+						<sci:help>The original path within the database of this component.</sci:help>
+						<sci:value>Components\CSD\Virtual Screening\Perform Virtual Screening</sci:value>
+					</sci:arg>
+				</sci:component>
+				<sci:protocol/>
+			</sci:data>
+			<sci:data object="SciTegic.SortData.1">
+				<sci:component name="Sort Data" version="2">
+					<sci:arg name="Sort By" type="GroupType" required="false" visibility="visible" multi="true" expanded="true">
+						<sci:help>Defines properties for sorting. Use this parameter to add, remove and reorder properties to be used for sorting.</sci:help>
+						<sci:member>Property 1</sci:member>
+						<sci:member>Property 2</sci:member>
+						<sci:member>Property 3</sci:member>
+					</sci:arg>
+					<sci:arg name="Property 1" type="StringType" required="true" visibility="visible" multi="false" expanded="true">
+						<sci:help>The property to sort by.</sci:help>
+						<sci:member>Property 1 Sort Order</sci:member>
+						<sci:member>Property 1 Sort As</sci:member>
+						<sci:value>Virtual_Screen_Score</sci:value>
+					</sci:arg>
+					<sci:arg name="Property 1 Sort Order" type="StringType" required="true" visibility="visible" multi="false">
+						<sci:help>Whether to sort in ascending or descending order.</sci:help>
+						<sci:legalval selected="true">Ascending</sci:legalval>
+						<sci:legalval>Descending</sci:legalval>
+					</sci:arg>
+					<sci:arg name="Property 1 Sort As" type="StringType" required="true" visibility="visible" multi="false">
+						<sci:help>Whether to sort as numbers, dates, or text.
+&lt;p&gt;
+Text can be case-sensitive or case-insensitive, and text containing numbers can be sorted based on the numbers (e.g., &quot;test5&quot; comes before &quot;test23&quot;).
+&lt;/p&gt;</sci:help>
+						<sci:legalval selected="true">Numbers</sci:legalval>
+						<sci:legalval>Text</sci:legalval>
+						<sci:legalval>Case Sensitive Text</sci:legalval>
+						<sci:legalval>Text Containing Numbers</sci:legalval>
+						<sci:legalval>Case Sensitive Text Containing Numbers</sci:legalval>
+						<sci:legalval>Dates</sci:legalval>
+					</sci:arg>
+					<sci:arg name="Property 2" type="StringType" required="false" visibility="visible" multi="false">
+						<sci:help>The property to sort by.</sci:help>
+						<sci:member>Property 2 Sort Order</sci:member>
+						<sci:member>Property 2 Sort As</sci:member>
+					</sci:arg>
+					<sci:arg name="Property 2 Sort Order" type="StringType" required="false" visibility="visible" multi="false">
+						<sci:help>Whether to sort in ascending or descending order.</sci:help>
+						<sci:legalval selected="true">Ascending</sci:legalval>
+						<sci:legalval>Descending</sci:legalval>
+					</sci:arg>
+					<sci:arg name="Property 2 Sort As" type="StringType" required="false" visibility="visible" multi="false">
+						<sci:help>Whether to sort as numbers, dates, or text.
+&lt;p&gt;
+Text can be case-sensitive or case-insensitive, and text containing numbers can be sorted based on the numbers (e.g., &quot;test5&quot; comes before &quot;test23&quot;).
+&lt;/p&gt;</sci:help>
+						<sci:legalval selected="true">Numbers</sci:legalval>
+						<sci:legalval>Text</sci:legalval>
+						<sci:legalval>Case Sensitive Text</sci:legalval>
+						<sci:legalval>Text Containing Numbers</sci:legalval>
+						<sci:legalval>Case Sensitive Text Containing Numbers</sci:legalval>
+						<sci:legalval>Dates</sci:legalval>
+					</sci:arg>
+					<sci:arg name="Property 3" type="StringType" required="false" visibility="visible" multi="false">
+						<sci:help>The property to sort by.</sci:help>
+						<sci:member>Property 3 Sort Order</sci:member>
+						<sci:member>Property 3 Sort As</sci:member>
+					</sci:arg>
+					<sci:arg name="Property 3 Sort Order" type="StringType" required="false" visibility="visible" multi="false">
+						<sci:help>Whether to sort in ascending or descending order.</sci:help>
+						<sci:legalval selected="true">Ascending</sci:legalval>
+						<sci:legalval>Descending</sci:legalval>
+					</sci:arg>
+					<sci:arg name="Property 3 Sort As" type="StringType" required="false" visibility="visible" multi="false">
+						<sci:help>Whether to sort as numbers, dates, or text.
+&lt;p&gt;
+Text can be case-sensitive or case-insensitive, and text containing numbers can be sorted based on the numbers (e.g., &quot;test5&quot; comes before &quot;test23&quot;).
+&lt;/p&gt;</sci:help>
+						<sci:legalval selected="true">Numbers</sci:legalval>
+						<sci:legalval>Text</sci:legalval>
+						<sci:legalval>Case Sensitive Text</sci:legalval>
+						<sci:legalval>Text Containing Numbers</sci:legalval>
+						<sci:legalval>Case Sensitive Text Containing Numbers</sci:legalval>
+						<sci:legalval>Dates</sci:legalval>
+					</sci:arg>
+					<sci:arg name="ComponentAttributes" type="StringType" required="false" visibility="hidden" multi="true">
+						<sci:help>Component Attributes</sci:help>
+						<sci:legalval selected="true">ComponentTakesInput</sci:legalval>
+						<sci:legalval selected="true">ComponentReturnsPass</sci:legalval>
+						<sci:legalval selected="true">ComponentReturnsFail</sci:legalval>
+						<sci:legalval>ComponentRunsLocal</sci:legalval>
+					</sci:arg>
+					<sci:arg name="OnDataTypeError" type="StringType" required="true" visibility="hidden" multi="false">
+						<sci:legalval selected="true">Halt</sci:legalval>
+						<sci:legalval>Fail</sci:legalval>
+						<sci:legalval>Pass</sci:legalval>
+					</sci:arg>
+					<sci:arg name="OnGeneralError" type="StringType" required="true" visibility="hidden" multi="false">
+						<sci:legalval selected="true">Halt</sci:legalval>
+						<sci:legalval>Fail</sci:legalval>
+						<sci:legalval>Pass</sci:legalval>
+					</sci:arg>
+					<sci:arg name="CustomErrorText" type="StringType" required="false" visibility="nevershow" multi="false"/>
+					<sci:arg name="Registrant" type="StringType" required="false" visibility="nevershow" multi="false">
+						<sci:help>The user who registered this component.</sci:help>
+						<sci:value>scitegic/generic</sci:value>
+					</sci:arg>
+					<sci:arg name="RegistrationDate" type="StringType" required="false" visibility="nevershow" multi="false">
+						<sci:help>The date this component was registered.</sci:help>
+						<sci:value>Wed Nov 11 11:11:11 2009</sci:value>
+					</sci:arg>
+					<sci:arg name="ComponentDisplayName" type="StringType" required="false" visibility="nevershow" multi="false">
+						<sci:value>Sort by Score</sci:value>
+					</sci:arg>
+					<sci:arg name="ComponentAutoDisplayName" type="ExpressionType" required="false" visibility="nevershow" multi="false">
+						<sci:help>Automatically update the component display name when the &quot;Expression&quot; property is changed. This feature is turned off after the user manually changes the display name of the component in Protocol workspace.</sci:help>
+						<sci:value>/* Start from &apos;Property 1&apos; since it must be defined.
+   Keep this following line for the client auto-rename to use.
+	 Parameter(&apos;Property 1&apos;),
+     Parameter(&apos;Property 2&apos;),
+	 Parameter(&apos;Property 3&apos;)
+	 Parameter(&apos;Property 4&apos;)
+	 Parameter(&apos;Property 5&apos;)
+ */
+if (trim(strlength(parameter(&apos;Property 1&apos;, 2))) &gt; 0) then
+	#name := &quot;Sort on &quot; . trim(parameter(&apos;Property 1&apos;, 2));
+
+	/* Get other sort properties that have values */
+	#paramKey := &apos;Property &apos;;
+	#count := 2;
+	#paramName := #paramKey . #count;
+
+	while (#count &lt;= 5 and parameter(#paramName, 2) is defined)
+	loop
+		if (strlength(parameter(#paramName, 2)) &gt; 0) then
+			#name := #name . &apos;, &apos;;
+			#name := #name . parameter(#paramName, 2);
+		end if;
+
+		#count++;
+		#paramName := #paramKey . #count;
+	end loop;
+	#name;
+else
+	&quot;&quot;;
+end if;</sci:value>
+					</sci:arg>
+					<sci:arg name="DerivedFrom" type="StringType" required="false" visibility="nevershow" multi="false">
+						<sci:help>The component this component is based upon.</sci:help>
+						<sci:value>Sort Data</sci:value>
+					</sci:arg>
+					<sci:arg name="ComponentIcon" type="StringType" required="true" visibility="nevershow" multi="false">
+						<sci:value>COMPONENTNODE</sci:value>
+					</sci:arg>
+					<sci:arg name="ComponentGUID" type="StringType" required="false" visibility="nevershow" multi="false">
+						<sci:value>{BC934106-6EA5-44e1-93C3-8787DECA9D15}</sci:value>
+					</sci:arg>
+					<sci:arg name="ComponentPoint" type="StringType" required="false" visibility="nevershow" multi="false">
+						<sci:value>690 -95</sci:value>
+					</sci:arg>
+					<sci:arg name="ComponentDisabled" type="LongType" required="false" visibility="nevershow" multi="false">
+						<sci:value>0</sci:value>
+					</sci:arg>
+					<sci:arg name="ComponentHelp" type="StringType" required="false" visibility="nevershow" multi="true">
+						<sci:value>100</sci:value>
+						<sci:value>Sorts data records according to one or more properties</sci:value>
+						<sci:value>&lt;p&gt;The incoming data records are re-ordered on output using the specified sort criteria. The sort criteria are defined by one or more properties whose values are used to order the records.&lt;/p&gt;
+
+&lt;p&gt;Use &lt;i&gt;Sort By&lt;/i&gt; parameter to add more properties for sorting.&lt;/p&gt;
+
+&lt;p&gt;When multiple properties are used by sorting, the property values of &lt;i&gt;Property 1&lt;/i&gt; are checked first.  If the values are equal, then the values specified by &lt;i&gt;Property 2&lt;/I&gt; are checked; if they are equal, then &lt;i&gt;Property 3&lt;/i&gt; is checked, and so on.&lt;/p&gt;
+
+&lt;b&gt;Notes:&lt;/b&gt;
+&lt;ul&gt;
+&lt;li&gt;The order of sorting can be changed using &lt;i&gt;Sort Order&lt;/i&gt;.&lt;/li&gt;
+&lt;li&gt;The order of a set of records can be randomized by sorting on the property RandomNumber.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;b&gt;See Also:&lt;/b&gt;
+&lt;ul&gt;
+&lt;li&gt;Often, sorting of records is performed so that you can retain some number of records at the head of the sorted list.  &lt;a href=&quot;javascript:DoLink(&apos;{75F04448-3A09-4ECD-A462-D427268653D0}&apos;)&quot;&gt;Top N Filter&lt;/a&gt; is the most efficient way to do this.&lt;/li&gt;
+&lt;/ul&gt;
+</sci:value>
+						<sci:value>Generic</sci:value>
+						<sci:value/>
+						<sci:value>Generic</sci:value>
+						<sci:value>Data records in sorted order</sci:value>
+						<sci:value>Generic</sci:value>
+						<sci:value>Data records that do not contain the sort field(s)</sci:value>
+					</sci:arg>
+					<sci:arg name="RegistrationVersion" type="StringType" required="false" visibility="nevershow" multi="false">
+						<sci:help>The server version when this component was registered</sci:help>
+						<sci:value>7.5.2.500</sci:value>
+					</sci:arg>
+					<sci:arg name="Component Sticky Notes" type="StringType" required="false" visibility="nevershow" multi="false"/>
+					<sci:arg name="ComponentLocalID" type="LongType" required="false" visibility="nevershow" multi="false">
+						<sci:help>Local Component Identifier</sci:help>
+						<sci:value>6</sci:value>
+					</sci:arg>
+					<sci:arg name="Component Path" type="StringType" required="false" visibility="nevershow" multi="false">
+						<sci:help>The original path within the database of this component.</sci:help>
+						<sci:value>Components\Data Access and Manipulation\Data Manipulators\Sort Data</sci:value>
+					</sci:arg>
+				</sci:component>
+			</sci:data>
+			<sci:data object="SciTegic.Protocol.1">
+				<sci:component name="HTML Table Viewer" version="2">
+					<sci:arg name="Maximum Rows" type="LongType" required="true" visibility="visible" multi="false">
+						<sci:help>Specifies the maximum number of table rows in the HTML page</sci:help>
+						<sci:value>2000</sci:value>
+					</sci:arg>
+					<sci:arg name="Rows Per Page" type="StringType" required="false" visibility="visible" multi="false">
+						<sci:help>The number of rows displayed on each page</sci:help>
+						<sci:value>25</sci:value>
+					</sci:arg>
+					<sci:arg name="Title" type="StringType" required="false" visibility="visible" multi="false">
+						<sci:help>The optional title of the HTML document</sci:help>
+					</sci:arg>
+					<sci:arg name="Freeze Table Header" type="BoolType" required="false" visibility="visible" multi="false" uimpl="false">
+						<sci:help>&lt;p&gt;When set to True, this table&apos;s header and title will remain visible when the table is scrolled vertically.&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;Notes:&lt;/b&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+	&lt;li&gt;This feature only applies to HTML reports.&lt;/li&gt;
+	&lt;li&gt;The fixed header behavior depends on what container (e.g., plain browser window, Tile component, Dynamic Content Container) that the Table is piped into.&lt;/li&gt; 
+	&lt;li&gt;To create a table of fixed pixel height, set this parameter to True and pipe this table into a Dynamic Content Container of fixed (i.e., non-percentage) height.&lt;/li&gt;
+&lt;/ul&gt;</sci:help>
+						<sci:legalval>True</sci:legalval>
+						<sci:legalval selected="true">False</sci:legalval>
+					</sci:arg>
+					<sci:arg name="Use Default Browser" type="BoolType" required="false" visibility="visible" multi="false" expanded="true" legalvalsenforced="false" uimpl="false">
+						<sci:metaproplist>
+							<sci:propval name="SCI_PromotionRenameRule">UsingParent</sci:propval>
+							<sci:mpropval name="SCI_PromotedFrom" type="StringType">
+								<sci:value>Browser</sci:value>
+							</sci:mpropval>
+						</sci:metaproplist>
+						<sci:help>&lt;p&gt;
+This parameter is only relevant when running the protocol in the Pipeline Pilot Professional Client.
+&lt;/p&gt;
+&lt;p&gt;
+The value specifies whether to use your default desktop web browser to view the HTML table. When set to False, Internet Explorer is used as a standard fallback option. If IE is your default browser, it is used in either case.
+&lt;/p&gt;
+</sci:help>
+						<sci:legalval selected="true">True</sci:legalval>
+						<sci:legalval>False</sci:legalval>
+					</sci:arg>
+					<sci:arg name="Tempfiles" type="StringType" required="false" visibility="visible" multi="false" implbase="{7B3502D7-FA57-4EB5-838B-FE6AB0BF0E69}" uimpl="true">
+						<sci:help>Lists the set of temporary files which will be converted by the network to true temporary file names</sci:help>
+						<sci:value>temphtml</sci:value>
+					</sci:arg>
+					<sci:arg name="DeclareLocal" type="StringType" required="false" visibility="visible" multi="false" implbase="{17001C74-63CE-4B4B-B37C-F0EAA19CE4AA}" uimpl="true">
+						<sci:help>Lists a set of properties (without the @) to be created on the property list for this protocol.
+Other properties are created on the global property list
+and so are accessible from all protocols.</sci:help>
+						<sci:value>HTML Filename</sci:value>
+					</sci:arg>
+					<sci:arg name="RunToCompletion" type="BoolType" required="false" visibility="visible" multi="false" implbase="{7B3502D7-FA57-4EB5-838B-FE6AB0BF0E69}" uimpl="true">
+						<sci:help>When the network is run, whether we process once or until done for each process call</sci:help>
+						<sci:legalval>True</sci:legalval>
+						<sci:legalval selected="true">False</sci:legalval>
+					</sci:arg>
+					<sci:arg name="Internet Explorer" type="StringType" required="false" visibility="visible" multi="false" uimpl="true">
+						<sci:help>The location for Internet Explorer</sci:help>
+						<sci:value>internetexplorer.application</sci:value>
+					</sci:arg>
+					<sci:arg name="Chrome" type="StringType" required="false" visibility="visible" multi="false" uimpl="true">
+						<sci:help>The location for Chrome</sci:help>
+						<sci:value>&quot;C:\Program Files (x86)\Google\Chrome\Application\chrome.exe&quot;</sci:value>
+					</sci:arg>
+					<sci:arg name="Firefox" type="StringType" required="false" visibility="visible" multi="false" expanded="true" uimpl="true">
+						<sci:help>The location for Firefox</sci:help>
+						<sci:value>&quot;C:\Program Files (x86)\Mozilla Firefox\firefox.exe&quot;</sci:value>
+					</sci:arg>
+					<sci:arg name="ComponentAttributes" type="StringType" required="false" visibility="hidden" multi="true">
+						<sci:help>Component Attributes</sci:help>
+						<sci:legalval selected="true">ComponentTakesInput</sci:legalval>
+						<sci:legalval>ComponentReturnsPass</sci:legalval>
+						<sci:legalval>ComponentReturnsFail</sci:legalval>
+						<sci:legalval>ComponentRunsLocal</sci:legalval>
+					</sci:arg>
+					<sci:arg name="OnDataTypeError" type="StringType" required="true" visibility="hidden" multi="false">
+						<sci:legalval selected="true">Halt</sci:legalval>
+						<sci:legalval>Fail</sci:legalval>
+						<sci:legalval>Pass</sci:legalval>
+					</sci:arg>
+					<sci:arg name="OnGeneralError" type="StringType" required="true" visibility="hidden" multi="false">
+						<sci:legalval selected="true">Halt</sci:legalval>
+						<sci:legalval>Fail</sci:legalval>
+						<sci:legalval>Pass</sci:legalval>
+					</sci:arg>
+					<sci:arg name="CustomErrorText" type="StringType" required="false" visibility="nevershow" multi="false"/>
+					<sci:arg name="Protocol Options" type="StringType" required="false" visibility="nevershow" multi="true">
+						<sci:help>Protocol Options</sci:help>
+						<sci:legalval selected="true">Make Shortcut by Default</sci:legalval>
+						<sci:legalval>Cant Replace With Copy</sci:legalval>
+						<sci:legalval>Cant Open</sci:legalval>
+					</sci:arg>
+					<sci:arg name="Registrant" type="StringType" required="false" visibility="nevershow" multi="false">
+						<sci:help>The user who registered this component.</sci:help>
+						<sci:value>scitegic/generic</sci:value>
+					</sci:arg>
+					<sci:arg name="RegistrationDate" type="StringType" required="false" visibility="nevershow" multi="false">
+						<sci:help>The date this component was registered.</sci:help>
+						<sci:value>Fri Oct 23 17:05:34 2015</sci:value>
+					</sci:arg>
+					<sci:arg name="ComponentDisplayName" type="StringType" required="false" visibility="nevershow" multi="false">
+						<sci:value>HTML Table Viewer</sci:value>
+					</sci:arg>
+					<sci:arg name="ProtocolAutoLayout" type="BoolType" required="false" visibility="nevershow" multi="false">
+						<sci:help>Protocol AutoLayout</sci:help>
+						<sci:value>true</sci:value>
+					</sci:arg>
+					<sci:arg name="ComponentPoint" type="StringType" required="false" visibility="nevershow" multi="false">
+						<sci:value>990 -95</sci:value>
+					</sci:arg>
+					<sci:arg name="ComponentDisabled" type="LongType" required="false" visibility="nevershow" multi="false">
+						<sci:value>0</sci:value>
+					</sci:arg>
+					<sci:arg name="ComponentIcon" type="StringType" required="true" visibility="nevershow" multi="false">
+						<sci:value>ViewerNode</sci:value>
+					</sci:arg>
+					<sci:arg name="ComponentRevision" type="LongType" required="true" visibility="nevershow" multi="false">
+						<sci:help>Component Revision</sci:help>
+						<sci:value>100</sci:value>
+					</sci:arg>
+					<sci:arg name="ProtocolCommentSize" type="StringType" required="false" visibility="nevershow" multi="false">
+						<sci:help>ProtocolCommentSize</sci:help>
+						<sci:value>1100 500</sci:value>
+					</sci:arg>
+					<sci:arg name="DerivedFrom" type="StringType" required="false" visibility="nevershow" multi="false">
+						<sci:help>The component this component is based upon.</sci:help>
+						<sci:value>SubProtocol</sci:value>
+					</sci:arg>
+					<sci:arg name="ComponentGUID" type="StringType" required="false" visibility="nevershow" multi="false">
+						<sci:value>{F6A20C96-BC1C-48f3-82E9-4D8F023F82EE}</sci:value>
+					</sci:arg>
+					<sci:arg name="ProtocolScale" type="LongType" required="false" visibility="nevershow" multi="false">
+						<sci:help>Protocol Scale</sci:help>
+						<sci:value>0</sci:value>
+					</sci:arg>
+					<sci:arg name="ByReference" type="BoolType" required="false" visibility="nevershow" multi="false">
+						<sci:help>By Ref</sci:help>
+						<sci:value>1</sci:value>
+					</sci:arg>
+					<sci:arg name="ComponentHelp" type="StringType" required="false" visibility="nevershow" multi="true">
+						<sci:value>100</sci:value>
+						<sci:value>Displays data records as HTML in a web browser</sci:value>
+						<sci:value>&lt;p&gt;Generates and displays an HTML table page of data records, with one record per row. Each property becomes a column in the table and each value a cell.
+&lt;p&gt;
+&lt;b&gt;Notes:&lt;/b&gt;
+&lt;ul&gt;
+&lt;li&gt;Molecules will be displayed if present.&lt;/li&gt;
+&lt;li&gt;For hierarchical data records, only top level properties are displayed.&lt;/li&gt;
+&lt;li&gt;Any grouped data is displayed in nested tables.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;b&gt;See Also:&lt;/b&gt;
+&lt;ul&gt;
+&lt;li&gt;If you prefer not to view the grouped data, use &lt;a href=&quot;javascript:DoLink(&apos;{ACCDEEEF-FEED-4B27-B263-BA531EABFC9C}&apos;)&quot;&gt;Delete Children&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;For more control over the display of molecules, use &lt;a href=&quot;javascript:DoLink(&apos;{485D30CD-737C-4AD3-89C9-F81CB20E47AE}&apos;)&quot;&gt;HTML Molecular Table Viewer&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+</sci:value>
+						<sci:value>Generic</sci:value>
+						<sci:value/>
+						<sci:value>None</sci:value>
+						<sci:value/>
+						<sci:value>None</sci:value>
+						<sci:value/>
+					</sci:arg>
+					<sci:arg name="RegistrationVersion" type="StringType" required="false" visibility="nevershow" multi="false">
+						<sci:help>The server version when this component was registered</sci:help>
+						<sci:value>16.1.0.1089</sci:value>
+					</sci:arg>
+					<sci:arg name="Component Sticky Notes" type="StringType" required="false" visibility="nevershow" multi="false"/>
+					<sci:arg name="Protocol Sticky Notes" type="StringType" required="false" visibility="nevershow" multi="false">
+						<sci:help>Protocol Sticky Notes</sci:help>
+					</sci:arg>
+					<sci:arg name="ProtocolScale2" type="LongType" required="false" visibility="nevershow" multi="false">
+						<sci:help>Protocol Scale</sci:help>
+						<sci:value>100</sci:value>
+					</sci:arg>
+					<sci:arg name="ComponentLocalID" type="LongType" required="false" visibility="nevershow" multi="false">
+						<sci:help>Local Component Identifier</sci:help>
+						<sci:value>3</sci:value>
+					</sci:arg>
+					<sci:arg name="SubProtocolMadeLinkIntoCopy" type="BoolType" required="false" visibility="nevershow" multi="false">
+						<sci:help>Subprotocol Made Link Into Copy</sci:help>
+						<sci:value>0</sci:value>
+					</sci:arg>
+					<sci:arg name="Component Path" type="StringType" required="false" visibility="nevershow" multi="false">
+						<sci:help>The original path within the database of this component.</sci:help>
+						<sci:value>Components\Data Access and Manipulation\Viewers\HTML Table Viewer</sci:value>
+					</sci:arg>
+				</sci:component>
+				<sci:protocol/>
+			</sci:data>
+			<sci:connectid from="4" to="2" type="true"/>
+			<sci:connectid from="2" to="6" type="true"/>
+			<sci:connectid from="6" to="3" type="true"/>
+			<sci:version iVal="1"/>
+		</sci:protocol>
+	</sci:dbitem>
+</sci:data>

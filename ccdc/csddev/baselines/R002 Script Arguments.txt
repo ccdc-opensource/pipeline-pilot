@@ -1,0 +1,2 @@
+success	inference
+true	Parsing of arguments is working as intended.

@@ -1,0 +1,6 @@
+text	ErrorText	success	inference
+More cowbell	Refcode not found in selected database.		
+More cowbell	Refcode not found in selected database.		
+IBPRAC	Python script produced no data.		
+More cowbell	Python script produced no data.		
+		False	Means that the option to ignore unfound refcodes is being ignored.

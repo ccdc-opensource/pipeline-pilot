@@ -1,0 +1,5 @@
+File Name
+1di8_lig_DTQ_confs.sdf
+1ke8_lig_LS4_confs.sdf
+1pxl_lig_CK4_confs.sdf
+test.sdf

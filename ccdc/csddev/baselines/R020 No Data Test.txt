@@ -1,0 +1,2 @@
+success	inference
+True	Correctly assessed that there were no molecule records

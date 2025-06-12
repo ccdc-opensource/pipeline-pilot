@@ -1,0 +1,2 @@
+Molecule name	max_log_probability	min_log_probability	n_conf_gen_clust	n_rotamers_with_no_observations	rotamers_with_no_observations	IsSummary
+Mol_0	Useful output	Useful output	250	0	[]	true

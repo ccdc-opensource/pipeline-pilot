@@ -1,0 +1,2 @@
+csd_refcode	publications	synonyms
+ACCELL10	S.Perez, F.Brisse	1,2,3,6-Tetra-O-acetyl-4-O-(2,3,6-tri-O-acetyl-4-O-(2,3,4,6-tetra-O-acetyl-²-D-glucopyranosyl)-²-D-glucopyranosyl)-²-D-glucopyranose

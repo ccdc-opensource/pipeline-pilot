@@ -1,0 +1,2 @@
+ErrorText	success	inference
+Screening Set file has MOL2 extension but is not valid MOL2 file.	true	Expected validation error.

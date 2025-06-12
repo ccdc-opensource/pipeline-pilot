@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sci:data xmlns:sci="http://www.SciTegic.com/" object="SciTegic.EvaluateExpression.1">
+	<sci:component name="Convert Unicode Characters" version="2">
+		<sci:arg name="Unicode Property" type="StringType" required="true" visibility="visible" multi="false">
+			<sci:help>The name of the properties (comma separated list) to convert unicode codes to characters in.</sci:help>
+		</sci:arg>
+		<sci:arg name="Expression" type="ExpressionType" required="true" visibility="visible" multi="false" implbase="{0995D675-7EE2-432C-95DF-E91C14052B22}" uimpl="true">
+			<sci:help>Expression (or list of expressions separated by semi-colons) to evaluate.</sci:help>
+			<sci:member>Initial Expression</sci:member>
+			<sci:member>Final Expression</sci:member>
+			<sci:member>Keep Calculated Properties</sci:member>
+			<sci:value>// For each unicode property listed...
+For #p In 1 .. NumValues(#pUnicode) Loop
+	// Is the property defined?
+	If Property(#pUnicode[#p]) Is Defined Then
+		// It is so grab the unicode property value.
+		#unicode := Property(#pUnicode[#p]);
+		
+		#changed := false;
+		
+		// For each value in the unicode array.
+		For #v In 1 .. NumValues(#unicode) Loop
+			// Does the value contain something looking like a unicode?
+			If #unicode[#v] RLike &apos;\\u[0-9A-Za-z]{4}&apos; Then
+				// It does. Gather all codes...
+				#codes := RMatch(#unicode[#v], &apos;\\u[0-9A-Za-z]{4}&apos;, &apos;g&apos;);
+				// And deduplicate - only need to translate one each.
+				RemoveDuplicates(#codes);
+				
+				// Convert each code to binary array
+				For #i In 1 .. NumValues(#codes) Loop
+					// Is this code already known?
+					If HashContains(#known, #codes[#i]) Then
+						// Already known. Lookup.
+						#total := HashFind(#known, #codes[#i]);
+					Else
+						// Not known. Derive.
+						#bin := Array();
+						// Ignore \u at start (characters 1 and 2 respectively.
+						For #c In Reverse 6 .. 3 Loop
+							Append(#bin, HashFind(#val, Substring(#codes[#i], #c, 1)));
+						End Loop;
+						
+						// Convert binary array (contains 1s and 0s) to integer.
+						#total := 0;
+						// Multiplier for each binary value doubles each time, 
+						// starting from 1, then 2, then 4, etc.
+						#mult := 1;
+						For #b In 1 .. NumValues(#bin) Loop
+							#total += #bin[#b] * #mult;
+							#mult *= 2; // Next time use double mult
+						End Loop;
+						
+						// Record the total for next time.
+						HashAdd(#known, #codes[#i], #total);
+					End If;
+					
+					// Replace the code strings (e.g. \u03b2) with character
+					#unicode[#v] := StrReplace(#unicode[#v], #codes[#i], Chr(#total));
+					
+					#changed := true;
+				End Loop;
+			End If;
+		End Loop;
+		
+		// Replace property if changes made.
+		If #changed Then
+			Property(#pUnicode[#p]) := #unicode;
+		End If;
+	End If;
+End Loop;
+</sci:value>
+		</sci:arg>
+		<sci:arg name="Initial Expression" type="ExpressionType" required="false" visibility="visible" multi="false" implbase="{0995D675-7EE2-432C-95DF-E91C14052B22}" uimpl="true">
+			<sci:help>&lt;p&gt;
+This expression is executed only the first time data passes into the component.
+&lt;p/&gt; 
+Since there is no data available at initialization time, only expressions referencing local or global properties are allowed.
+&lt;/p&gt;</sci:help>
+			<sci:value>#val := HashValueCreate();
+// These are the binary arrays (in 1,2,4,8-bit order) for each HEX character. 
+HashAdd(#val, &apos;0&apos;, Array(0,0,0,0)); // 0
+HashAdd(#val, &apos;1&apos;, Array(1,0,0,0)); // 1
+HashAdd(#val, &apos;2&apos;, Array(0,1,0,0)); // 2
+HashAdd(#val, &apos;3&apos;, Array(1,1,0,0)); // 3
+HashAdd(#val, &apos;4&apos;, Array(0,0,1,0)); // 4
+HashAdd(#val, &apos;5&apos;, Array(1,0,1,0)); // 5
+HashAdd(#val, &apos;6&apos;, Array(0,1,1,0)); // 6
+HashAdd(#val, &apos;7&apos;, Array(1,1,1,0)); // 7
+HashAdd(#val, &apos;8&apos;, Array(0,0,0,1)); // 8
+HashAdd(#val, &apos;9&apos;, Array(1,0,0,1)); // 9
+HashAdd(#val, &apos;a&apos;, Array(0,1,0,1)); // 10
+HashAdd(#val, &apos;b&apos;, Array(1,1,0,1)); // 11
+HashAdd(#val, &apos;c&apos;, Array(0,0,1,1)); // 12
+HashAdd(#val, &apos;d&apos;, Array(1,0,1,1)); // 13
+HashAdd(#val, &apos;e&apos;, Array(0,1,1,1)); // 14
+HashAdd(#val, &apos;f&apos;, Array(1,1,1,1)); // 15
+
+#pUnicode := Parameter(&apos;Unicode Property&apos;);
+#pUnicode := RSplit(#pUnicode, &apos;\s*,\s*&apos;, &apos;g&apos;);
+
+// Because there are a lot of common characters (e.g. alpha, beta, etc.)
+// It is worth while recalling which codes we already know, to speed
+// up the conversion process.
+#known := HashValueCreate();</sci:value>
+		</sci:arg>
+		<sci:arg name="Final Expression" type="ExpressionType" required="false" visibility="visible" multi="false" implbase="{0995D675-7EE2-432C-95DF-E91C14052B22}" uimpl="true">
+			<sci:help>&lt;p&gt;
+This expression is executed only at finalization (after the last data passes out of the component).
+&lt;p/&gt; 
+Since there is no data available at finalization time, only expressions referencing local or global properties are allowed.
+&lt;/p&gt;</sci:help>
+		</sci:arg>
+		<sci:arg name="Keep Calculated Properties" type="BoolType" required="true" visibility="visible" multi="false" implbase="{0995D675-7EE2-432C-95DF-E91C14052B22}" uimpl="true">
+			<sci:help>Adds any properties calculated in this component to a data record&apos;s property list.</sci:help>
+			<sci:legalval selected="true">True</sci:legalval>
+			<sci:legalval>False</sci:legalval>
+		</sci:arg>
+		<sci:arg name="ComponentAttributes" type="StringType" required="false" visibility="hidden" multi="true">
+			<sci:help>Component Attributes</sci:help>
+			<sci:legalval selected="true">ComponentTakesInput</sci:legalval>
+			<sci:legalval selected="true">ComponentReturnsPass</sci:legalval>
+			<sci:legalval>ComponentReturnsFail</sci:legalval>
+			<sci:legalval>ComponentRunsLocal</sci:legalval>
+		</sci:arg>
+		<sci:arg name="OnDataTypeError" type="StringType" required="true" visibility="hidden" multi="false">
+			<sci:legalval selected="true">Halt</sci:legalval>
+			<sci:legalval>Fail</sci:legalval>
+			<sci:legalval>Pass</sci:legalval>
+		</sci:arg>
+		<sci:arg name="OnGeneralError" type="StringType" required="true" visibility="hidden" multi="false">
+			<sci:legalval selected="true">Halt</sci:legalval>
+			<sci:legalval>Fail</sci:legalval>
+			<sci:legalval>Pass</sci:legalval>
+		</sci:arg>
+		<sci:arg name="CustomErrorText" type="StringType" required="false" visibility="nevershow" multi="false"/>
+		<sci:arg name="Do Screen" type="BoolType" required="false" visibility="nevershow" multi="false" implbase="{0995D675-7EE2-432C-95DF-E91C14052B22}">
+			<sci:help>When TRUE, controls which exit port is used for
+each data record by evaluating the final expression
+(or only one) listed in the &quot;Expression&quot; parameter.
+   -Pass (green) port when expression true
+   -Fail (red) port when expression false</sci:help>
+			<sci:legalval>True</sci:legalval>
+			<sci:legalval selected="true">False</sci:legalval>
+		</sci:arg>
+		<sci:arg name="ExpressionVersion" type="LongType" required="false" visibility="nevershow" multi="false" implbase="{0995D675-7EE2-432C-95DF-E91C14052B22}">
+			<sci:help>Version of expression parser to use.</sci:help>
+			<sci:value>2</sci:value>
+		</sci:arg>
+		<sci:arg name="Registrant" type="StringType" required="false" visibility="nevershow" multi="false">
+			<sci:help>The user who registered this component.</sci:help>
+			<sci:value>ccdc/csd</sci:value>
+		</sci:arg>
+		<sci:arg name="RegistrationDate" type="StringType" required="false" visibility="nevershow" multi="false">
+			<sci:help>The date this component was registered.</sci:help>
+			<sci:value>Fri Nov 22 11:04:04 2019</sci:value>
+		</sci:arg>
+		<sci:arg name="ComponentDisplayName" type="StringType" required="false" visibility="nevershow" multi="false">
+			<sci:value>Convert Unicode Characters</sci:value>
+		</sci:arg>
+		<sci:arg name="ComponentAutoDisplayName" type="ExpressionType" required="false" visibility="nevershow" multi="false">
+			<sci:help>Automatically update the component display name when the &quot;Expression&quot; property is changed. This feature is turned off after the user manually changes the display name of the component in Protocol workspace.</sci:help>
+			<sci:value>#displayName := trim(Parameter(&apos;Expression&apos;, 2));
+if(strlength(#displayName) &gt; 0) then	
+	/* Find the first line break */
+	#nl := FindSubstring(#displayName, &quot;\r&quot;);
+	if #nl &lt;= 0 then
+		#nl := FindSubstring(#displayName, &quot;\n&quot;);
+	end if;
+
+	/* Keep the first line only */
+	if (#nl &gt; 0) then
+		StrErase(#displayName, #nl);
+	end if;
+	
+	#displayName;
+else
+	&quot;&quot;;
+end if;</sci:value>
+		</sci:arg>
+		<sci:arg name="DerivedFrom" type="StringType" required="false" visibility="nevershow" multi="false">
+			<sci:help>The component this component is based upon.</sci:help>
+			<sci:value>Custom Manipulator (PilotScript)</sci:value>
+		</sci:arg>
+		<sci:arg name="ComponentIcon" type="StringType" required="true" visibility="nevershow" multi="false">
+			<sci:value>ComponentNode</sci:value>
+		</sci:arg>
+		<sci:arg name="ComponentDisabled" type="LongType" required="false" visibility="nevershow" multi="false">
+			<sci:value>0</sci:value>
+		</sci:arg>
+		<sci:arg name="ComponentGUID" type="StringType" required="false" visibility="nevershow" multi="false">
+			<sci:value>{B0822C9A-EC56-4FB3-B7ED-D0C016C70127}</sci:value>
+		</sci:arg>
+		<sci:arg name="ComponentPoint" type="StringType" required="false" visibility="nevershow" multi="false">
+			<sci:value>90 -815</sci:value>
+		</sci:arg>
+		<sci:arg name="ComponentHelp" type="StringType" required="false" visibility="nevershow" multi="true">
+			<sci:value>100</sci:value>
+			<sci:value>Convert Unicodes in Properties to Characters</sci:value>
+			<sci:value>&lt;p&gt;Convert the unicode strings found in one or more properties into their appropriate character.&lt;/p&gt;
+&lt;p&gt;For example, consider the value:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;6&apos;-O-Trityl-\u03b1-cellobiose hepta-acetate
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This contains the unicode character \u03b1. To convert this to its character (using the &lt;code&gt;Chr()&lt;/code&gt; function), this must first be converted from the HEX value to a decimal number. In this case, that&apos;s 945. This is the alpha character &lt;b&gt;&amp;#0945;&lt;/b&gt;. This makes this property.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;6&apos;-O-Trityl-&amp;#0945;-cellobiose hepta-acetate
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;b&gt;Note:&lt;/b&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Multiple properties can be specified by entering a comma-separated list in the &lt;i&gt;Unicode Property&lt;/i&gt; parameter.&lt;/li&gt;
+&lt;li&gt;If a property is found to be an array, all elements of that array will be processed.&lt;/li&gt;
+&lt;/ul&gt;</sci:value>
+			<sci:value>Generic</sci:value>
+			<sci:value/>
+			<sci:value>Generic</sci:value>
+			<sci:value/>
+			<sci:value>None</sci:value>
+			<sci:value/>
+		</sci:arg>
+		<sci:arg name="RegistrationVersion" type="StringType" required="false" visibility="nevershow" multi="false">
+			<sci:help>The server version when this component was registered</sci:help>
+			<sci:value>19.1.0.1963</sci:value>
+		</sci:arg>
+		<sci:arg name="Component Sticky Notes" type="StringType" required="false" visibility="nevershow" multi="false"/>
+		<sci:arg name="ComponentLocalID" type="LongType" required="false" visibility="nevershow" multi="false">
+			<sci:help>Local Component Identifier</sci:help>
+			<sci:value>4</sci:value>
+		</sci:arg>
+		<sci:arg name="Component Path" type="StringType" required="false" visibility="nevershow" multi="false">
+			<sci:help>The original path within the database of this component.</sci:help>
+			<sci:value>fatkinson\ccdc\csd\xml\Components\CSD\Manipulators\Convert Unicode Characters</sci:value>
+		</sci:arg>
+	</sci:component>
+</sci:data>

@@ -1,0 +1,4 @@
+score_calculated	correct_active_assignment	inference
+true	true	Score completed and the data had the correct properties defined.
+true	true	Score completed and the data had the correct properties defined.
+true	true	Score completed and the data had the correct properties defined.

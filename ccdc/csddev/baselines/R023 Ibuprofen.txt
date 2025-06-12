@@ -1,0 +1,2 @@
+text	smiles
+IBPRAC	CC(C)Cc1ccc(cc1)C(C)C(O)=O

@@ -1,0 +1,2 @@
+success	inference
+true	Package components retain the state originally recorded.

@@ -1,0 +1,2 @@
+success	inference
+True	Nothing has been leaked by the Run Conformer Generation component.

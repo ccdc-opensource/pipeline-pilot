@@ -1,0 +1,2 @@
+inference
+Ranked score file written where expected.

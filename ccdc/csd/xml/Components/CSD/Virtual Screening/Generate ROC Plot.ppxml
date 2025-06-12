@@ -1,0 +1,863 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sci:data xmlns:sci="http://www.SciTegic.com/" object="SciTegic.Protocol.1" format="8.0.0">
+	<sci:dbitem>
+		<sci:component name="Generate ROC Plot" version="2">
+			<sci:arg name="Input Options" type="GroupType" required="false" visibility="visible" multi="false" expanded="true" legalvalsenforced="false">
+				<sci:metaproplist>
+					<sci:mpropval name="SCI_PromotedFrom" ishidden="true" type="StringType">
+						<sci:value>Input Options</sci:value>
+					</sci:mpropval>
+					<sci:propval name="SCI_PromotionRenameRule" ishidden="true">UsingParent</sci:propval>
+				</sci:metaproplist>
+				<sci:help>The options concerning the input - file sources, formats, etc.</sci:help>
+				<sci:member>Active Source</sci:member>
+				<sci:member>Decoy Source</sci:member>
+			</sci:arg>
+			<sci:arg name="Active Source" type="StringType" required="false" visibility="visible" multi="false" expanded="true" uimpl="false">
+				<sci:metaproplist>
+					<sci:propval name="SCI_PromotionRenameRule">UsingParent</sci:propval>
+					<sci:mpropval name="SCI_PromotedFrom" type="StringType">
+						<sci:value>Active Source</sci:value>
+					</sci:mpropval>
+				</sci:metaproplist>
+				<sci:help>The source of actives:
+&lt;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;b&gt;From Tag:&lt;/b&gt; Actives are molecules in the input stream that pass the test specified by the &lt;i&gt;Test for Active&lt;/i&gt;  parameter. Actives must occur in the input stream before targets.&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;From File:&lt;/b&gt; Actives are read from the list of files specified by the &lt;i&gt;Source&lt;/i&gt; parameter.&lt;/li&gt;
+&lt;/ul&gt;</sci:help>
+				<sci:member>Active Source Source</sci:member>
+				<sci:member>Active Source Test for Active</sci:member>
+				<sci:legalval selected="true">From File</sci:legalval>
+				<sci:legalval>From Tag</sci:legalval>
+			</sci:arg>
+			<sci:arg name="Active Source Source" type="URLType" required="true" visibility="visible" multi="false" expanded="true" legalvalsenforced="false" uimpl="false">
+				<sci:metaproplist>
+					<sci:mpropval name="SCI_PromotedFrom" type="StringType">
+						<sci:value>Active Source Source</sci:value>
+					</sci:mpropval>
+				</sci:metaproplist>
+				<sci:help>The file specifying the substructure(s) to search for.</sci:help>
+				<sci:validscript>#source := Parameter();
+#source RLike &apos;\.sdf$&apos; Or #source RLike &apos;\.mol2$&apos;</sci:validscript>
+				<sci:enabledscript>parameter(&quot;Active Source&quot;) eq &quot;From File&quot;</sci:enabledscript>
+			</sci:arg>
+			<sci:arg name="Active Source Test for Active" type="ExpressionType" required="true" visibility="visible" multi="false" legalvalsenforced="false">
+				<sci:metaproplist>
+					<sci:propval name="SCI_PromotionRenameRule">UsingParent</sci:propval>
+					<sci:mpropval name="SCI_PromotedFrom" type="StringType">
+						<sci:value>Active Source Test for Active</sci:value>
+					</sci:mpropval>
+				</sci:metaproplist>
+				<sci:help>The PilotScript expression used to identify active records.</sci:help>
+				<sci:enabledscript>Parameter(&apos;Active Source&apos;) Eq &apos;From Tag&apos;</sci:enabledscript>
+				<sci:value>IsActive Is Defined</sci:value>
+			</sci:arg>
+			<sci:arg name="Decoy Source" type="StringType" required="false" visibility="visible" multi="false" expanded="true" uimpl="false">
+				<sci:metaproplist>
+					<sci:propval name="SCI_PromotionRenameRule">UsingParent</sci:propval>
+					<sci:mpropval name="SCI_PromotedFrom" type="StringType">
+						<sci:value>Decoy Source</sci:value>
+					</sci:mpropval>
+				</sci:metaproplist>
+				<sci:help>The source of actives:
+&lt;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;b&gt;From Tag:&lt;/b&gt; Actives are molecules in the input stream that pass the test specified by the &lt;i&gt;Test for Active&lt;/i&gt;  parameter. Actives must occur in the input stream before targets.&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;From File:&lt;/b&gt; Actives are read from the list of files specified by the &lt;i&gt;Source&lt;/i&gt; parameter.&lt;/li&gt;
+&lt;/ul&gt;</sci:help>
+				<sci:member>Decoy Source Source</sci:member>
+				<sci:member>Decoy Source Test for Decoy</sci:member>
+				<sci:legalval selected="true">From File</sci:legalval>
+				<sci:legalval>From Tag</sci:legalval>
+			</sci:arg>
+			<sci:arg name="Decoy Source Source" type="URLType" required="true" visibility="visible" multi="false" expanded="true" legalvalsenforced="false" uimpl="false">
+				<sci:metaproplist>
+					<sci:mpropval name="SCI_PromotedFrom" type="StringType">
+						<sci:value>Decoy Source Source</sci:value>
+					</sci:mpropval>
+				</sci:metaproplist>
+				<sci:help>The file specifying the substructure(s) to search for.</sci:help>
+				<sci:validscript>#source := Parameter();
+#source RLike &apos;\.sdf$&apos; Or #source RLike &apos;\.mol2$&apos;</sci:validscript>
+				<sci:enabledscript>parameter(&quot;Decoy Source&quot;) eq &quot;From File&quot;</sci:enabledscript>
+			</sci:arg>
+			<sci:arg name="Decoy Source Test for Decoy" type="ExpressionType" required="true" visibility="visible" multi="false" legalvalsenforced="false" uimpl="false">
+				<sci:metaproplist>
+					<sci:propval name="SCI_PromotionRenameRule">UsingParent</sci:propval>
+					<sci:mpropval name="SCI_PromotedFrom" type="StringType">
+						<sci:value>Decoy Source Test for Decoy</sci:value>
+					</sci:mpropval>
+				</sci:metaproplist>
+				<sci:help>The PilotScript expression used to identify decoy records.</sci:help>
+				<sci:enabledscript>Parameter(&apos;Decoy Source&apos;) Eq &apos;From Tag&apos;</sci:enabledscript>
+				<sci:value>IsDecoy Is Defined</sci:value>
+			</sci:arg>
+			<sci:arg name="Screening Validation Options" type="GroupType" required="false" visibility="visible" multi="false" expanded="true" legalvalsenforced="false">
+				<sci:metaproplist>
+					<sci:mpropval name="SCI_PromotedFrom" type="StringType">
+						<sci:value>Screening Validation Options</sci:value>
+					</sci:mpropval>
+					<sci:propval name="SCI_PromotionRenameRule" ishidden="true">UsingParent</sci:propval>
+				</sci:metaproplist>
+				<sci:help>The options for the screening validation routine.</sci:help>
+				<sci:member>Max Number of Conformers</sci:member>
+				<sci:member>Number of Threads</sci:member>
+			</sci:arg>
+			<sci:arg name="Number of Threads" type="LongType" required="true" visibility="visible" multi="false">
+				<sci:metaproplist>
+					<sci:mpropval name="SCI_PromotedFrom" type="StringType">
+						<sci:value>Number of Threads</sci:value>
+					</sci:mpropval>
+				</sci:metaproplist>
+				<sci:help>Number of threads. The default is 1.</sci:help>
+				<sci:validscript>Parameter() &gt; 0</sci:validscript>
+				<sci:value>1</sci:value>
+			</sci:arg>
+			<sci:arg name="Max Number of Conformers" type="LongType" required="true" visibility="visible" multi="false">
+				<sci:metaproplist>
+					<sci:mpropval name="SCI_PromotedFrom" type="StringType">
+						<sci:value>Max Number of Conformers</sci:value>
+					</sci:mpropval>
+				</sci:metaproplist>
+				<sci:help>Maximum number of conformers. The default is 25. If set to zero, then the incoming molecules are standardized then used.</sci:help>
+				<sci:validscript>Parameter() &gt; 0 And Parameter() &lt;= 200</sci:validscript>
+				<sci:value>25</sci:value>
+			</sci:arg>
+			<sci:arg name="Output Options" type="GroupType" required="false" visibility="visible" multi="false" expanded="true" legalvalsenforced="false">
+				<sci:metaproplist>
+					<sci:propval name="SCI_PromotionRenameRule" ishidden="true">UsingParent</sci:propval>
+					<sci:mpropval name="SCI_PromotedFrom" ishidden="true" type="StringType">
+						<sci:value>Output Options</sci:value>
+					</sci:mpropval>
+				</sci:metaproplist>
+				<sci:help>The options controlling the output.</sci:help>
+				<sci:member>Screening Score Property</sci:member>
+				<sci:member>Options</sci:member>
+			</sci:arg>
+			<sci:arg name="Screening Score Property" type="StringType" required="true" visibility="visible" multi="false">
+				<sci:metaproplist>
+					<sci:mpropval name="SCI_PromotedFrom" type="StringType">
+						<sci:value>Screening Score Property</sci:value>
+						<sci:value>Screening Score Property</sci:value>
+					</sci:mpropval>
+					<sci:propval name="SCI_PromotionRenameRule" ishidden="true">UsingParent</sci:propval>
+				</sci:metaproplist>
+				<sci:help>The name for the screening score property.</sci:help>
+				<sci:value>Virtual_Screen_Score</sci:value>
+			</sci:arg>
+			<sci:arg name="Options" type="StringType" required="false" visibility="visible" multi="true">
+				<sci:metaproplist>
+					<sci:mpropval name="SCI_PromotedFrom" ishidden="true" type="StringType">
+						<sci:value>Options</sci:value>
+					</sci:mpropval>
+					<sci:propval name="SCI_PromotionRenameRule" ishidden="true">UsingParent</sci:propval>
+				</sci:metaproplist>
+				<sci:legalval>Show Plot in Browser</sci:legalval>
+				<sci:legalval selected="true">Output Reporting Element</sci:legalval>
+			</sci:arg>
+			<sci:arg name="Format" type="StringType" required="true" visibility="visible" multi="false" uimpl="true">
+				<sci:metaproplist>
+					<sci:propval name="SCI_PromotionRenameRule">UsingParent</sci:propval>
+					<sci:mpropval name="SCI_PromotedFrom" type="StringType">
+						<sci:value>Format</sci:value>
+					</sci:mpropval>
+				</sci:metaproplist>
+				<sci:help>The format of files to use internally. When the actives and/or decoys are defined by tag (Query Source or Decory Source set to &quot;From Tag&quot;), incoming data is written to files of this format. When either are defined from a file (Active Source and/or Decoy Source set to &quot;From File&quot;), the file format is kept, and only the query set is written to a file of the specified format.</sci:help>
+				<sci:legalval>SDF</sci:legalval>
+				<sci:legalval selected="true">MOL2</sci:legalval>
+			</sci:arg>
+			<sci:arg name="Tempfiles" type="StringType" required="false" visibility="visible" multi="false" uimpl="true">
+				<sci:help>&lt;p&gt;A comma delimited list of global properties, each of which will automatically hold the name of a file in the job&apos;s temporary folder, whose name is guaranteed to be unique.&lt;p/&gt;For each global name, an additional global is created (with the suffix &lt;i&gt;_Filename&lt;/i&gt;) that hold just the leaf file name of the temporary file.&lt;/p&gt;</sci:help>
+				<sci:value>_tmpActive, _tmpDecoy, _tmpQuery</sci:value>
+			</sci:arg>
+			<sci:arg name="DeclareLocal" type="StringType" required="false" visibility="visible" multi="false" uimpl="true">
+				<sci:help>&lt;p&gt;Lists a set of properties (without the @) to create on the global property list for this subprotocol. Such properties can only be accessed within the scope of this subprotocol and its descendent subprotocols.&lt;p/&gt;Any global property not declared in this way is created on the top level global property list and is accessible from all protocols, but may collide with another property of the same name.&lt;/p&gt;&lt;p&gt;Scoping global properties to the subprotocol where they are used is highly recommended.&lt;/p&gt;</sci:help>
+				<sci:value>_active_file, _decoy_file, _query_file</sci:value>
+			</sci:arg>
+			<sci:arg name="RunToCompletion" type="StringType" required="false" visibility="visible" multi="false" uimpl="true">
+				<sci:help>When &lt;i&gt;RunToCompletion&lt;/i&gt; is set to &quot;True - For Each Data Record&quot;, the subprotocol is re-initialized and executed in its entirety for each individual data record it processes.
+&lt;p&gt;
+When set to &quot;True - For Each Category&quot;, the data records are divided into categories based on the value of the Categorize Using parameter and then the subprotocol is re-initialized and executed in its entirety for each category of data records. When used in conjunction with &lt;i&gt;Parallel Processing Options&lt;/i&gt;, each category of data records will be sent to the remote server as part of one single batch.</sci:help>
+				<sci:member>RunToCompletion Categorize Using</sci:member>
+				<sci:legalval selected="true">False</sci:legalval>
+				<sci:legalval>True - For Each Data Record</sci:legalval>
+				<sci:legalval>True - For Each Category</sci:legalval>
+			</sci:arg>
+			<sci:arg name="RunToCompletion Categorize Using" type="StringType" required="false" visibility="visible" multi="false" uimpl="true">
+				<sci:help>Required when RunToCompletion is set to &lt;i&gt;True - For Each Category&lt;/i&gt;, this parameter specifies the property or properties used to define the categories.</sci:help>
+				<sci:validscript>SetInvalidDetails(&apos;This parameter is required when RunToCompletion is set to True - For Each Category&apos;);
+Parameter() ne &apos;&apos;;</sci:validscript>
+				<sci:enabledscript>SetDisabledDetails(&apos;To Enable, Set RunToCompletion to True - For Each Category&apos;);
+Parameter(&apos;RunToCompletion&apos;) eq &apos;True - For Each Category&apos;;</sci:enabledscript>
+			</sci:arg>
+			<sci:arg name="Parallel Processing Options" type="BoolType" required="false" visibility="visible" multi="false" uimpl="true">
+				<sci:help>&lt;p&gt;
+When set to True, this set of options allow the subprotocol to execute in parallel on one or more independent Pipeline Pilot servers, running local or remote.  Additional parameters control the number of data records to send in each process batch, the list of Pipeline Pilot servers to use, the number of protocol processes that can be executed on each server, and whether to preserve the order of the processed data records.
+&lt;/p&gt;&lt;p&gt;
+Use this option judiciously, since it will not increase throughput in all circumstances. In general, it will yield improved performance when the parallelization benefits outweigh the data transfer overhead for the specified batch size.  As a rough guide, performance can be improved when each individual batch requires at least 10 seconds to execute, although this can be affected by the size of each data record.
+&lt;/p&gt;&lt;p&gt;
+When running the protocol with debugging, the subprotocol will provide debugging messages to detail each of the various steps of execution.  Also, components located within the parallel subprotocol will display their debugging messages as well.
+&lt;/p&gt;&lt;p&gt;
+For more information on the parallel subprotocol options, see &lt;a href=&quot;javascript:DoLink(&apos;scihelpdocs/user/subprots/subprot_parallel_processing.htm&apos;)&quot;&gt;Parallel Processing Subprotocols&lt;/a&gt;.
+&lt;/p&gt;
+</sci:help>
+				<sci:member>Parallel Processing Options Batch Size</sci:member>
+				<sci:member>Parallel Processing Options Server</sci:member>
+				<sci:member>Parallel Processing Options Preserve Order</sci:member>
+				<sci:legalval>True</sci:legalval>
+				<sci:legalval selected="true">False</sci:legalval>
+			</sci:arg>
+			<sci:arg name="Parallel Processing Options Batch Size" type="LongType" required="true" visibility="visible" multi="false" uimpl="true">
+				<sci:help>&lt;p&gt;The number of records to send to the remote server(s) for each subprotocol execution.  In general, performance is optimized when the amount of time required to process each batch is at least 10 seconds (note that this can vary depending on the characteristics of the remote server&apos;s hardware).  Use a batch size of -1 to pass all data in a single batch.&lt;/p&gt;
+&lt;p&gt;When &lt;i&gt;RunToCompletion&lt;/i&gt; is set to &quot;True - for each category&quot;, the batch sizes will be determined by the number of records in each individual category.  Therefore, the &lt;i&gt;Batch Size&lt;/i&gt; parameter is not applicable.</sci:help>
+				<sci:enabledscript>#parallel := Parameter(&apos;Parallel Processing Options&apos;);
+#rtcForEachCategory := (Parameter(&apos;RunToCompletion&apos;) eq &apos;True - For Each Category&apos;);
+if (not #parallel) then
+	SetDisabledDetails(&quot;This parameter is only applicable if &apos;Parallel Processing Options&apos; is &apos;True&apos;&quot;);
+elsif (#rtcForEachCategory) then
+	SetDisabledDetails(&quot;This parameter is not applicable when &apos;RunToCompletion&apos; is set to &apos;True - For Each Category&apos;&quot;);
+end if;
+#parallel and not #rtcForEachCategory;</sci:enabledscript>
+			</sci:arg>
+			<sci:arg name="Parallel Processing Options Server" type="StringType" required="false" visibility="visible" multi="true" expanded="true" legalvalsenforced="false" uimpl="true">
+				<sci:help>&lt;p&gt;
+Comma separated list of Pipeline Pilot servers on which to execute the parallel subprotocol.  The server names should be in the same format as the Pipeline Pilot Client&apos;s change server dialog (server-name:port-number).
+&lt;/p&gt;&lt;p&gt;
+Specifying &lt;b&gt;localhost&lt;/b&gt; as a server will cause the subprotocol to use its own Pipeline Pilot server.  This can be helpful on multi-CPU/multi-core systems (where the subprotocol jobs are spawned on the same machine) and Pipeline Pilot Linux clusters (where &apos;localhost&apos; requests spawning the subprotocol jobs on the same cluster).
+&lt;/p&gt;</sci:help>
+				<sci:member>Parallel Processing Options Server Processes</sci:member>
+				<sci:member>Parallel Processing Options Server Run On Grid</sci:member>
+				<sci:validscript>SetInvalidDetails(&apos;This parameter is required.&apos;);
+Parameter() ne &apos;&apos;;</sci:validscript>
+				<sci:enabledscript>SetDisabledDetails(&quot;This parameter is only applicable if &apos;Parallel Processing Options&apos; is &apos;True&apos;&quot;);
+Parameter(&apos;Parallel Processing Options&apos;);</sci:enabledscript>
+			</sci:arg>
+			<sci:arg name="Parallel Processing Options Server Processes" type="StringType" required="false" visibility="visible" multi="false" uimpl="true">
+				<sci:help>Comma separated list of maximum number of batches that can be simultaneously executed on each remote server.  The number of entries in this parameter must equal the number of servers. If &apos;*&apos; is specified as the number of processes, then that server will only launch as many batches as the administrator of the remote server has permitted.</sci:help>
+				<sci:validscript>/* Server Processes must have the same number of comma separated entries as the Server parameter and must have a value*/
+#processes := parameter();
+expand(&apos;,&apos;, #processes);
+#servers := parameter(&apos;Parallel Processing Options Server&apos;);
+expand(&apos;,&apos;, #servers);
+
+if (numvalues(#processes) == 0) then
+	SetInvalidDetails(&apos;This parameter is required.&apos;);
+else
+	SetInvalidDetails(&apos;The number of server processes (&apos; . numvalues(#processes) . &apos;) must equal the number of servers (&apos; . numvalues(#servers) . &apos;).&apos;);
+end if;
+numvalues(#processes) &gt; 0 and numvalues(#processes) == numvalues(#servers);</sci:validscript>
+				<sci:enabledscript>SetDisabledDetails(&quot;This parameter is only applicable if &apos;Parallel Processing Options&apos; is &apos;True&apos;&quot;);
+Parameter(&apos;Parallel Processing Options&apos;);</sci:enabledscript>
+			</sci:arg>
+			<sci:arg name="Parallel Processing Options Server Run On Grid" type="BoolType" required="false" visibility="visible" multi="false" uimpl="true">
+				<sci:help>Run subprotocol on grid engine if available.</sci:help>
+				<sci:member>Parallel Processing Options Server Run On Grid Queue Name</sci:member>
+				<sci:member>Parallel Processing Options Server Run On Grid Grid Options</sci:member>
+				<sci:enabledscript>parameter(&apos;Parallel Processing Options&apos;);</sci:enabledscript>
+				<sci:legalval selected="true">True</sci:legalval>
+				<sci:legalval>False</sci:legalval>
+			</sci:arg>
+			<sci:arg name="Parallel Processing Options Server Run On Grid Queue Name" type="StringType" required="false" visibility="visible" multi="false" legalvalsenforced="false" uimpl="true">
+				<sci:help>Select the queue name on the grid to submit jobs to. Leave blank to use default queue name.</sci:help>
+				<sci:enabledscript>parameter(&apos;Parallel Processing Options Server Run On Grid&apos;);</sci:enabledscript>
+			</sci:arg>
+			<sci:arg name="Parallel Processing Options Server Run On Grid Grid Options" type="StringType" required="false" visibility="visible" multi="false" uimpl="true">
+				<sci:help>Use this to specify grid engine specific command line parameters to the job submission command. Leave blank to use defaults.</sci:help>
+				<sci:enabledscript>parameter(&apos;Parallel Processing Options Server Run On Grid&apos;);</sci:enabledscript>
+			</sci:arg>
+			<sci:arg name="Parallel Processing Options Preserve Order" type="BoolType" required="false" visibility="visible" multi="false" uimpl="true">
+				<sci:help>Whether to preserve the order of the data as it enters and leaves the remote subprotocol.</sci:help>
+				<sci:enabledscript>SetDisabledDetails(&quot;This parameter is only applicable if &apos;Parallel Processing Options&apos; is &apos;True&apos;&quot;);
+Parameter(&apos;Parallel Processing Options&apos;);</sci:enabledscript>
+				<sci:legalval selected="true">True</sci:legalval>
+				<sci:legalval>False</sci:legalval>
+			</sci:arg>
+			<sci:arg name="ComponentAttributes" type="StringType" required="false" visibility="hidden" multi="true">
+				<sci:help>Component Attributes</sci:help>
+				<sci:legalval selected="true">ComponentTakesInput</sci:legalval>
+				<sci:legalval selected="true">ComponentReturnsPass</sci:legalval>
+				<sci:legalval selected="true">ComponentReturnsFail</sci:legalval>
+				<sci:legalval>ComponentRunsLocal</sci:legalval>
+			</sci:arg>
+			<sci:arg name="OnDataTypeError" type="StringType" required="true" visibility="hidden" multi="false">
+				<sci:legalval selected="true">Halt</sci:legalval>
+				<sci:legalval>Fail</sci:legalval>
+				<sci:legalval>Pass</sci:legalval>
+			</sci:arg>
+			<sci:arg name="OnGeneralError" type="StringType" required="true" visibility="hidden" multi="false">
+				<sci:legalval selected="true">Halt</sci:legalval>
+				<sci:legalval>Fail</sci:legalval>
+				<sci:legalval>Pass</sci:legalval>
+			</sci:arg>
+			<sci:arg name="CustomErrorText" type="StringType" required="false" visibility="nevershow" multi="false"/>
+			<sci:arg name="ComponentDisplayName" type="StringType" required="false" visibility="nevershow" multi="false">
+				<sci:value>Generate ROC Plot</sci:value>
+			</sci:arg>
+			<sci:arg name="ProtocolAutoLayout" type="BoolType" required="false" visibility="nevershow" multi="false">
+				<sci:help>Protocol AutoLayout</sci:help>
+				<sci:value>1</sci:value>
+			</sci:arg>
+			<sci:arg name="ComponentDisabled" type="LongType" required="false" visibility="nevershow" multi="false">
+				<sci:value>0</sci:value>
+			</sci:arg>
+			<sci:arg name="ComponentIcon" type="StringType" required="true" visibility="nevershow" multi="false">
+				<sci:value>ComponentNode</sci:value>
+			</sci:arg>
+			<sci:arg name="ComponentRevision" type="LongType" required="true" visibility="nevershow" multi="false">
+				<sci:help>Component Revision</sci:help>
+				<sci:value>790</sci:value>
+			</sci:arg>
+			<sci:arg name="ComponentGUID" type="StringType" required="false" visibility="nevershow" multi="false">
+				<sci:value>{7B1341D0-DA46-47D7-B5DC-4FFB163C5BD1}</sci:value>
+			</sci:arg>
+			<sci:arg name="ComponentPoint" type="StringType" required="false" visibility="nevershow" multi="false">
+				<sci:value>90 -95</sci:value>
+			</sci:arg>
+			<sci:arg name="ByReference" type="BoolType" required="false" visibility="nevershow" multi="false">
+				<sci:help>By Ref</sci:help>
+				<sci:value>0</sci:value>
+			</sci:arg>
+			<sci:arg name="ComponentHelp" type="StringType" required="false" visibility="nevershow" multi="true">
+				<sci:value>100</sci:value>
+				<sci:value>Generate ROC Plot</sci:value>
+				<sci:value>&lt;p&gt;Wrap the &lt;a href=&quot;javascript:DoLink(&apos;{564281DA-81F7-4EDE-B610-6681A43A2845}&apos;)&quot;&gt;Perform Virtual Screening Validation&lt;/a&gt; component to produce an &lt;a href=&quot;javascript:DoLink(&apos;{2E590EF8-6E3A-4554-A131-8D3AD568DFDA}&apos;)&quot;&gt;ROC Plot&lt;/a&gt; from the data produced. The component can act as a view and simply display the plot produced (&lt;em&gt;Options&lt;/em&gt; set to &quot;Show Plot in Browser&quot;) or can produce reporting elements which can be incorporated in a larger report (&lt;em&gt;Options&lt;/em&gt; set to &quot;Output Reporting Element&quot;).&lt;/p&gt;</sci:value>
+				<sci:value>Molecule</sci:value>
+				<sci:value>The molecule to be scored to generate the ROC plot for</sci:value>
+				<sci:value>Generic</sci:value>
+				<sci:value>Records passing out of any unconnected pass ports of components inside the subprotocol</sci:value>
+				<sci:value>Generic</sci:value>
+				<sci:value>Records passing out of any unconnected fail ports of components inside the subprotocol</sci:value>
+			</sci:arg>
+			<sci:arg name="RegistrationVersion" type="StringType" required="false" visibility="nevershow" multi="false">
+				<sci:help>The server version when this component was registered</sci:help>
+				<sci:value>19.1.0.1963</sci:value>
+			</sci:arg>
+			<sci:arg name="Component Sticky Notes" type="StringType" required="false" visibility="nevershow" multi="false"/>
+			<sci:arg name="Protocol Sticky Notes" type="StringType" required="false" visibility="nevershow" multi="false">
+				<sci:help>Protocol Sticky Notes</sci:help>
+			</sci:arg>
+			<sci:arg name="ProtocolScale2" type="LongType" required="false" visibility="nevershow" multi="false">
+				<sci:help>Protocol Scale</sci:help>
+				<sci:value>100</sci:value>
+			</sci:arg>
+			<sci:arg name="Protocol Options" type="StringType" required="false" visibility="nevershow" multi="false">
+				<sci:help>Protocol Options</sci:help>
+				<sci:legalval>Owner Access Only</sci:legalval>
+			</sci:arg>
+			<sci:arg name="Registrant" type="StringType" required="false" visibility="nevershow" multi="false">
+				<sci:help>The user who registered this component.</sci:help>
+				<sci:value>ccdc/csd</sci:value>
+			</sci:arg>
+			<sci:arg name="RegistrationDate" type="StringType" required="false" visibility="nevershow" multi="false">
+				<sci:help>The date this component was registered.</sci:help>
+				<sci:value>Fri Nov 22 11:04:05 2019</sci:value>
+			</sci:arg>
+			<sci:arg name="ComponentLocalID" type="LongType" required="false" visibility="nevershow" multi="false">
+				<sci:help>Local Component Identifier</sci:help>
+				<sci:value>11</sci:value>
+			</sci:arg>
+			<sci:arg name="Component Path" type="StringType" required="false" visibility="nevershow" multi="false">
+				<sci:help>The original path within the database of this component.</sci:help>
+				<sci:value>fatkinson\ccdc\csd\xml\Components\CSD\Virtual Screening\Generate ROC Plot</sci:value>
+			</sci:arg>
+		</sci:component>
+		<sci:protocol>
+			<sci:data object="SciTegic.Protocol.1">
+				<sci:component name="Perform Virtual Screening Validation" version="2">
+					<sci:arg name="Input Options" type="LinkParentParameterType" required="false" visibility="visible" multi="false" expanded="true" legalvalsenforced="false">
+						<sci:metaproplist>
+							<sci:propval name="SCI_InitializeUsingOrigType" ishidden="true">GroupType</sci:propval>
+						</sci:metaproplist>
+						<sci:help>The options concerning the input - file sources, formats, etc.</sci:help>
+						<sci:member>Active Source</sci:member>
+						<sci:member>Decoy Source</sci:member>
+						<sci:value>Input Options</sci:value>
+					</sci:arg>
+					<sci:arg name="Screening Validation Options" type="LinkParentParameterType" required="false" visibility="visible" multi="false" expanded="true" legalvalsenforced="false">
+						<sci:metaproplist>
+							<sci:propval name="SCI_InitializeUsingOrigType" ishidden="true">GroupType</sci:propval>
+						</sci:metaproplist>
+						<sci:help>The options for the screening validation routine.</sci:help>
+						<sci:member>Max Number of Conformers</sci:member>
+						<sci:member>Number of Threads</sci:member>
+						<sci:value>Screening Validation Options</sci:value>
+					</sci:arg>
+					<sci:arg name="Output Options" type="GroupType" required="false" visibility="visible" multi="false" expanded="true" legalvalsenforced="false">
+						<sci:metaproplist>
+							<sci:mpropval name="SCI_PromotedFrom" type="StringType">
+								<sci:value>Output Options</sci:value>
+							</sci:mpropval>
+							<sci:propval name="SCI_PromotionRenameRule">UsingParent</sci:propval>
+						</sci:metaproplist>
+						<sci:help>The options controlling the output.</sci:help>
+						<sci:member>Active Tag</sci:member>
+						<sci:member>Screening Score Property</sci:member>
+					</sci:arg>
+					<sci:arg name="Active Tag" type="StringType" required="false" visibility="visible" multi="false">
+						<sci:metaproplist>
+							<sci:mpropval name="SCI_PromotedFrom" type="StringType">
+								<sci:value>Active Tag</sci:value>
+								<sci:value>Active Tag</sci:value>
+							</sci:mpropval>
+							<sci:propval name="SCI_PromotionRenameRule">UsingParent</sci:propval>
+						</sci:metaproplist>
+						<sci:help>If supplied, this defines the name of the property to tag active records with.</sci:help>
+						<sci:value>_Is_Active</sci:value>
+					</sci:arg>
+					<sci:arg name="Screening Score Property" type="LinkSingleParentParameterType" required="true" visibility="visible" multi="false">
+						<sci:metaproplist>
+							<sci:propval name="SCI_InitializeUsingOrigType" ishidden="true">StringType</sci:propval>
+						</sci:metaproplist>
+						<sci:help>The name for the screening score property.</sci:help>
+						<sci:value>Screening Score Property</sci:value>
+					</sci:arg>
+					<sci:arg name="Format" type="StringType" required="true" visibility="visible" multi="false" uimpl="true">
+						<sci:metaproplist>
+							<sci:propval name="SCI_PromotionRenameRule">UsingParent</sci:propval>
+							<sci:mpropval name="SCI_PromotedFrom" type="StringType">
+								<sci:value>Format</sci:value>
+							</sci:mpropval>
+						</sci:metaproplist>
+						<sci:help>The format of files to use internally. When the actives and/or decoys are defined by tag (Query Source or Decory Source set to &quot;From Tag&quot;), incoming data is written to files of this format. When either are defined from a file (Active Source and/or Decoy Source set to &quot;From File&quot;), the file format is kept, and only the query set is written to a file of the specified format.</sci:help>
+						<sci:legalval>SDF</sci:legalval>
+						<sci:legalval selected="true">MOL2</sci:legalval>
+					</sci:arg>
+					<sci:arg name="Tempfiles" type="StringType" required="false" visibility="visible" multi="false" uimpl="true">
+						<sci:help>&lt;p&gt;A comma delimited list of global properties, each of which will automatically hold the name of a file in the job&apos;s temporary folder, whose name is guaranteed to be unique.&lt;p/&gt;For each global name, an additional global is created (with the suffix &lt;i&gt;_Filename&lt;/i&gt;) that hold just the leaf file name of the temporary file.&lt;/p&gt;</sci:help>
+						<sci:value>_tmpActive, _tmpDecoy, _tmpQuery, _name_hash, _name_idx</sci:value>
+					</sci:arg>
+					<sci:arg name="DeclareLocal" type="StringType" required="false" visibility="visible" multi="false" uimpl="true">
+						<sci:help>&lt;p&gt;Lists a set of properties (without the @) to create on the global property list for this subprotocol. Such properties can only be accessed within the scope of this subprotocol and its descendent subprotocols.&lt;p/&gt;Any global property not declared in this way is created on the top level global property list and is accessible from all protocols, but may collide with another property of the same name.&lt;/p&gt;&lt;p&gt;Scoping global properties to the subprotocol where they are used is highly recommended.&lt;/p&gt;</sci:help>
+						<sci:value>_active_file, _decoy_file, _query_file</sci:value>
+					</sci:arg>
+					<sci:arg name="RunToCompletion" type="StringType" required="false" visibility="visible" multi="false" uimpl="true">
+						<sci:help>When &lt;i&gt;RunToCompletion&lt;/i&gt; is set to &quot;True - For Each Data Record&quot;, the subprotocol is re-initialized and executed in its entirety for each individual data record it processes.
+&lt;p&gt;
+When set to &quot;True - For Each Category&quot;, the data records are divided into categories based on the value of the Categorize Using parameter and then the subprotocol is re-initialized and executed in its entirety for each category of data records. When used in conjunction with &lt;i&gt;Parallel Processing Options&lt;/i&gt;, each category of data records will be sent to the remote server as part of one single batch.</sci:help>
+						<sci:member>RunToCompletion Categorize Using</sci:member>
+						<sci:legalval selected="true">False</sci:legalval>
+						<sci:legalval>True - For Each Data Record</sci:legalval>
+						<sci:legalval>True - For Each Category</sci:legalval>
+					</sci:arg>
+					<sci:arg name="RunToCompletion Categorize Using" type="StringType" required="false" visibility="visible" multi="false" uimpl="true">
+						<sci:help>Required when RunToCompletion is set to &lt;i&gt;True - For Each Category&lt;/i&gt;, this parameter specifies the property or properties used to define the categories.</sci:help>
+						<sci:validscript>SetInvalidDetails(&apos;This parameter is required when RunToCompletion is set to True - For Each Category&apos;);
+Parameter() ne &apos;&apos;;</sci:validscript>
+						<sci:enabledscript>SetDisabledDetails(&apos;To Enable, Set RunToCompletion to True - For Each Category&apos;);
+Parameter(&apos;RunToCompletion&apos;) eq &apos;True - For Each Category&apos;;</sci:enabledscript>
+					</sci:arg>
+					<sci:arg name="Parallel Processing Options" type="BoolType" required="false" visibility="visible" multi="false" uimpl="true">
+						<sci:help>&lt;p&gt;
+When set to True, this set of options allow the subprotocol to execute in parallel on one or more independent Pipeline Pilot servers, running local or remote.  Additional parameters control the number of data records to send in each process batch, the list of Pipeline Pilot servers to use, the number of protocol processes that can be executed on each server, and whether to preserve the order of the processed data records.
+&lt;/p&gt;&lt;p&gt;
+Use this option judiciously, since it will not increase throughput in all circumstances. In general, it will yield improved performance when the parallelization benefits outweigh the data transfer overhead for the specified batch size.  As a rough guide, performance can be improved when each individual batch requires at least 10 seconds to execute, although this can be affected by the size of each data record.
+&lt;/p&gt;&lt;p&gt;
+When running the protocol with debugging, the subprotocol will provide debugging messages to detail each of the various steps of execution.  Also, components located within the parallel subprotocol will display their debugging messages as well.
+&lt;/p&gt;&lt;p&gt;
+For more information on the parallel subprotocol options, see &lt;a href=&quot;javascript:DoLink(&apos;scihelpdocs/user/subprots/subprot_parallel_processing.htm&apos;)&quot;&gt;Parallel Processing Subprotocols&lt;/a&gt;.
+&lt;/p&gt;
+</sci:help>
+						<sci:member>Parallel Processing Options Batch Size</sci:member>
+						<sci:member>Parallel Processing Options Server</sci:member>
+						<sci:member>Parallel Processing Options Preserve Order</sci:member>
+						<sci:legalval>True</sci:legalval>
+						<sci:legalval selected="true">False</sci:legalval>
+					</sci:arg>
+					<sci:arg name="Parallel Processing Options Batch Size" type="LongType" required="true" visibility="visible" multi="false" uimpl="true">
+						<sci:help>&lt;p&gt;The number of records to send to the remote server(s) for each subprotocol execution.  In general, performance is optimized when the amount of time required to process each batch is at least 10 seconds (note that this can vary depending on the characteristics of the remote server&apos;s hardware).  Use a batch size of -1 to pass all data in a single batch.&lt;/p&gt;
+&lt;p&gt;When &lt;i&gt;RunToCompletion&lt;/i&gt; is set to &quot;True - for each category&quot;, the batch sizes will be determined by the number of records in each individual category.  Therefore, the &lt;i&gt;Batch Size&lt;/i&gt; parameter is not applicable.</sci:help>
+						<sci:enabledscript>#parallel := Parameter(&apos;Parallel Processing Options&apos;);
+#rtcForEachCategory := (Parameter(&apos;RunToCompletion&apos;) eq &apos;True - For Each Category&apos;);
+if (not #parallel) then
+	SetDisabledDetails(&quot;This parameter is only applicable if &apos;Parallel Processing Options&apos; is &apos;True&apos;&quot;);
+elsif (#rtcForEachCategory) then
+	SetDisabledDetails(&quot;This parameter is not applicable when &apos;RunToCompletion&apos; is set to &apos;True - For Each Category&apos;&quot;);
+end if;
+#parallel and not #rtcForEachCategory;</sci:enabledscript>
+					</sci:arg>
+					<sci:arg name="Parallel Processing Options Server" type="StringType" required="false" visibility="visible" multi="true" expanded="true" legalvalsenforced="false" uimpl="true">
+						<sci:help>&lt;p&gt;
+Comma separated list of Pipeline Pilot servers on which to execute the parallel subprotocol.  The server names should be in the same format as the Pipeline Pilot Client&apos;s change server dialog (server-name:port-number).
+&lt;/p&gt;&lt;p&gt;
+Specifying &lt;b&gt;localhost&lt;/b&gt; as a server will cause the subprotocol to use its own Pipeline Pilot server.  This can be helpful on multi-CPU/multi-core systems (where the subprotocol jobs are spawned on the same machine) and Pipeline Pilot Linux clusters (where &apos;localhost&apos; requests spawning the subprotocol jobs on the same cluster).
+&lt;/p&gt;</sci:help>
+						<sci:member>Parallel Processing Options Server Processes</sci:member>
+						<sci:member>Parallel Processing Options Server Run On Grid</sci:member>
+						<sci:validscript>SetInvalidDetails(&apos;This parameter is required.&apos;);
+Parameter() ne &apos;&apos;;</sci:validscript>
+						<sci:enabledscript>SetDisabledDetails(&quot;This parameter is only applicable if &apos;Parallel Processing Options&apos; is &apos;True&apos;&quot;);
+Parameter(&apos;Parallel Processing Options&apos;);</sci:enabledscript>
+					</sci:arg>
+					<sci:arg name="Parallel Processing Options Server Processes" type="StringType" required="false" visibility="visible" multi="false" uimpl="true">
+						<sci:help>Comma separated list of maximum number of batches that can be simultaneously executed on each remote server.  The number of entries in this parameter must equal the number of servers. If &apos;*&apos; is specified as the number of processes, then that server will only launch as many batches as the administrator of the remote server has permitted.</sci:help>
+						<sci:validscript>/* Server Processes must have the same number of comma separated entries as the Server parameter and must have a value*/
+#processes := parameter();
+expand(&apos;,&apos;, #processes);
+#servers := parameter(&apos;Parallel Processing Options Server&apos;);
+expand(&apos;,&apos;, #servers);
+
+if (numvalues(#processes) == 0) then
+	SetInvalidDetails(&apos;This parameter is required.&apos;);
+else
+	SetInvalidDetails(&apos;The number of server processes (&apos; . numvalues(#processes) . &apos;) must equal the number of servers (&apos; . numvalues(#servers) . &apos;).&apos;);
+end if;
+numvalues(#processes) &gt; 0 and numvalues(#processes) == numvalues(#servers);</sci:validscript>
+						<sci:enabledscript>SetDisabledDetails(&quot;This parameter is only applicable if &apos;Parallel Processing Options&apos; is &apos;True&apos;&quot;);
+Parameter(&apos;Parallel Processing Options&apos;);</sci:enabledscript>
+					</sci:arg>
+					<sci:arg name="Parallel Processing Options Server Run On Grid" type="BoolType" required="false" visibility="visible" multi="false" uimpl="true">
+						<sci:help>Run subprotocol on grid engine if available.</sci:help>
+						<sci:member>Parallel Processing Options Server Run On Grid Queue Name</sci:member>
+						<sci:member>Parallel Processing Options Server Run On Grid Grid Options</sci:member>
+						<sci:enabledscript>parameter(&apos;Parallel Processing Options&apos;);</sci:enabledscript>
+						<sci:legalval selected="true">True</sci:legalval>
+						<sci:legalval>False</sci:legalval>
+					</sci:arg>
+					<sci:arg name="Parallel Processing Options Server Run On Grid Queue Name" type="StringType" required="false" visibility="visible" multi="false" legalvalsenforced="false" uimpl="true">
+						<sci:help>Select the queue name on the grid to submit jobs to. Leave blank to use default queue name.</sci:help>
+						<sci:enabledscript>parameter(&apos;Parallel Processing Options Server Run On Grid&apos;);</sci:enabledscript>
+					</sci:arg>
+					<sci:arg name="Parallel Processing Options Server Run On Grid Grid Options" type="StringType" required="false" visibility="visible" multi="false" uimpl="true">
+						<sci:help>Use this to specify grid engine specific command line parameters to the job submission command. Leave blank to use defaults.</sci:help>
+						<sci:enabledscript>parameter(&apos;Parallel Processing Options Server Run On Grid&apos;);</sci:enabledscript>
+					</sci:arg>
+					<sci:arg name="Parallel Processing Options Preserve Order" type="BoolType" required="false" visibility="visible" multi="false" uimpl="true">
+						<sci:help>Whether to preserve the order of the data as it enters and leaves the remote subprotocol.</sci:help>
+						<sci:enabledscript>SetDisabledDetails(&quot;This parameter is only applicable if &apos;Parallel Processing Options&apos; is &apos;True&apos;&quot;);
+Parameter(&apos;Parallel Processing Options&apos;);</sci:enabledscript>
+						<sci:legalval selected="true">True</sci:legalval>
+						<sci:legalval>False</sci:legalval>
+					</sci:arg>
+					<sci:arg name="ComponentAttributes" type="StringType" required="false" visibility="hidden" multi="true">
+						<sci:help>Component Attributes</sci:help>
+						<sci:legalval selected="true">ComponentTakesInput</sci:legalval>
+						<sci:legalval selected="true">ComponentReturnsPass</sci:legalval>
+						<sci:legalval selected="true">ComponentReturnsFail</sci:legalval>
+						<sci:legalval>ComponentRunsLocal</sci:legalval>
+					</sci:arg>
+					<sci:arg name="OnDataTypeError" type="StringType" required="true" visibility="hidden" multi="false">
+						<sci:legalval selected="true">Halt</sci:legalval>
+						<sci:legalval>Fail</sci:legalval>
+						<sci:legalval>Pass</sci:legalval>
+					</sci:arg>
+					<sci:arg name="OnGeneralError" type="StringType" required="true" visibility="hidden" multi="false">
+						<sci:legalval selected="true">Halt</sci:legalval>
+						<sci:legalval>Fail</sci:legalval>
+						<sci:legalval>Pass</sci:legalval>
+					</sci:arg>
+					<sci:arg name="CustomErrorText" type="StringType" required="false" visibility="nevershow" multi="false"/>
+					<sci:arg name="Active Source" type="PromotedGroupMemberType" required="false" visibility="nevershow" multi="false" expanded="true" uimpl="false">
+						<sci:metaproplist>
+							<sci:propval name="SCI_PromotionRenameRule">UsingParent</sci:propval>
+							<sci:mpropval name="SCI_PromotedFrom" type="StringType">
+								<sci:value>Active Source</sci:value>
+							</sci:mpropval>
+						</sci:metaproplist>
+						<sci:help>The source of actives:
+&lt;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;b&gt;From Tag:&lt;/b&gt; Actives are molecules in the input stream that pass the test specified by the &lt;i&gt;Test for Active&lt;/i&gt;  parameter. Actives must occur in the input stream before targets.&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;From File:&lt;/b&gt; Actives are read from the list of files specified by the &lt;i&gt;Source&lt;/i&gt; parameter.&lt;/li&gt;
+&lt;/ul&gt;</sci:help>
+						<sci:member>Active Source Source</sci:member>
+						<sci:member>Active Source Test for Active</sci:member>
+						<sci:value>Active Source</sci:value>
+					</sci:arg>
+					<sci:arg name="Active Source Source" type="PromotedGroupMemberType" required="true" visibility="nevershow" multi="false" expanded="true" legalvalsenforced="false" uimpl="false">
+						<sci:metaproplist>
+							<sci:mpropval name="SCI_PromotedFrom" type="StringType">
+								<sci:value>Active Source Source</sci:value>
+							</sci:mpropval>
+						</sci:metaproplist>
+						<sci:help>The file specifying the substructure(s) to search for.</sci:help>
+						<sci:value>Active Source Source</sci:value>
+					</sci:arg>
+					<sci:arg name="Active Source Test for Active" type="PromotedGroupMemberType" required="true" visibility="nevershow" multi="false" legalvalsenforced="false">
+						<sci:metaproplist>
+							<sci:propval name="SCI_PromotionRenameRule">UsingParent</sci:propval>
+							<sci:mpropval name="SCI_PromotedFrom" type="StringType">
+								<sci:value>Active Source Test for Active</sci:value>
+							</sci:mpropval>
+						</sci:metaproplist>
+						<sci:help>The PilotScript expression used to identify active records.</sci:help>
+						<sci:value>Active Source Test for Active</sci:value>
+					</sci:arg>
+					<sci:arg name="Decoy Source" type="PromotedGroupMemberType" required="false" visibility="nevershow" multi="false" expanded="true" uimpl="false">
+						<sci:metaproplist>
+							<sci:propval name="SCI_PromotionRenameRule">UsingParent</sci:propval>
+							<sci:mpropval name="SCI_PromotedFrom" type="StringType">
+								<sci:value>Decoy Source</sci:value>
+							</sci:mpropval>
+						</sci:metaproplist>
+						<sci:help>The source of actives:
+&lt;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;b&gt;From Tag:&lt;/b&gt; Actives are molecules in the input stream that pass the test specified by the &lt;i&gt;Test for Active&lt;/i&gt;  parameter. Actives must occur in the input stream before targets.&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;From File:&lt;/b&gt; Actives are read from the list of files specified by the &lt;i&gt;Source&lt;/i&gt; parameter.&lt;/li&gt;
+&lt;/ul&gt;</sci:help>
+						<sci:member>Decoy Source Source</sci:member>
+						<sci:member>Decoy Source Test for Decoy</sci:member>
+						<sci:value>Decoy Source</sci:value>
+					</sci:arg>
+					<sci:arg name="Decoy Source Source" type="PromotedGroupMemberType" required="true" visibility="nevershow" multi="false" expanded="true" legalvalsenforced="false" uimpl="false">
+						<sci:metaproplist>
+							<sci:mpropval name="SCI_PromotedFrom" type="StringType">
+								<sci:value>Decoy Source Source</sci:value>
+							</sci:mpropval>
+						</sci:metaproplist>
+						<sci:help>The file specifying the substructure(s) to search for.</sci:help>
+						<sci:value>Decoy Source Source</sci:value>
+					</sci:arg>
+					<sci:arg name="Decoy Source Test for Decoy" type="PromotedGroupMemberType" required="true" visibility="nevershow" multi="false" legalvalsenforced="false" uimpl="false">
+						<sci:metaproplist>
+							<sci:propval name="SCI_PromotionRenameRule">UsingParent</sci:propval>
+							<sci:mpropval name="SCI_PromotedFrom" type="StringType">
+								<sci:value>Decoy Source Test for Decoy</sci:value>
+							</sci:mpropval>
+						</sci:metaproplist>
+						<sci:help>The PilotScript expression used to identify decoy records.</sci:help>
+						<sci:value>Decoy Source Test for Decoy</sci:value>
+					</sci:arg>
+					<sci:arg name="Number of Threads" type="PromotedGroupMemberType" required="true" visibility="nevershow" multi="false">
+						<sci:metaproplist>
+							<sci:mpropval name="SCI_PromotedFrom" type="StringType">
+								<sci:value>Number of Threads</sci:value>
+							</sci:mpropval>
+						</sci:metaproplist>
+						<sci:help>Number of threads. The default is 1.</sci:help>
+						<sci:value>Number of Threads</sci:value>
+					</sci:arg>
+					<sci:arg name="Max Number of Conformers" type="PromotedGroupMemberType" required="true" visibility="nevershow" multi="false">
+						<sci:metaproplist>
+							<sci:mpropval name="SCI_PromotedFrom" type="StringType">
+								<sci:value>Max Number of Conformers</sci:value>
+							</sci:mpropval>
+						</sci:metaproplist>
+						<sci:help>Maximum number of conformers. The default is 200.</sci:help>
+						<sci:value>Max Number of Conformers</sci:value>
+					</sci:arg>
+					<sci:arg name="ComponentDisplayName" type="StringType" required="false" visibility="nevershow" multi="false">
+						<sci:value>Perform Virtual Screening Validation</sci:value>
+					</sci:arg>
+					<sci:arg name="ProtocolAutoLayout" type="BoolType" required="false" visibility="nevershow" multi="false">
+						<sci:help>Protocol AutoLayout</sci:help>
+						<sci:value>1</sci:value>
+					</sci:arg>
+					<sci:arg name="ComponentDisabled" type="LongType" required="false" visibility="nevershow" multi="false">
+						<sci:value>0</sci:value>
+					</sci:arg>
+					<sci:arg name="ComponentIcon" type="StringType" required="true" visibility="nevershow" multi="false">
+						<sci:value>ComponentNode</sci:value>
+					</sci:arg>
+					<sci:arg name="ComponentRevision" type="LongType" required="true" visibility="nevershow" multi="false">
+						<sci:help>Component Revision</sci:help>
+						<sci:value>790</sci:value>
+					</sci:arg>
+					<sci:arg name="ComponentGUID" type="StringType" required="false" visibility="nevershow" multi="false">
+						<sci:value>{564281DA-81F7-4EDE-B610-6681A43A2845}</sci:value>
+					</sci:arg>
+					<sci:arg name="ComponentPoint" type="StringType" required="false" visibility="nevershow" multi="false">
+						<sci:value>90 -95</sci:value>
+					</sci:arg>
+					<sci:arg name="ByReference" type="BoolType" required="false" visibility="nevershow" multi="false">
+						<sci:help>By Ref</sci:help>
+						<sci:value>1</sci:value>
+					</sci:arg>
+					<sci:arg name="ComponentHelp" type="StringType" required="false" visibility="nevershow" multi="true">
+						<sci:value>100</sci:value>
+						<sci:value>Perform Virtual Screening Validation</sci:value>
+						<sci:value>&lt;p&gt;This component takes a stream of query records, and compares these to known actives and known decoys, before assessing the selectivity of the screen by producing a stream of the actives and decoys with scores. The scores are sorted from lowest to highest - lowest being the best - and the occurrence of genuine actives vs. decoys are tagged to help identify them. As with the &lt;a href=&quot;javascript:DoLink(&apos;{F4B50AC5-CA25-41B8-AB85-F60E9727AC32}&apos;)&quot;&gt;Perform Virtual Screening&lt;/a&gt; component, this component can work with actives and decoys in files specified in the appropriate source parameter, or can identify the actives and/or decoys in-line.&lt;/p&gt;
+&lt;p&gt;The data produced has two new properties; one for the active tag (a value of 1 in this property implies the record related to the active set) and another for the virtual screening score. Therefore, the Output Options group has parameters to control the naming of these properties; &lt;em&gt;Active Tag&lt;/em&gt; and &lt;em&gt;Screening Score Property&lt;/em&gt; respectively.&lt;/p&gt;</sci:value>
+						<sci:value>Generic</sci:value>
+						<sci:value/>
+						<sci:value>Generic</sci:value>
+						<sci:value>Records passing out of any unconnected pass ports of components inside the subprotocol</sci:value>
+						<sci:value>Generic</sci:value>
+						<sci:value>Records passing out of any unconnected fail ports of components inside the subprotocol</sci:value>
+					</sci:arg>
+					<sci:arg name="RegistrationVersion" type="StringType" required="false" visibility="nevershow" multi="false">
+						<sci:help>The server version when this component was registered</sci:help>
+						<sci:value>9.1.0.13</sci:value>
+					</sci:arg>
+					<sci:arg name="Component Sticky Notes" type="StringType" required="false" visibility="nevershow" multi="false"/>
+					<sci:arg name="Protocol Sticky Notes" type="StringType" required="false" visibility="nevershow" multi="false">
+						<sci:help>Protocol Sticky Notes</sci:help>
+					</sci:arg>
+					<sci:arg name="ProtocolScale2" type="LongType" required="false" visibility="nevershow" multi="false">
+						<sci:help>Protocol Scale</sci:help>
+						<sci:value>100</sci:value>
+					</sci:arg>
+					<sci:arg name="Protocol Options" type="StringType" required="false" visibility="nevershow" multi="false">
+						<sci:help>Protocol Options</sci:help>
+						<sci:legalval>Owner Access Only</sci:legalval>
+					</sci:arg>
+					<sci:arg name="Registrant" type="StringType" required="false" visibility="nevershow" multi="false">
+						<sci:help>The user who registered this component.</sci:help>
+						<sci:value>ccdc/csd</sci:value>
+					</sci:arg>
+					<sci:arg name="RegistrationDate" type="StringType" required="false" visibility="nevershow" multi="false">
+						<sci:help>The date this component was registered.</sci:help>
+						<sci:value>Fri Sep 23 16:24:41 2016</sci:value>
+					</sci:arg>
+					<sci:arg name="ComponentLocalID" type="LongType" required="false" visibility="nevershow" multi="false">
+						<sci:help>Local Component Identifier</sci:help>
+						<sci:value>21</sci:value>
+					</sci:arg>
+					<sci:arg name="SubProtocolMadeLinkIntoCopy" type="BoolType" required="false" visibility="nevershow" multi="false">
+						<sci:help>Subprotocol Made Link Into Copy</sci:help>
+						<sci:value>0</sci:value>
+					</sci:arg>
+					<sci:arg name="Component Path" type="StringType" required="false" visibility="nevershow" multi="false">
+						<sci:value>Components\CSD\Virtual Screening\Perform Virtual Screening Validation</sci:value>
+					</sci:arg>
+				</sci:component>
+				<sci:protocol/>
+			</sci:data>
+			<sci:data object="SciTegic.Protocol.1">
+				<sci:component name="ROC Plot Viewer" version="2">
+					<sci:arg name="ScoreProperty" type="LinkSingleParentParameterType" required="true" visibility="visible" multi="false">
+						<sci:metaproplist>
+							<sci:propval name="SCI_InitializeUsingOrigType" ishidden="true">StringType</sci:propval>
+						</sci:metaproplist>
+						<sci:help>ScoreProperty</sci:help>
+						<sci:value>Screening Score Property</sci:value>
+					</sci:arg>
+					<sci:arg name="TestForGood" type="ExpressionType" required="false" visibility="visible" multi="false">
+						<sci:help>TestForGood</sci:help>
+						<sci:value>_Is_Active == 1</sci:value>
+					</sci:arg>
+					<sci:arg name="Options" type="LinkSingleParentParameterType" required="false" visibility="visible" multi="true">
+						<sci:metaproplist>
+							<sci:propval name="SCI_InitializeUsingOrigType" ishidden="true">StringType</sci:propval>
+						</sci:metaproplist>
+						<sci:help>Settings controlling the viewer&apos;s behavior. Options are:
+&lt;ul&gt;
+&lt;li&gt;Show Plot in Browser: Launch a separate browser window displaying the plot.
+&lt;li&gt;Output Reporting Element: Send a Pipeline Pilot Reporting element out the Pass port. This allows the plot to be embedded in a report.
+&lt;/ul&gt;</sci:help>
+						<sci:value>Options</sci:value>
+					</sci:arg>
+					<sci:arg name="DeclareLocal" type="StringType" required="false" visibility="visible" multi="false" expanded="true" uimpl="true">
+						<sci:value>ReversedScore,TitleSuffix,Acc,Accuracy</sci:value>
+					</sci:arg>
+					<sci:arg name="ComponentAttributes" type="StringType" required="false" visibility="hidden" multi="true">
+						<sci:help>Component Attributes</sci:help>
+						<sci:legalval selected="true">ComponentTakesInput</sci:legalval>
+						<sci:legalval selected="true">ComponentReturnsPass</sci:legalval>
+						<sci:legalval>ComponentReturnsFail</sci:legalval>
+						<sci:legalval>ComponentRunsLocal</sci:legalval>
+					</sci:arg>
+					<sci:arg name="OnDataTypeError" type="StringType" required="true" visibility="hidden" multi="false">
+						<sci:legalval selected="true">Halt</sci:legalval>
+						<sci:legalval>Fail</sci:legalval>
+						<sci:legalval>Pass</sci:legalval>
+					</sci:arg>
+					<sci:arg name="OnGeneralError" type="StringType" required="true" visibility="hidden" multi="false">
+						<sci:legalval selected="true">Halt</sci:legalval>
+						<sci:legalval>Fail</sci:legalval>
+						<sci:legalval>Pass</sci:legalval>
+					</sci:arg>
+					<sci:arg name="CustomErrorText" type="StringType" required="false" visibility="nevershow" multi="false"/>
+					<sci:arg name="Registrant" type="StringType" required="false" visibility="nevershow" multi="false">
+						<sci:help>The user who registered this component.</sci:help>
+						<sci:value>scitegic/modeling</sci:value>
+					</sci:arg>
+					<sci:arg name="RegistrationDate" type="StringType" required="false" visibility="nevershow" multi="false">
+						<sci:help>The date this component was registered.</sci:help>
+						<sci:value>Tue Dec 07 14:18:30 2010</sci:value>
+					</sci:arg>
+					<sci:arg name="ComponentDisplayName" type="StringType" required="false" visibility="nevershow" multi="false">
+						<sci:value>ROC Plot Viewer</sci:value>
+					</sci:arg>
+					<sci:arg name="ProtocolAutoLayout" type="BoolType" required="false" visibility="nevershow" multi="false">
+						<sci:help>Protocol AutoLayout</sci:help>
+						<sci:value>true</sci:value>
+					</sci:arg>
+					<sci:arg name="ComponentDisabled" type="LongType" required="false" visibility="nevershow" multi="false">
+						<sci:value>0</sci:value>
+					</sci:arg>
+					<sci:arg name="ComponentIcon" type="StringType" required="true" visibility="nevershow" multi="false">
+						<sci:value>VIEWERNODE</sci:value>
+					</sci:arg>
+					<sci:arg name="ComponentRevision" type="LongType" required="true" visibility="nevershow" multi="false">
+						<sci:help>Component Revision</sci:help>
+						<sci:value>100</sci:value>
+					</sci:arg>
+					<sci:arg name="DerivedFrom" type="StringType" required="false" visibility="nevershow" multi="false">
+						<sci:help>The component this component is based upon.</sci:help>
+						<sci:value>SubProtocol</sci:value>
+					</sci:arg>
+					<sci:arg name="ComponentGUID" type="StringType" required="false" visibility="nevershow" multi="false">
+						<sci:value>{2E590EF8-6E3A-4554-A131-8D3AD568DFDA}</sci:value>
+					</sci:arg>
+					<sci:arg name="ComponentPoint" type="StringType" required="false" visibility="nevershow" multi="false">
+						<sci:value>378 -95</sci:value>
+					</sci:arg>
+					<sci:arg name="ByReference" type="BoolType" required="false" visibility="nevershow" multi="false">
+						<sci:help>By Ref</sci:help>
+						<sci:value>1</sci:value>
+					</sci:arg>
+					<sci:arg name="ComponentHelp" type="StringType" required="false" visibility="nevershow" multi="true">
+						<sci:value>100</sci:value>
+						<sci:value>Generates a Receiver Operating Characteristic (ROC) plot and displays it in an HTML page</sci:value>
+						<sci:value>A ROC plot can help you understand the tradeoff between model sensitivity (the model&apos;s ability to identify true positives) and model specificity (its ability to avoid false positives) in a learned model. To create a ROC plot, you provide a &lt;i&gt;ScoreProperty&lt;/i&gt; which is used to rank samples according to their predicted likelihood of being &quot;good&quot; or &quot;bad&quot;.  The &lt;i&gt;TestForGood&lt;/i&gt; is the expression used to distinguish actual good from bad samples.  
+&lt;p&gt;
+Also reported in the plot title is the ROC score -- the area under the curve of the ROC plot. The score as reported by this component is a number between 0.5 and 1.0. The closer the ROC score is to 1.0, the better the model is at distinguishing good from bad samples.&lt;/p&gt;
+&lt;p&gt;
+&lt;b&gt;Notes:&lt;/b&gt;
+&lt;ul&gt;
+&lt;li&gt;Each point on a ROC plot corresponds to a different cutoff value for the &lt;i&gt;ScoreProperty&lt;/i&gt;.  All samples above the cutoff are considered good; all those below the cutoff are considered bad.  The X value of the point on the ROC curve is the proportion of false positives for the given cutoff (i.e., the proportion of bad samples classified as good).  The Y value is the proportion of true positives (i.e., the proportion of good samples classified as good).  The complete ROC curve is generated by considering all possible values of the cutoff.
+&lt;li&gt;Internally, the ROC score is first computed assuming that greater values of the score property correspond to increased likelihood of a sample being good.  In some models, greater values instead correspond to increased likelihood of being bad.  This is assumed to be the case if the first internally computed ROC score is less than 0.5.  If so, the ordering of the samples based on the score property is reversed, and the ROC plot is created according to this ordering.  If this reverse ordering is done, the text &quot;[ranking reversed]&quot; appears at the end of the plot title.
+&lt;/ul&gt;
+
+&lt;b&gt;See Also:&lt;/b&gt;
+&lt;ul&gt;
+&lt;li&gt;To compute a ROC score without displaying the ROC plot, use &lt;a href=&quot;javascript:DoLink(&apos;{766152E4-98EB-4754-9990-EDEEA7E5F779}&apos;)&quot;&gt;Generate ROC Score&lt;/a&gt;.
+&lt;li&gt;Enrichment plots and enrichment scores give another measure of model quality.  See the &lt;a href=&quot;javascript:DoLink(&apos;{6F75B0E4-F5FF-4490-88CC-F53D2E3316E9}&apos;)&quot;&gt;Enrichment Plot Viewer&lt;/a&gt; in the Data Modeling collection.
+&lt;li&gt;To display ROC plots and compare ROC scores between multiple models, use the &lt;a href=&quot;javascript:DoLink(&apos;{27910028-CF29-49E9-B23C-EF951C8B184A}&apos;)&quot;&gt;Classification Model Evaluation Viewer&lt;/a&gt;.
+&lt;/ul&gt;
+
+</sci:value>
+						<sci:value>Generic</sci:value>
+						<sci:value/>
+						<sci:value>Generic</sci:value>
+						<sci:value>A reporting element containing the plot if the &quot;Output Reporting Element&quot; option is selected</sci:value>
+						<sci:value>None</sci:value>
+						<sci:value>Records passing out of any unconnected fail ports of components inside the subprotocol</sci:value>
+					</sci:arg>
+					<sci:arg name="RegistrationVersion" type="StringType" required="false" visibility="nevershow" multi="false">
+						<sci:help>The server version when this component was registered</sci:help>
+						<sci:value>7.0.1.0</sci:value>
+					</sci:arg>
+					<sci:arg name="Component Sticky Notes" type="StringType" required="false" visibility="nevershow" multi="false"/>
+					<sci:arg name="Protocol Sticky Notes" type="StringType" required="false" visibility="nevershow" multi="false">
+						<sci:help>Protocol Sticky Notes</sci:help>
+					</sci:arg>
+					<sci:arg name="ProtocolScale2" type="LongType" required="false" visibility="nevershow" multi="false">
+						<sci:help>Protocol Scale</sci:help>
+						<sci:value>100</sci:value>
+					</sci:arg>
+					<sci:arg name="Protocol Options" type="StringType" required="false" visibility="nevershow" multi="true">
+						<sci:help>Protocol Options</sci:help>
+						<sci:legalval>Owner Access Only</sci:legalval>
+					</sci:arg>
+					<sci:arg name="ComponentLocalID" type="LongType" required="false" visibility="nevershow" multi="false">
+						<sci:help>Local Component Identifier</sci:help>
+						<sci:value>19</sci:value>
+					</sci:arg>
+					<sci:arg name="SubProtocolMadeLinkIntoCopy" type="BoolType" required="false" visibility="nevershow" multi="false">
+						<sci:help>Subprotocol Made Link Into Copy</sci:help>
+						<sci:value>0</sci:value>
+					</sci:arg>
+					<sci:arg name="Component Path" type="StringType" required="false" visibility="nevershow" multi="false">
+						<sci:value>Components\Analysis and Statistics\Data Modeling\Viewers\ROC Plot Viewer</sci:value>
+					</sci:arg>
+				</sci:component>
+				<sci:protocol/>
+			</sci:data>
+			<sci:connectid from="21" to="19" type="true"/>
+			<sci:version iVal="1"/>
+		</sci:protocol>
+	</sci:dbitem>
+</sci:data>

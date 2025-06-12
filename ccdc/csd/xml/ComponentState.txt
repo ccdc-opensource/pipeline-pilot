@@ -1,0 +1,1342 @@
+﻿2
+01 Queries Identified by File Screening Example
+	Tempfiles	StringType	2	0	1		0	
+	Protocol Form	ProtocolType	2	0	1		0	
+	Advanced Options	GroupType	2	1	__PoolID	1	1		0	
+	__PoolID	StringType	2	0	1		0	
+	Reporting	GroupType	2	1	Reporting Stylesheet	1	1		0	
+	Reporting Stylesheet	StylesheetType	2	0	1	{44C6ECA7-D7C8-4BD8-A0C6-450FF605F58B}	0	
+	Run On Grid	BoolType	2	2	Queue Name	Grid Options	0	1	False	2	True	False	
+	Queue Name	StringType	2	0	1		0	
+	Grid Options	StringType	2	0	1		0	
+	ComponentAttributes	StringType	14	0	0	4	ComponentTakesInput	ComponentReturnsPass	ComponentReturnsFail	ComponentRunsLocal	
+	OnDataTypeError	StringType	11	0	1	Halt	3	Halt	Fail	Pass	
+	OnGeneralError	StringType	11	0	1	Halt	3	Halt	Fail	Pass	
+	WebExports	StringType	8	0	1		0	
+	Keep Alive	BoolType	8	0	1	True	2	True	False	
+	ComponentDisplayName	StringType	8	0	1	Actives Identified by File Screening Example	0	
+	ComponentGUID	StringType	8	0	1	{9F3F5A02-3ED8-480A-AA6E-8F9A7E235884}	0	
+	Protocol Options	StringType	8	0	0	1	Owner Access Only	
+	ComponentDisabled	LongType	8	0	1	0	0	
+*****
+01 Run Python Script Example
+	Tempfiles	StringType	2	0	1		0	
+	Protocol Form	ProtocolType	2	0	1		0	
+	Advanced Options	GroupType	2	1	__PoolID	1	1		0	
+	__PoolID	StringType	2	0	1		0	
+	Run On Grid	BoolType	2	2	Queue Name	Grid Options	0	1	False	2	True	False	
+	Queue Name	StringType	2	0	1		0	
+	Grid Options	StringType	2	0	1		0	
+	ComponentAttributes	StringType	14	0	0	4	ComponentTakesInput	ComponentReturnsPass	ComponentReturnsFail	ComponentRunsLocal	
+	Reporting	GroupType	2	1	Reporting Stylesheet	1	1		0	
+	Reporting Stylesheet	StylesheetType	2	0	1	{44C6ECA7-D7C8-4BD8-A0C6-450FF605F58B}	0	
+	OnDataTypeError	StringType	11	0	1	Halt	3	Halt	Fail	Pass	
+	OnGeneralError	StringType	11	0	1	Halt	3	Halt	Fail	Pass	
+	WebExports	StringType	8	0	1		0	
+	Keep Alive	BoolType	8	0	1	True	2	True	False	
+	ComponentDisplayName	StringType	8	0	1	01 Run Python Script Example	0	
+	ComponentGUID	StringType	8	0	1	{397ABD1C-B242-46FA-B076-4D58DCD6921C}	0	
+	Protocol Options	StringType	8	0	0	1	Owner Access Only	
+	ComponentDisabled	LongType	8	0	1	0	0	
+*****
+01 Search CSD By Structures
+	Tempfiles	StringType	2	0	1		0	
+	Protocol Form	ProtocolType	2	0	1		0	
+	Advanced Options	GroupType	2	1	__PoolID	1	1		0	
+	__PoolID	StringType	2	0	1		0	
+	Reporting	GroupType	2	1	Reporting Stylesheet	1	1		0	
+	Reporting Stylesheet	StylesheetType	2	0	1	{44C6ECA7-D7C8-4BD8-A0C6-450FF605F58B}	0	
+	Run On Grid	BoolType	2	2	Queue Name	Grid Options	0	1	False	2	True	False	
+	Queue Name	StringType	2	0	1		0	
+	Grid Options	StringType	2	0	1		0	
+	ComponentAttributes	StringType	14	0	0	4	ComponentTakesInput	ComponentReturnsPass	ComponentReturnsFail	ComponentRunsLocal	
+	OnDataTypeError	StringType	11	0	1	Halt	3	Halt	Fail	Pass	
+	OnGeneralError	StringType	11	0	1	Halt	3	Halt	Fail	Pass	
+	WebExports	StringType	8	0	1		0	
+	Keep Alive	BoolType	8	0	1	True	2	True	False	
+	ComponentDisplayName	StringType	8	0	1	01 Search CSD By Structures	0	
+	ComponentGUID	StringType	8	0	1	{16C9C222-2840-4CFB-BE4F-6B135A8EBCF7}	0	
+	Protocol Options	StringType	8	0	0	1	Owner Access Only	
+	ComponentDisabled	LongType	8	0	1	0	0	
+*****
+02 Queries Identified by Tag Screening Example
+	Tempfiles	StringType	2	0	1		0	
+	Protocol Form	ProtocolType	2	0	1		0	
+	Advanced Options	GroupType	2	1	__PoolID	1	1		0	
+	__PoolID	StringType	2	0	1		0	
+	Reporting	GroupType	2	2	Reporting Stylesheet	Reporting Chart Display Type	1	1		0	
+	Reporting Stylesheet	StylesheetType	2	0	1	{44C6ECA7-D7C8-4BD8-A0C6-450FF605F58B}	0	
+	Reporting Chart Display Type	StringType	2	0	1	Default	3	Default	Interactive	Image	
+	Run On Grid	BoolType	2	2	Queue Name	Grid Options	0	1	False	2	True	False	
+	Queue Name	StringType	2	0	1		0	
+	Grid Options	StringType	2	0	1		0	
+	ComponentAttributes	StringType	14	0	0	4	ComponentTakesInput	ComponentReturnsPass	ComponentReturnsFail	ComponentRunsLocal	
+	OnDataTypeError	StringType	11	0	1	Halt	3	Halt	Fail	Pass	
+	OnGeneralError	StringType	11	0	1	Halt	3	Halt	Fail	Pass	
+	WebExports	StringType	8	0	1		0	
+	Keep Alive	BoolType	8	0	1	True	2	True	False	
+	ComponentDisplayName	StringType	8	0	1	R007 Perfom Validation By Tag	0	
+	ComponentGUID	StringType	8	0	1	{C43697BB-A940-442A-A7CF-A2DCD52F856D}	0	
+	Protocol Options	StringType	8	0	0	1	Owner Access Only	
+	ComponentDisabled	LongType	8	0	1	0	0	
+*****
+02 Search CSD By Text Numeric Fields
+	Tempfiles	StringType	2	0	1		0	
+	Protocol Form	ProtocolType	2	0	1		0	
+	Advanced Options	GroupType	2	1	__PoolID	1	1		0	
+	__PoolID	StringType	2	0	1		0	
+	Reporting	GroupType	2	1	Reporting Stylesheet	1	1		0	
+	Reporting Stylesheet	StylesheetType	2	0	1	{44C6ECA7-D7C8-4BD8-A0C6-450FF605F58B}	0	
+	Run On Grid	BoolType	2	2	Queue Name	Grid Options	0	1	False	2	True	False	
+	Queue Name	StringType	2	0	1		0	
+	Grid Options	StringType	2	0	1		0	
+	ComponentAttributes	StringType	14	0	0	4	ComponentTakesInput	ComponentReturnsPass	ComponentReturnsFail	ComponentRunsLocal	
+	OnDataTypeError	StringType	11	0	1	Halt	3	Halt	Fail	Pass	
+	OnGeneralError	StringType	11	0	1	Halt	3	Halt	Fail	Pass	
+	WebExports	StringType	8	0	1		0	
+	Keep Alive	BoolType	8	0	1	True	2	True	False	
+	ComponentDisplayName	StringType	8	0	1	02 Search CSD By Text Numeric Fields	0	
+	ComponentGUID	StringType	8	0	1	{D16BA311-4F99-4EC6-87D0-D21AC6D52454}	0	
+	Protocol Options	StringType	8	0	0	1	Owner Access Only	
+	ComponentDisabled	LongType	8	0	1	0	0	
+*****
+02 Using Derive Script Path
+	Tempfiles	StringType	2	0	1		0	
+	Protocol Form	ProtocolType	2	0	1		0	
+	Advanced Options	GroupType	2	1	__PoolID	1	1		0	
+	__PoolID	StringType	2	0	1		0	
+	Run On Grid	BoolType	2	2	Queue Name	Grid Options	0	1	False	2	True	False	
+	Queue Name	StringType	2	0	1		0	
+	Grid Options	StringType	2	0	1		0	
+	ComponentAttributes	StringType	14	0	0	4	ComponentTakesInput	ComponentReturnsPass	ComponentReturnsFail	ComponentRunsLocal	
+	Reporting	GroupType	2	1	Reporting Stylesheet	1	1		0	
+	Reporting Stylesheet	StylesheetType	2	0	1	{44C6ECA7-D7C8-4BD8-A0C6-450FF605F58B}	0	
+	OnDataTypeError	StringType	11	0	1	Halt	3	Halt	Fail	Pass	
+	OnGeneralError	StringType	11	0	1	Halt	3	Halt	Fail	Pass	
+	WebExports	StringType	8	0	1		0	
+	Keep Alive	BoolType	8	0	1	True	2	True	False	
+	ComponentDisplayName	StringType	8	0	1	02 Using Derive Script Path	0	
+	ComponentGUID	StringType	8	0	1	{7B6EBFB2-8D55-4A5D-9534-FC2A3D1CCE2B}	0	
+	Protocol Options	StringType	8	0	0	1	Owner Access Only	
+	ComponentDisabled	LongType	8	0	1	0	0	
+*****
+03 Get CSD Python API version
+	Tempfiles	StringType	2	0	1		0	
+	Protocol Form	ProtocolType	2	0	1		0	
+	Advanced Options	GroupType	2	3	__PoolID	Http Cookie Handling	__NotificationProtocol	1	1		0	
+	__PoolID	StringType	2	0	1		0	
+	Http Cookie Handling	StringType	2	0	1	Protocol Scoped	2	Protocol Scoped	Disabled	
+	__NotificationProtocol	StringType	2	0	1		0	
+	Reporting	GroupType	2	1	Reporting Stylesheet	1	1		0	
+	Reporting Stylesheet	StylesheetType	2	0	1	{44C6ECA7-D7C8-4BD8-A0C6-450FF605F58B}	0	
+	Run On Grid	BoolType	2	2	Queue Name	Grid Options	0	1	False	2	True	False	
+	Queue Name	StringType	2	0	1		0	
+	Grid Options	StringType	2	0	1		0	
+	ComponentAttributes	StringType	14	0	0	4	ComponentTakesInput	ComponentReturnsPass	ComponentReturnsFail	ComponentRunsLocal	
+	OnDataTypeError	StringType	11	0	1	Halt	3	Halt	Fail	Pass	
+	OnGeneralError	StringType	11	0	1	Halt	3	Halt	Fail	Pass	
+	WebExports	StringType	8	0	1		0	
+	Keep Alive	BoolType	8	0	1	True	2	True	False	
+	ComponentDisplayName	StringType	8	0	1	03 Get CSD Python API version	0	
+	ComponentGUID	StringType	8	0	1	{D880C25B-4532-4BAF-AC7F-980281D9F96A}	0	
+	Protocol Options	StringType	8	0	0	1	Owner Access Only	
+	ComponentDisabled	LongType	8	0	1	0	0	
+*****
+03 Screen Validation Using Tagging
+	Tempfiles	StringType	2	0	1		0	
+	Protocol Form	ProtocolType	2	0	1		0	
+	Advanced Options	GroupType	2	1	__PoolID	1	1		0	
+	__PoolID	StringType	2	0	1		0	
+	Reporting	GroupType	2	2	Reporting Stylesheet	Reporting Chart Display Type	1	1		0	
+	Reporting Stylesheet	StylesheetType	2	0	1	{44C6ECA7-D7C8-4BD8-A0C6-450FF605F58B}	0	
+	Reporting Chart Display Type	StringType	2	0	1	Default	3	Default	Interactive	Image	
+	Run On Grid	BoolType	2	2	Queue Name	Grid Options	0	1	False	2	True	False	
+	Queue Name	StringType	2	0	1		0	
+	Grid Options	StringType	2	0	1		0	
+	ComponentAttributes	StringType	14	0	0	4	ComponentTakesInput	ComponentReturnsPass	ComponentReturnsFail	ComponentRunsLocal	
+	OnDataTypeError	StringType	11	0	1	Halt	3	Halt	Fail	Pass	
+	OnGeneralError	StringType	11	0	1	Halt	3	Halt	Fail	Pass	
+	WebExports	StringType	8	0	1		0	
+	Keep Alive	BoolType	8	0	1	True	2	True	False	
+	ComponentDisplayName	StringType	8	0	1	R007 Perfom Validation By Tag	0	
+	ComponentGUID	StringType	8	0	1	{EE052CA7-C649-4AD8-B971-FF5CB6C8A61B}	0	
+	Protocol Options	StringType	8	0	0	1	Owner Access Only	
+	ComponentDisabled	LongType	8	0	1	0	0	
+*****
+03 Search CSD By Reduced Cell
+	Tempfiles	StringType	2	0	1		0	
+	Protocol Form	ProtocolType	2	0	1		0	
+	Advanced Options	GroupType	2	1	__PoolID	1	1		0	
+	__PoolID	StringType	2	0	1		0	
+	Reporting	GroupType	2	1	Reporting Stylesheet	1	1		0	
+	Reporting Stylesheet	StylesheetType	2	0	1	{44C6ECA7-D7C8-4BD8-A0C6-450FF605F58B}	0	
+	Run On Grid	BoolType	2	2	Queue Name	Grid Options	0	1	False	2	True	False	
+	Queue Name	StringType	2	0	1		0	
+	Grid Options	StringType	2	0	1		0	
+	ComponentAttributes	StringType	14	0	0	4	ComponentTakesInput	ComponentReturnsPass	ComponentReturnsFail	ComponentRunsLocal	
+	OnDataTypeError	StringType	11	0	1	Halt	3	Halt	Fail	Pass	
+	OnGeneralError	StringType	11	0	1	Halt	3	Halt	Fail	Pass	
+	WebExports	StringType	8	0	1		0	
+	Keep Alive	BoolType	8	0	1	True	2	True	False	
+	ComponentDisplayName	StringType	8	0	1	03 Search CSD By Reduced Cell	0	
+	ComponentGUID	StringType	8	0	1	{5F108D19-EC2C-436C-AD36-9F254EA559C3}	0	
+	Protocol Options	StringType	8	0	0	1	Owner Access Only	
+	ComponentDisabled	LongType	8	0	1	0	0	
+*****
+04 Count Entries per Decade
+	Tempfiles	StringType	2	0	1		0	
+	Protocol Form	ProtocolType	2	0	1		0	
+	Advanced Options	GroupType	2	3	__PoolID	Http Cookie Handling	__NotificationProtocol	1	1		0	
+	__PoolID	StringType	2	0	1		0	
+	Http Cookie Handling	StringType	2	0	1	Protocol Scoped	2	Protocol Scoped	Disabled	
+	__NotificationProtocol	StringType	2	0	1		0	
+	Reporting	GroupType	2	2	Reporting Stylesheet	Reporting Chart Display Type	1	1		0	
+	Reporting Stylesheet	StylesheetType	2	0	1	{44C6ECA7-D7C8-4BD8-A0C6-450FF605F58B}	0	
+	Reporting Chart Display Type	StringType	2	0	1	Default	3	Default	Interactive	Image	
+	Run On Grid	BoolType	2	2	Queue Name	Grid Options	0	1	False	2	True	False	
+	Queue Name	StringType	2	0	1		0	
+	Grid Options	StringType	2	0	1		0	
+	ComponentAttributes	StringType	14	0	0	4	ComponentTakesInput	ComponentReturnsPass	ComponentReturnsFail	ComponentRunsLocal	
+	OnDataTypeError	StringType	11	0	1	Halt	3	Halt	Fail	Pass	
+	OnGeneralError	StringType	11	0	1	Halt	3	Halt	Fail	Pass	
+	WebExports	StringType	8	0	1		0	
+	Keep Alive	BoolType	8	0	1	True	2	True	False	
+	ComponentDisplayName	StringType	8	0	1	04 Count Entries per Decade	0	
+	ComponentGUID	StringType	8	0	1	{12FD3594-78D5-412C-8672-2433A14738FA}	0	
+	Protocol Options	StringType	8	0	0	1	Owner Access Only	
+	ComponentDisabled	LongType	8	0	1	0	0	
+*****
+04 Generate Enrichment Plot Example
+	Tempfiles	StringType	2	0	1		0	
+	Protocol Form	ProtocolType	2	0	1		0	
+	Advanced Options	GroupType	2	1	__PoolID	1	1		0	
+	__PoolID	StringType	2	0	1		0	
+	Reporting	GroupType	2	2	Reporting Stylesheet	Reporting Chart Display Type	1	1		0	
+	Reporting Stylesheet	StylesheetType	2	0	1	{44C6ECA7-D7C8-4BD8-A0C6-450FF605F58B}	0	
+	Reporting Chart Display Type	StringType	2	0	1	Default	3	Default	Interactive	Image	
+	Run On Grid	BoolType	2	2	Queue Name	Grid Options	0	1	False	2	True	False	
+	Queue Name	StringType	2	0	1		0	
+	Grid Options	StringType	2	0	1		0	
+	ComponentAttributes	StringType	14	0	0	4	ComponentTakesInput	ComponentReturnsPass	ComponentReturnsFail	ComponentRunsLocal	
+	OnDataTypeError	StringType	11	0	1	Halt	3	Halt	Fail	Pass	
+	OnGeneralError	StringType	11	0	1	Halt	3	Halt	Fail	Pass	
+	WebExports	StringType	8	0	1		0	
+	Keep Alive	BoolType	8	0	1	True	2	True	False	
+	ComponentDisplayName	StringType	8	0	1	R007 Perfom Validation By Tag	0	
+	ComponentGUID	StringType	8	0	1	{2C39D39A-C658-4AEA-8617-55198CED4363}	0	
+	Protocol Options	StringType	8	0	0	1	Owner Access Only	
+	ComponentDisabled	LongType	8	0	1	0	0	
+*****
+04 Retrieve Entry and Molecule Attributes for Refcodes
+	Tempfiles	StringType	2	0	1		0	
+	Protocol Form	ProtocolType	2	0	1		0	
+	Advanced Options	GroupType	2	1	__PoolID	1	1		0	
+	__PoolID	StringType	2	0	1		0	
+	Reporting	GroupType	2	1	Reporting Stylesheet	1	1		0	
+	Reporting Stylesheet	StylesheetType	2	0	1	{44C6ECA7-D7C8-4BD8-A0C6-450FF605F58B}	0	
+	Run On Grid	BoolType	2	2	Queue Name	Grid Options	0	1	False	2	True	False	
+	Queue Name	StringType	2	0	1		0	
+	Grid Options	StringType	2	0	1		0	
+	ComponentAttributes	StringType	14	0	0	4	ComponentTakesInput	ComponentReturnsPass	ComponentReturnsFail	ComponentRunsLocal	
+	OnDataTypeError	StringType	11	0	1	Halt	3	Halt	Fail	Pass	
+	OnGeneralError	StringType	11	0	1	Halt	3	Halt	Fail	Pass	
+	WebExports	StringType	8	0	1		0	
+	Keep Alive	BoolType	8	0	1	True	2	True	False	
+	ComponentDisplayName	StringType	8	0	1	04 Retrieve Entry and Molecule Attributes for Refcodes	0	
+	ComponentGUID	StringType	8	0	1	{594B6345-0E91-4FF0-82BB-3673460E28CB}	0	
+	Protocol Options	StringType	8	0	0	1	Owner Access Only	
+	ComponentDisabled	LongType	8	0	1	0	0	
+*****
+05 Combining Hit Sets - AND
+	Tempfiles	StringType	2	0	1		0	
+	Protocol Form	ProtocolType	2	0	1		0	
+	Advanced Options	GroupType	2	1	__PoolID	1	1		0	
+	__PoolID	StringType	2	0	1		0	
+	Reporting	GroupType	2	1	Reporting Stylesheet	1	1		0	
+	Reporting Stylesheet	StylesheetType	2	0	1	{44C6ECA7-D7C8-4BD8-A0C6-450FF605F58B}	0	
+	Run On Grid	BoolType	2	2	Queue Name	Grid Options	0	1	False	2	True	False	
+	Queue Name	StringType	2	0	1		0	
+	Grid Options	StringType	2	0	1		0	
+	ComponentAttributes	StringType	14	0	0	4	ComponentTakesInput	ComponentReturnsPass	ComponentReturnsFail	ComponentRunsLocal	
+	OnDataTypeError	StringType	11	0	1	Halt	3	Halt	Fail	Pass	
+	OnGeneralError	StringType	11	0	1	Halt	3	Halt	Fail	Pass	
+	WebExports	StringType	8	0	1		0	
+	Keep Alive	BoolType	8	0	1	True	2	True	False	
+	ComponentDisplayName	StringType	8	0	1	05 Combining Hit Sets - AND	0	
+	ComponentGUID	StringType	8	0	1	{5E1ED5CC-EC69-40F8-B9EB-5005F0B033F5}	0	
+	Protocol Options	StringType	8	0	0	1	Owner Access Only	
+	ComponentDisabled	LongType	8	0	1	0	0	
+*****
+05 Count Entries per Year
+	Tempfiles	StringType	2	0	1		0	
+	Protocol Form	ProtocolType	2	0	1		0	
+	Advanced Options	GroupType	2	3	__PoolID	Http Cookie Handling	__NotificationProtocol	1	1		0	
+	__PoolID	StringType	2	0	1		0	
+	Http Cookie Handling	StringType	2	0	1	Protocol Scoped	2	Protocol Scoped	Disabled	
+	__NotificationProtocol	StringType	2	0	1		0	
+	Reporting	GroupType	2	2	Reporting Stylesheet	Reporting Chart Display Type	1	1		0	
+	Reporting Stylesheet	StylesheetType	2	0	1	{44C6ECA7-D7C8-4BD8-A0C6-450FF605F58B}	0	
+	Reporting Chart Display Type	StringType	2	0	1	Default	3	Default	Interactive	Image	
+	Run On Grid	BoolType	2	2	Queue Name	Grid Options	0	1	False	2	True	False	
+	Queue Name	StringType	2	0	1		0	
+	Grid Options	StringType	2	0	1		0	
+	ComponentAttributes	StringType	14	0	0	4	ComponentTakesInput	ComponentReturnsPass	ComponentReturnsFail	ComponentRunsLocal	
+	OnDataTypeError	StringType	11	0	1	Halt	3	Halt	Fail	Pass	
+	OnGeneralError	StringType	11	0	1	Halt	3	Halt	Fail	Pass	
+	WebExports	StringType	8	0	1		0	
+	Keep Alive	BoolType	8	0	1	True	2	True	False	
+	ComponentDisplayName	StringType	8	0	1	05 Count Entries per Year	0	
+	ComponentGUID	StringType	8	0	1	{86CF9AF2-93D8-41A8-B68F-C96B3F30C893}	0	
+	Protocol Options	StringType	8	0	0	1	Owner Access Only	
+	ComponentDisabled	LongType	8	0	1	0	0	
+*****
+05 Generate ROC Example
+	Tempfiles	StringType	2	0	1		0	
+	Protocol Form	ProtocolType	2	0	1		0	
+	Advanced Options	GroupType	2	1	__PoolID	1	1		0	
+	__PoolID	StringType	2	0	1		0	
+	Reporting	GroupType	2	2	Reporting Stylesheet	Reporting Chart Display Type	1	1		0	
+	Reporting Stylesheet	StylesheetType	2	0	1	{44C6ECA7-D7C8-4BD8-A0C6-450FF605F58B}	0	
+	Reporting Chart Display Type	StringType	2	0	1	Default	3	Default	Interactive	Image	
+	Run On Grid	BoolType	2	2	Queue Name	Grid Options	0	1	False	2	True	False	
+	Queue Name	StringType	2	0	1		0	
+	Grid Options	StringType	2	0	1		0	
+	ComponentAttributes	StringType	14	0	0	4	ComponentTakesInput	ComponentReturnsPass	ComponentReturnsFail	ComponentRunsLocal	
+	OnDataTypeError	StringType	11	0	1	Halt	3	Halt	Fail	Pass	
+	OnGeneralError	StringType	11	0	1	Halt	3	Halt	Fail	Pass	
+	WebExports	StringType	8	0	1		0	
+	Keep Alive	BoolType	8	0	1	True	2	True	False	
+	ComponentDisplayName	StringType	8	0	1	R007 Perfom Validation By Tag	0	
+	ComponentGUID	StringType	8	0	1	{3C058854-1AA1-4254-A0F9-8F509D8B497E}	0	
+	Protocol Options	StringType	8	0	0	1	Owner Access Only	
+	ComponentDisabled	LongType	8	0	1	0	0	
+*****
+06 Combining Hit Sets - NOT
+	Tempfiles	StringType	2	0	1		0	
+	Protocol Form	ProtocolType	2	0	1		0	
+	Advanced Options	GroupType	2	1	__PoolID	1	1		0	
+	__PoolID	StringType	2	0	1		0	
+	Reporting	GroupType	2	1	Reporting Stylesheet	1	1		0	
+	Reporting Stylesheet	StylesheetType	2	0	1	{44C6ECA7-D7C8-4BD8-A0C6-450FF605F58B}	0	
+	Run On Grid	BoolType	2	2	Queue Name	Grid Options	0	1	False	2	True	False	
+	Queue Name	StringType	2	0	1		0	
+	Grid Options	StringType	2	0	1		0	
+	ComponentAttributes	StringType	14	0	0	4	ComponentTakesInput	ComponentReturnsPass	ComponentReturnsFail	ComponentRunsLocal	
+	OnDataTypeError	StringType	11	0	1	Halt	3	Halt	Fail	Pass	
+	OnGeneralError	StringType	11	0	1	Halt	3	Halt	Fail	Pass	
+	WebExports	StringType	8	0	1		0	
+	Keep Alive	BoolType	8	0	1	True	2	True	False	
+	ComponentDisplayName	StringType	8	0	1	06 Combining Hit Sets - NOT	0	
+	ComponentGUID	StringType	8	0	1	{1655CB87-8213-4C76-A21B-CA206CA66C64}	0	
+	Protocol Options	StringType	8	0	0	1	Owner Access Only	
+	ComponentDisabled	LongType	8	0	1	0	0	
+*****
+06 Generate Conformers for Molecule
+	Tempfiles	StringType	2	0	1		0	
+	Protocol Form	ProtocolType	2	0	1		0	
+	Advanced Options	GroupType	2	1	__PoolID	1	1		0	
+	__PoolID	StringType	2	0	1		0	
+	Reporting	GroupType	2	1	Reporting Stylesheet	1	1		0	
+	Reporting Stylesheet	StylesheetType	2	0	1	{44C6ECA7-D7C8-4BD8-A0C6-450FF605F58B}	0	
+	Run On Grid	BoolType	2	2	Queue Name	Grid Options	0	1	False	2	True	False	
+	Queue Name	StringType	2	0	1		0	
+	Grid Options	StringType	2	0	1		0	
+	ComponentAttributes	StringType	14	0	0	4	ComponentTakesInput	ComponentReturnsPass	ComponentReturnsFail	ComponentRunsLocal	
+	OnDataTypeError	StringType	11	0	1	Halt	3	Halt	Fail	Pass	
+	OnGeneralError	StringType	11	0	1	Halt	3	Halt	Fail	Pass	
+	WebExports	StringType	8	0	1		0	
+	Keep Alive	BoolType	8	0	1	True	2	True	False	
+	ComponentDisplayName	StringType	8	0	1	06 Generate Conformers for Molecule	0	
+	ComponentGUID	StringType	8	0	1	{810AC26F-B71A-4AF1-B5CF-8FF611C4C08E}	0	
+	Protocol Options	StringType	8	0	0	1	Owner Access Only	
+	ComponentDisabled	LongType	8	0	1	0	0	
+*****
+07 Mercury Viewer Example
+	Tempfiles	StringType	2	0	1		0	
+	Protocol Form	ProtocolType	2	0	1		0	
+	Advanced Options	GroupType	2	1	__PoolID	1	1		0	
+	__PoolID	StringType	2	0	1		0	
+	Run On Grid	BoolType	2	2	Queue Name	Grid Options	0	1	False	2	True	False	
+	Queue Name	StringType	2	0	1		0	
+	Grid Options	StringType	2	0	1		0	
+	ComponentAttributes	StringType	14	0	0	4	ComponentTakesInput	ComponentReturnsPass	ComponentReturnsFail	ComponentRunsLocal	
+	OnDataTypeError	StringType	11	0	1	Halt	3	Halt	Fail	Pass	
+	OnGeneralError	StringType	11	0	1	Halt	3	Halt	Fail	Pass	
+	WebExports	StringType	8	0	1		0	
+	Keep Alive	BoolType	8	0	1	True	2	True	False	
+	ComponentDisplayName	StringType	8	0	1	Mercury Viewer Example	0	
+	ComponentGUID	StringType	8	0	1	{6C4A7D05-9314-4471-9883-1BAA216BCD6F}	0	
+	Protocol Options	StringType	8	0	0	1	Owner Access Only	
+	ComponentDisabled	LongType	8	0	1	0	0	
+*****
+07 Parsing Citation and Synonyms
+	Tempfiles	StringType	2	0	1		0	
+	Protocol Form	ProtocolType	2	0	1		0	
+	Advanced Options	GroupType	2	1	__PoolID	1	1		0	
+	__PoolID	StringType	2	0	1		0	
+	Reporting	GroupType	2	1	Reporting Stylesheet	1	1		0	
+	Reporting Stylesheet	StylesheetType	2	0	1	{44C6ECA7-D7C8-4BD8-A0C6-450FF605F58B}	0	
+	Run On Grid	BoolType	2	2	Queue Name	Grid Options	0	1	False	2	True	False	
+	Queue Name	StringType	2	0	1		0	
+	Grid Options	StringType	2	0	1		0	
+	ComponentAttributes	StringType	14	0	0	4	ComponentTakesInput	ComponentReturnsPass	ComponentReturnsFail	ComponentRunsLocal	
+	OnDataTypeError	StringType	11	0	1	Halt	3	Halt	Fail	Pass	
+	OnGeneralError	StringType	11	0	1	Halt	3	Halt	Fail	Pass	
+	WebExports	StringType	8	0	1		0	
+	Keep Alive	BoolType	8	0	1	True	2	True	False	
+	ComponentDisplayName	StringType	8	0	1	07 Parsing Citation and Synonyms	0	
+	ComponentGUID	StringType	8	0	1	{196AB932-E410-400F-A40F-6272E0E83C19}	0	
+	Protocol Options	StringType	8	0	0	1	Owner Access Only	
+	ComponentDisabled	LongType	8	0	1	0	0	
+*****
+08 Conformer Writer Example
+	Tempfiles	StringType	2	0	1		0	
+	Protocol Form	ProtocolType	2	0	1		0	
+	Advanced Options	GroupType	2	1	__PoolID	1	1		0	
+	__PoolID	StringType	2	0	1		0	
+	Run On Grid	BoolType	2	2	Queue Name	Grid Options	0	1	False	2	True	False	
+	Queue Name	StringType	2	0	1		0	
+	Grid Options	StringType	2	0	1		0	
+	ComponentAttributes	StringType	14	0	0	4	ComponentTakesInput	ComponentReturnsPass	ComponentReturnsFail	ComponentRunsLocal	
+	Reporting Stylesheet	StylesheetType	2	0	1	{44C6ECA7-D7C8-4BD8-A0C6-450FF605F58B}	0	
+	Reporting	GroupType	2	1	Reporting Stylesheet	1	1		0	
+	OnDataTypeError	StringType	11	0	1	Halt	3	Halt	Fail	Pass	
+	OnGeneralError	StringType	11	0	1	Halt	3	Halt	Fail	Pass	
+	WebExports	StringType	8	0	1		0	
+	Keep Alive	BoolType	8	0	1	True	2	True	False	
+	ComponentDisplayName	StringType	8	0	1	Writer with Copy to Client Example	0	
+	ComponentGUID	StringType	8	0	1	{2A08F496-50A2-4836-A2C6-FA54B17744AF}	0	
+	Protocol Options	StringType	8	0	0	1	Owner Access Only	
+	ComponentDisabled	LongType	8	0	1	0	0	
+*****
+09 View Conformers in Report Viewer
+	Tempfiles	StringType	2	0	1		0	
+	Protocol Form	ProtocolType	2	0	1		0	
+	Advanced Options	GroupType	2	1	__PoolID	1	1		0	
+	__PoolID	StringType	2	0	1		0	
+	Run On Grid	BoolType	2	2	Queue Name	Grid Options	0	1	False	2	True	False	
+	Queue Name	StringType	2	0	1		0	
+	Grid Options	StringType	2	0	1		0	
+	ComponentAttributes	StringType	14	0	0	4	ComponentTakesInput	ComponentReturnsPass	ComponentReturnsFail	ComponentRunsLocal	
+	Reporting	GroupType	2	1	Reporting Stylesheet	1	1		0	
+	Reporting Stylesheet	StylesheetType	2	0	1	{44C6ECA7-D7C8-4BD8-A0C6-450FF605F58B}	0	
+	OnDataTypeError	StringType	11	0	1	Halt	3	Halt	Fail	Pass	
+	OnGeneralError	StringType	11	0	1	Halt	3	Halt	Fail	Pass	
+	WebExports	StringType	8	0	1		0	
+	Keep Alive	BoolType	8	0	1	True	2	True	False	
+	ComponentDisplayName	StringType	8	0	1	09 View Conformers in Report Viewer	0	
+	ComponentGUID	StringType	8	0	1	{A8652DF3-144C-4657-8074-6ADF3C553B19}	0	
+	Protocol Options	StringType	8	0	0	1	Owner Access Only	
+	ComponentDisabled	LongType	8	0	1	0	0	
+*****
+10 Mercury Viewer Example with Grouping
+	Tempfiles	StringType	2	0	1		0	
+	Protocol Form	ProtocolType	2	0	1		0	
+	Advanced Options	GroupType	2	1	__PoolID	1	1		0	
+	__PoolID	StringType	2	0	1		0	
+	Reporting	GroupType	2	1	Reporting Stylesheet	1	1		0	
+	Reporting Stylesheet	StylesheetType	2	0	1	{44C6ECA7-D7C8-4BD8-A0C6-450FF605F58B}	0	
+	Run On Grid	BoolType	2	2	Queue Name	Grid Options	0	1	False	2	True	False	
+	Queue Name	StringType	2	0	1		0	
+	Grid Options	StringType	2	0	1		0	
+	ComponentAttributes	StringType	14	0	0	4	ComponentTakesInput	ComponentReturnsPass	ComponentReturnsFail	ComponentRunsLocal	
+	OnDataTypeError	StringType	11	0	1	Halt	3	Halt	Fail	Pass	
+	OnGeneralError	StringType	11	0	1	Halt	3	Halt	Fail	Pass	
+	WebExports	StringType	8	0	1		0	
+	Keep Alive	BoolType	8	0	1	True	2	True	False	
+	ComponentDisplayName	StringType	8	0	1	Mercury Viewer Example	0	
+	ComponentGUID	StringType	8	0	1	{A1332008-CC29-4AFB-993E-5817EC8258FE}	0	
+	Protocol Options	StringType	8	0	0	1	Owner Access Only	
+	ComponentDisabled	LongType	8	0	1	0	0	
+*****
+11 Virtual Screening Report Viewer Example
+	Tempfiles	StringType	2	0	1		0	
+	Protocol Form	ProtocolType	2	0	1		0	
+	Advanced Options	GroupType	2	1	__PoolID	1	1		0	
+	__PoolID	StringType	2	0	1		0	
+	Reporting	GroupType	2	1	Reporting Stylesheet	1	1		0	
+	Reporting Stylesheet	StylesheetType	2	0	1	{44C6ECA7-D7C8-4BD8-A0C6-450FF605F58B}	0	
+	Run On Grid	BoolType	2	2	Queue Name	Grid Options	0	1	False	2	True	False	
+	Queue Name	StringType	2	0	1		0	
+	Grid Options	StringType	2	0	1		0	
+	ComponentAttributes	StringType	14	0	0	4	ComponentTakesInput	ComponentReturnsPass	ComponentReturnsFail	ComponentRunsLocal	
+	OnDataTypeError	StringType	11	0	1	Halt	3	Halt	Fail	Pass	
+	OnGeneralError	StringType	11	0	1	Halt	3	Halt	Fail	Pass	
+	WebExports	StringType	8	0	1		0	
+	Keep Alive	BoolType	8	0	1	True	2	True	False	
+	ComponentDisplayName	StringType	8	0	1	Actives Identified by File Screening Example	0	
+	ComponentGUID	StringType	8	0	1	{9C410604-FBA5-495E-B469-10AF2E489522}	0	
+	Protocol Options	StringType	8	0	0	1	Owner Access Only	
+	ComponentDisabled	LongType	8	0	1	0	0	
+*****
+12 Hermes Viewer Example - Structures
+	Tempfiles	StringType	2	0	1		0	
+	Protocol Form	ProtocolType	2	0	1		0	
+	Advanced Options	GroupType	2	1	__PoolID	1	1		0	
+	__PoolID	StringType	2	0	1		0	
+	Reporting	GroupType	2	1	Reporting Stylesheet	1	1		0	
+	Reporting Stylesheet	StylesheetType	2	0	1	{44C6ECA7-D7C8-4BD8-A0C6-450FF605F58B}	0	
+	Run On Grid	BoolType	2	2	Queue Name	Grid Options	0	1	False	2	True	False	
+	Queue Name	StringType	2	0	1		0	
+	Grid Options	StringType	2	0	1		0	
+	ComponentAttributes	StringType	14	0	0	4	ComponentTakesInput	ComponentReturnsPass	ComponentReturnsFail	ComponentRunsLocal	
+	OnDataTypeError	StringType	11	0	1	Halt	3	Halt	Fail	Pass	
+	OnGeneralError	StringType	11	0	1	Halt	3	Halt	Fail	Pass	
+	WebExports	StringType	8	0	1		0	
+	Keep Alive	BoolType	8	0	1	True	2	True	False	
+	ComponentDisplayName	StringType	8	0	1	12 Hermes Viewer Example - Structures	0	
+	ComponentGUID	StringType	8	0	1	{937FA0BB-ACFA-4F7D-819F-E054FAB86C1D}	0	
+	Protocol Options	StringType	8	0	0	1	Owner Access Only	
+	ComponentDisabled	LongType	8	0	1	0	0	
+*****
+Check Journal Name
+	Journal Name	StringType	3	0	1		0	
+	Tempfiles	StringType	2	0	1		0	
+	DeclareLocal	StringType	2	0	1	_journal_name, _is_valid, _error_text, _validate_journal	0	
+	RunToCompletion	StringType	2	1	RunToCompletion Categorize Using	0	1	False	3	False	True - For Each Data Record	True - For Each Category	
+	RunToCompletion Categorize Using	StringType	2	0	1		0	
+	Parallel Processing Options Batch Size	LongType	3	0	1		0	
+	Parallel Processing Options Server	StringType	6	2	Parallel Processing Options Server Processes	Parallel Processing Options Server Run On Grid	1	1		0	
+	Parallel Processing Options Server Processes	StringType	2	0	1		0	
+	Parallel Processing Options Server Run On Grid	BoolType	2	2	Parallel Processing Options Server Run On Grid Queue Name	Parallel Processing Options Server Run On Grid Grid Options	0	1	True	2	True	False	
+	Parallel Processing Options Server Run On Grid Queue Name	StringType	2	0	1		0	
+	Parallel Processing Options Server Run On Grid Grid Options	StringType	2	0	1		0	
+	Parallel Processing Options Preserve Order	BoolType	2	0	1	True	2	True	False	
+	ComponentAttributes	StringType	14	0	2	ComponentReturnsPass	ComponentReturnsFail	4	ComponentTakesInput	ComponentReturnsPass	ComponentReturnsFail	ComponentRunsLocal	
+	OnDataTypeError	StringType	11	0	1	Halt	3	Halt	Fail	Pass	
+	OnGeneralError	StringType	11	0	1	Halt	3	Halt	Fail	Pass	
+	ComponentDisplayName	StringType	8	0	1	Check Journal Name	0	
+	ComponentDisabled	LongType	8	0	1	0	0	
+	ComponentGUID	StringType	8	0	1	{8265ADAE-6E44-44A1-9444-AE4C0D553473}	0	
+	Protocol Options	StringType	8	0	0	1	Owner Access Only	
+*****
+Conformer Report Viewer
+	Conformer Options	GroupType	2	4	Max Number of Conformers	Number of Threads	Maximum Unusual Torsions	Superimpose	1	1		0	
+	Max Number of Conformers	LongType	3	0	1	25	0	
+	Number of Threads	LongType	3	0	1	1	0	
+	Maximum Unusual Torsions	LongType	3	0	1	2	0	
+	Superimpose	BoolType	3	0	1	False	2	True	False	
+	Output Options	GroupType	2	4	Output What	Split Output	Report Title	Reporting Options	0	1		0	
+	Output What	StringType	7	0	2	Molecules	Summary	2	Molecules	Summary	
+	Split Output	BoolType	3	0	1	False	2	True	False	
+	Report Title	StringType	2	0	1	Conformer Generation Report	0	
+	Reporting Options	StringType	6	0	1	Show Plot in Browser	2	Show Plot in Browser	Output Reporting Element	
+	Tempfiles	StringType	2	0	1		0	
+	DeclareLocal	StringType	2	0	1		0	
+	RunToCompletion	StringType	2	1	RunToCompletion Categorize Using	0	1	False	3	False	True - For Each Data Record	True - For Each Category	
+	RunToCompletion Categorize Using	StringType	2	0	1		0	
+	Parallel Processing Options Batch Size	LongType	3	0	1		0	
+	Parallel Processing Options Server	StringType	6	2	Parallel Processing Options Server Processes	Parallel Processing Options Server Run On Grid	1	1		0	
+	Parallel Processing Options Server Processes	StringType	2	0	1		0	
+	Parallel Processing Options Server Run On Grid	BoolType	2	2	Parallel Processing Options Server Run On Grid Queue Name	Parallel Processing Options Server Run On Grid Grid Options	0	1	True	2	True	False	
+	Parallel Processing Options Server Run On Grid Queue Name	StringType	2	0	1		0	
+	Parallel Processing Options Server Run On Grid Grid Options	StringType	2	0	1		0	
+	Parallel Processing Options Preserve Order	BoolType	2	0	1	True	2	True	False	
+	ComponentAttributes	StringType	14	0	1	ComponentTakesInput	4	ComponentTakesInput	ComponentReturnsPass	ComponentReturnsFail	ComponentRunsLocal	
+	OnDataTypeError	StringType	11	0	1	Halt	3	Halt	Fail	Pass	
+	OnGeneralError	StringType	11	0	1	Halt	3	Halt	Fail	Pass	
+	ComponentDisplayName	StringType	8	0	1	Conformer Report Viewer	0	
+	ComponentDisabled	LongType	8	0	1	0	0	
+	ComponentGUID	StringType	8	0	1	{410FF913-9E84-4735-BBF9-3E6018C7C712}	0	
+	Protocol Options	StringType	8	0	0	1	Owner Access Only	
+	ProcessingOrder	StringType	8	0	1	DrainTopDown	0	
+*****
+Conformer Writer
+	Conformer Molecule Destination	DestinationURLType	3	0	1		0	
+	Conformer Molecule Directory	DirectoryType	3	0	1		0	
+	Conformer Summary Destination	DestinationURLType	3	0	1		0	
+	Conformer Warning Destination	DestinationURLType	3	0	1		0	
+	Conformer Log Destination	DestinationURLType	3	0	1		0	
+	Conformer Options	GroupType	2	4	Max Number of Conformers	Number of Threads	Maximum Unusual Torsions	Superimpose	0	1		0	
+	Max Number of Conformers	LongType	3	0	1	25	0	
+	Number of Threads	LongType	3	0	1	1	0	
+	Maximum Unusual Torsions	LongType	3	0	1	2	0	
+	Superimpose	BoolType	3	0	1	False	2	True	False	
+	Output Options	GroupType	2	2	Output What	Split Output	1	1		0	
+	Output What	StringType	7	0	1	Molecules	4	Molecules	Summary	Log	Warnings	
+	Split Output	BoolType	3	0	1	False	2	True	False	
+	Format	StringType	3	0	1	MOL2	2	SDF	MOL2	
+	Tempfiles	StringType	2	0	1	tmpSource	0	
+	DeclareLocal	StringType	2	0	1	_conformer_file, _output_dir,_delete	0	
+	RunToCompletion	StringType	2	1	RunToCompletion Categorize Using	0	1	False	3	False	True - For Each Data Record	True - For Each Category	
+	RunToCompletion Categorize Using	StringType	2	0	1		0	
+	Parallel Processing Options Batch Size	LongType	3	0	1		0	
+	Parallel Processing Options Server	StringType	6	2	Parallel Processing Options Server Processes	Parallel Processing Options Server Run On Grid	1	1		0	
+	Parallel Processing Options Server Processes	StringType	2	0	1		0	
+	Parallel Processing Options Server Run On Grid	BoolType	2	2	Parallel Processing Options Server Run On Grid Queue Name	Parallel Processing Options Server Run On Grid Grid Options	0	1	True	2	True	False	
+	Parallel Processing Options Server Run On Grid Queue Name	StringType	2	0	1		0	
+	Parallel Processing Options Server Run On Grid Grid Options	StringType	2	0	1		0	
+	Parallel Processing Options Preserve Order	BoolType	2	0	1	True	2	True	False	
+	ComponentAttributes	StringType	14	0	1	ComponentTakesInput	4	ComponentTakesInput	ComponentReturnsPass	ComponentReturnsFail	ComponentRunsLocal	
+	OnDataTypeError	StringType	11	0	1	Halt	3	Halt	Fail	Pass	
+	OnGeneralError	StringType	11	0	1	Halt	3	Halt	Fail	Pass	
+	ComponentDisplayName	StringType	8	0	1	Conformer Writer	0	
+	ComponentDisabled	LongType	8	0	1	0	0	
+	ComponentGUID	StringType	8	0	1	{0C5BF4EA-3A0E-441E-9870-7591F790AA83}	0	
+	Protocol Options	StringType	8	0	0	1	Owner Access Only	
+*****
+Convert Unicode Characters
+	Unicode Property	StringType	3	0	1		0	
+	Expression	ExpressionType	3	3	Initial Expression	Final Expression	Keep Calculated Properties	0	1	// For each unicode property listed...&#xA;For #p In 1 .. NumValues(#pUnicode) Loop&#xA;&#x9;// Is the property defined?&#xA;&#x9;If Property(#pUnicode[#p]) Is Defined Then&#xA;&#x9;&#x9;// It is so grab the unicode property value.&#xA;&#x9;&#x9;#unicode := Property(#pUnicode[#p]);&#xA;&#x9;&#x9;&#xA;&#x9;&#x9;#changed := false;&#xA;&#x9;&#x9;&#xA;&#x9;&#x9;// For each value in the unicode array.&#xA;&#x9;&#x9;For #v In 1 .. NumValues(#unicode) Loop&#xA;&#x9;&#x9;&#x9;// Does the value contain something looking like a unicode?&#xA;&#x9;&#x9;&#x9;If #unicode[#v] RLike '\\u[0-9A-Za-z]{4}' Then&#xA;&#x9;&#x9;&#x9;&#x9;// It does. Gather all codes...&#xA;&#x9;&#x9;&#x9;&#x9;#codes := RMatch(#unicode[#v], '\\u[0-9A-Za-z]{4}', 'g');&#xA;&#x9;&#x9;&#x9;&#x9;// And deduplicate - only need to translate one each.&#xA;&#x9;&#x9;&#x9;&#x9;RemoveDuplicates(#codes);&#xA;&#x9;&#x9;&#x9;&#x9;&#xA;&#x9;&#x9;&#x9;&#x9;// Convert each code to binary array&#xA;&#x9;&#x9;&#x9;&#x9;For #i In 1 .. NumValues(#codes) Loop&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;// Is this code already known?&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;If HashContains(#known, #codes[#i]) Then&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;// Already known. Lookup.&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;#total := HashFind(#known, #codes[#i]);&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;Else&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;// Not known. Derive.&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;#bin := Array();&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;// Ignore \u at start (characters 1 and 2 respectively.&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;For #c In Reverse 6 .. 3 Loop&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Append(#bin, HashFind(#val, Substring(#codes[#i], #c, 1)));&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;End Loop;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;// Convert binary array (contains 1s and 0s) to integer.&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;#total := 0;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;// Multiplier for each binary value doubles each time, &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;// starting from 1, then 2, then 4, etc.&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;#mult := 1;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;For #b In 1 .. NumValues(#bin) Loop&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;#total += #bin[#b] * #mult;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;#mult *= 2; // Next time use double mult&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;End Loop;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;// Record the total for next time.&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;HashAdd(#known, #codes[#i], #total);&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;End If;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;// Replace the code strings (e.g. \u03b2) with character&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;#unicode[#v] := StrReplace(#unicode[#v], #codes[#i], Chr(#total));&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;#changed := true;&#xA;&#x9;&#x9;&#x9;&#x9;End Loop;&#xA;&#x9;&#x9;&#x9;End If;&#xA;&#x9;&#x9;End Loop;&#xA;&#x9;&#x9;&#xA;&#x9;&#x9;// Replace property if changes made.&#xA;&#x9;&#x9;If #changed Then&#xA;&#x9;&#x9;&#x9;Property(#pUnicode[#p]) := #unicode;&#xA;&#x9;&#x9;End If;&#xA;&#x9;End If;&#xA;End Loop;&#xA;	0	
+	Initial Expression	ExpressionType	2	0	1	#val := HashValueCreate();&#xA;// These are the binary arrays (in 1,2,4,8-bit order) for each HEX character. &#xA;HashAdd(#val, '0', Array(0,0,0,0)); // 0&#xA;HashAdd(#val, '1', Array(1,0,0,0)); // 1&#xA;HashAdd(#val, '2', Array(0,1,0,0)); // 2&#xA;HashAdd(#val, '3', Array(1,1,0,0)); // 3&#xA;HashAdd(#val, '4', Array(0,0,1,0)); // 4&#xA;HashAdd(#val, '5', Array(1,0,1,0)); // 5&#xA;HashAdd(#val, '6', Array(0,1,1,0)); // 6&#xA;HashAdd(#val, '7', Array(1,1,1,0)); // 7&#xA;HashAdd(#val, '8', Array(0,0,0,1)); // 8&#xA;HashAdd(#val, '9', Array(1,0,0,1)); // 9&#xA;HashAdd(#val, 'a', Array(0,1,0,1)); // 10&#xA;HashAdd(#val, 'b', Array(1,1,0,1)); // 11&#xA;HashAdd(#val, 'c', Array(0,0,1,1)); // 12&#xA;HashAdd(#val, 'd', Array(1,0,1,1)); // 13&#xA;HashAdd(#val, 'e', Array(0,1,1,1)); // 14&#xA;HashAdd(#val, 'f', Array(1,1,1,1)); // 15&#xA;&#xA;#pUnicode := Parameter('Unicode Property');&#xA;#pUnicode := RSplit(#pUnicode, '\s*,\s*', 'g');&#xA;&#xA;// Because there are a lot of common characters (e.g. alpha, beta, etc.)&#xA;// It is worth while recalling which codes we already know, to speed&#xA;// up the conversion process.&#xA;#known := HashValueCreate();	0	
+	Final Expression	ExpressionType	2	0	1		0	
+	Keep Calculated Properties	BoolType	3	0	1	True	2	True	False	
+	ComponentAttributes	StringType	14	0	2	ComponentTakesInput	ComponentReturnsPass	4	ComponentTakesInput	ComponentReturnsPass	ComponentReturnsFail	ComponentRunsLocal	
+	OnDataTypeError	StringType	11	0	1	Halt	3	Halt	Fail	Pass	
+	OnGeneralError	StringType	11	0	1	Halt	3	Halt	Fail	Pass	
+	Do Screen	BoolType	8	0	1	False	2	True	False	
+	ExpressionVersion	LongType	8	0	1	2	0	
+	ComponentDisplayName	StringType	8	0	1	Convert Unicode Characters	0	
+	ComponentDisabled	LongType	8	0	1	0	0	
+	ComponentGUID	StringType	8	0	1	{B0822C9A-EC56-4FB3-B7ED-D0C016C70127}	0	
+*****
+CSD Reduced Cell Search
+	Cell Lengths	GroupType	2	4	Lengths String	a	b	c	1	1		0	
+	Lengths String	StringType	3	0	1		0	
+	a	DoubleType	2	0	1		0	
+	b	DoubleType	2	0	1		0	
+	c	DoubleType	2	0	1		0	
+	Cell Angles	GroupType	2	4	alpha	beta	gamma	Angles String	1	1		0	
+	Angles String	StringType	3	0	1		0	
+	alpha	DoubleType	3	0	1		0	
+	beta	DoubleType	3	0	1		0	
+	gamma	DoubleType	3	0	1		0	
+	Lattice Centring	StringType	2	0	1	primitive	6	primitive	A-centred	B-centred	C-centred	I-centred	R-obverse	
+	Options	GroupType	2	10	3D coordinates determined	R factor	Not disordered	No errors	Not polymeric	No ions	No powder structures	Only	Maximum	CSD Database	0	1		0	
+	Maximum	LongType	2	0	1		0	
+	CSD Database	StringType	6	0	1		0	
+	3D coordinates determined	BoolType	3	0	1	False	2	True	False	
+	R factor	DoubleType	2	0	1		0	
+	Not disordered	StringType	2	0	1	False	3	False	Non-hydrogen	All	
+	No errors	BoolType	3	0	1	False	2	True	False	
+	Not polymeric	BoolType	3	0	1	False	2	True	False	
+	No ions	BoolType	3	0	1	False	2	True	False	
+	No powder structures	BoolType	3	0	1	False	2	True	False	
+	Only	StringType	7	0	2	Organics	Organometallics	2	Organics	Organometallics	
+	Tempfiles	StringType	2	0	1	tmpReducedCell, tmp_settings	0	
+	DeclareLocal	StringType	2	0	1	_structure_search, _x_arg, _script, _l, _a, _b, _c, _alpha, _beta, _gamma, _d_switch, _databases	0	
+	RunToCompletion	StringType	2	1	RunToCompletion Categorize Using	0	1	True - For Each Data Record	3	False	True - For Each Data Record	True - For Each Category	
+	RunToCompletion Categorize Using	StringType	2	0	1		0	
+	Parallel Processing Options Batch Size	LongType	3	0	1		0	
+	Parallel Processing Options Server	StringType	6	2	Parallel Processing Options Server Processes	Parallel Processing Options Server Run On Grid	1	1		0	
+	Parallel Processing Options Server Processes	StringType	2	0	1		0	
+	Parallel Processing Options Server Run On Grid	BoolType	2	2	Parallel Processing Options Server Run On Grid Queue Name	Parallel Processing Options Server Run On Grid Grid Options	0	1	True	2	True	False	
+	Parallel Processing Options Server Run On Grid Queue Name	StringType	2	0	1		0	
+	Parallel Processing Options Server Run On Grid Grid Options	StringType	2	0	1		0	
+	Parallel Processing Options Preserve Order	BoolType	2	0	1	True	2	True	False	
+	ComponentAttributes	StringType	14	0	2	ComponentReturnsPass	ComponentReturnsFail	4	ComponentTakesInput	ComponentReturnsPass	ComponentReturnsFail	ComponentRunsLocal	
+	OnDataTypeError	StringType	11	0	1	Halt	3	Halt	Fail	Pass	
+	OnGeneralError	StringType	11	0	1	Halt	3	Halt	Fail	Pass	
+	ComponentDisplayName	StringType	8	0	1	CSD Reduced Cell Search	0	
+	ComponentDisabled	LongType	8	0	1	0	0	
+	ComponentGUID	StringType	8	0	1	{CBCBBE5D-D899-44E1-8F87-C65F9EAFEA99}	0	
+	Protocol Options	StringType	8	0	0	1	Owner Access Only	
+*****
+CSD Similarity Structure Search
+	Similarity Threshold	DoubleType	3	0	1	0.7	0	
+	Options	GroupType	2	10	3D coordinates determined	R factor	Not disordered	No errors	Not polymeric	No ions	No powder structures	Only	Maximum	CSD Database	0	1		0	
+	Maximum	LongType	2	0	1		0	
+	CSD Database	StringType	6	0	1		0	
+	3D coordinates determined	BoolType	3	0	1	False	2	True	False	
+	R factor	DoubleType	2	0	1		0	
+	Not disordered	StringType	2	0	1	False	3	False	Non-hydrogen	All	
+	No errors	BoolType	3	0	1	False	2	True	False	
+	Not polymeric	BoolType	3	0	1	False	2	True	False	
+	No ions	BoolType	3	0	1	False	2	True	False	
+	No powder structures	BoolType	3	0	1	False	2	True	False	
+	Only	StringType	7	0	2	Organics	Organometallics	2	Organics	Organometallics	
+	Tempfiles	StringType	2	0	1	tmp_query, tmp_results, tmp_settings	0	
+	DeclareLocal	StringType	2	0	1	_structure_search, _type, _threshold, _d_switch, _databases	0	
+	RunToCompletion	StringType	2	1	RunToCompletion Categorize Using	0	1	True - For Each Data Record	3	False	True - For Each Data Record	True - For Each Category	
+	RunToCompletion Categorize Using	StringType	2	0	1		0	
+	Parallel Processing Options Batch Size	LongType	3	0	1		0	
+	Parallel Processing Options Server	StringType	6	2	Parallel Processing Options Server Processes	Parallel Processing Options Server Run On Grid	1	1		0	
+	Parallel Processing Options Server Processes	StringType	2	0	1		0	
+	Parallel Processing Options Server Run On Grid	BoolType	2	2	Parallel Processing Options Server Run On Grid Queue Name	Parallel Processing Options Server Run On Grid Grid Options	0	1	True	2	True	False	
+	Parallel Processing Options Server Run On Grid Queue Name	StringType	2	0	1		0	
+	Parallel Processing Options Server Run On Grid Grid Options	StringType	2	0	1		0	
+	Parallel Processing Options Preserve Order	BoolType	2	0	1	True	2	True	False	
+	ComponentAttributes	StringType	14	0	3	ComponentTakesInput	ComponentReturnsPass	ComponentReturnsFail	4	ComponentTakesInput	ComponentReturnsPass	ComponentReturnsFail	ComponentRunsLocal	
+	OnDataTypeError	StringType	11	0	1	Halt	3	Halt	Fail	Pass	
+	OnGeneralError	StringType	11	0	1	Halt	3	Halt	Fail	Pass	
+	ComponentDisplayName	StringType	8	0	1	CSD Similarity Structure Search	0	
+	ComponentDisabled	LongType	8	0	1	0	0	
+	ComponentGUID	StringType	8	0	1	{69BAE591-0A75-4C5B-92EB-3DD02BB0609E}	0	
+	Protocol Options	StringType	8	0	0	1	Owner Access Only	
+*****
+CSD Substructure Search
+	Search Type	StringType	3	0	1	Substructure	2	Exact	Substructure	
+	Options	GroupType	2	10	3D coordinates determined	R factor	Not disordered	No errors	Not polymeric	No ions	No powder structures	Only	Maximum	CSD Database	0	1		0	
+	Maximum	LongType	2	0	1		0	
+	CSD Database	StringType	6	0	1		0	
+	3D coordinates determined	BoolType	3	0	1	False	2	True	False	
+	R factor	DoubleType	2	0	1		0	
+	Not disordered	StringType	2	0	1	False	3	False	Non-hydrogen	All	
+	No errors	BoolType	3	0	1	False	2	True	False	
+	Not polymeric	BoolType	3	0	1	False	2	True	False	
+	No ions	BoolType	3	0	1	False	2	True	False	
+	No powder structures	BoolType	3	0	1	False	2	True	False	
+	Only	StringType	7	0	2	Organics	Organometallics	2	Organics	Organometallics	
+	Tempfiles	StringType	2	0	1	tmp_query, tmp_results, tmp_settings	0	
+	DeclareLocal	StringType	2	0	1	_structure_search, _type, _d_switch, _databases	0	
+	RunToCompletion	StringType	2	1	RunToCompletion Categorize Using	0	1	True - For Each Data Record	3	False	True - For Each Data Record	True - For Each Category	
+	RunToCompletion Categorize Using	StringType	2	0	1		0	
+	Parallel Processing Options Batch Size	LongType	3	0	1		0	
+	Parallel Processing Options Server	StringType	6	2	Parallel Processing Options Server Processes	Parallel Processing Options Server Run On Grid	1	1		0	
+	Parallel Processing Options Server Processes	StringType	2	0	1		0	
+	Parallel Processing Options Server Run On Grid	BoolType	2	2	Parallel Processing Options Server Run On Grid Queue Name	Parallel Processing Options Server Run On Grid Grid Options	0	1	True	2	True	False	
+	Parallel Processing Options Server Run On Grid Queue Name	StringType	2	0	1		0	
+	Parallel Processing Options Server Run On Grid Grid Options	StringType	2	0	1		0	
+	Parallel Processing Options Preserve Order	BoolType	2	0	1	True	2	True	False	
+	ComponentAttributes	StringType	14	0	3	ComponentTakesInput	ComponentReturnsPass	ComponentReturnsFail	4	ComponentTakesInput	ComponentReturnsPass	ComponentReturnsFail	ComponentRunsLocal	
+	OnDataTypeError	StringType	11	0	1	Halt	3	Halt	Fail	Pass	
+	OnGeneralError	StringType	11	0	1	Halt	3	Halt	Fail	Pass	
+	ComponentDisplayName	StringType	8	0	1	CSD Substructure Search	0	
+	ComponentDisabled	LongType	8	0	1	0	0	
+	ComponentGUID	StringType	8	0	1	{AFC2F7D8-B4D3-4FFE-9B67-97CB4D1B6344}	0	
+	Protocol Options	StringType	8	0	0	1	Owner Access Only	
+*****
+CSD Text Numeric Search
+	All Text	StringType	2	2	All Text Mode	All Text Ignore Non-Alphanumeric	0	1		0	
+	All Text Mode	StringType	2	0	1	anywhere	7	not_null	anywhere	separate	is_null	exact	start	start_of_word	
+	All Text Ignore Non-Alphanumeric	BoolType	2	0	1	False	2	True	False	
+	Bioactivity	StringType	6	2	Bioactivity Mode	Bioactivity Ignore Non-Alphanumeric	0	1		0	
+	Bioactivity Mode	StringType	2	0	1	anywhere	7	not_null	anywhere	separate	is_null	exact	start	start_of_word	
+	Bioactivity Ignore Non-Alphanumeric	BoolType	2	0	1	False	2	True	False	
+	Citation	GroupType	2	6	Citation Author	Citation Journal	Citation Year	Citation Volume	Citation First Page	Citation Ignore Non-Alphanumeric	0	1		0	
+	Citation Author	StringType	2	0	1		0	
+	Citation Journal	StringType	2	0	1		0	
+	Citation Year	StringType	2	0	1		0	
+	Citation Volume	LongType	2	0	1		0	
+	Citation First Page	LongType	2	0	1		0	
+	Citation Ignore Non-Alphanumeric	BoolType	2	0	1	False	2	True	False	
+	Color	StringType	2	2	Color Mode	Color Ignore Non-Alphanumeric	0	1		0	
+	Color Mode	StringType	2	0	1	anywhere	7	not_null	anywhere	separate	is_null	exact	start	start_of_word	
+	Color Ignore Non-Alphanumeric	BoolType	2	0	1	False	2	True	False	
+	CompoundName	StringType	2	2	CompoundName Mode	CompoundName Ignore Non-Alphanumeric	0	1		0	
+	CompoundName Mode	StringType	2	0	1	anywhere	7	not_null	anywhere	separate	is_null	exact	start	start_of_word	
+	CompoundName Ignore Non-Alphanumeric	BoolType	2	0	1	False	2	True	False	
+	Synonym	StringType	2	2	Synonym Mode	Synonym Ignore Non-Alphanumeric	0	1		0	
+	Synonym Mode	StringType	2	0	1	anywhere	7	not_null	anywhere	separate	is_null	exact	start	start_of_word	
+	Synonym Ignore Non-Alphanumeric	BoolType	2	0	1	False	2	True	False	
+	Options	GroupType	2	10	3D coordinates determined	R factor	Not disordered	No errors	Not polymeric	No ions	No powder structures	Only	Maximum	CSD Database	1	1		0	
+	Maximum	LongType	2	0	1		0	
+	CSD Database	StringType	6	0	1		0	
+	3D coordinates determined	BoolType	3	0	1	False	2	True	False	
+	R factor	DoubleType	2	0	1		0	
+	Not disordered	StringType	2	0	1	False	3	False	Non-hydrogen	All	
+	No errors	BoolType	3	0	1	False	2	True	False	
+	Not polymeric	BoolType	3	0	1	False	2	True	False	
+	No ions	BoolType	3	0	1	False	2	True	False	
+	No powder structures	BoolType	3	0	1	False	2	True	False	
+	Only	StringType	7	0	2	Organics	Organometallics	2	Organics	Organometallics	
+	Tempfiles	StringType	2	0	1	tmpOutput, tmp_settings, tmpQuery	0	
+	DeclareLocal	StringType	2	0	1	_d_switch, _databases	0	
+	RunToCompletion	StringType	2	1	RunToCompletion Categorize Using	0	1	True - For Each Data Record	3	False	True - For Each Data Record	True - For Each Category	
+	RunToCompletion Categorize Using	StringType	2	0	1		0	
+	Parallel Processing Options Batch Size	LongType	3	0	1		0	
+	Parallel Processing Options Server	StringType	6	2	Parallel Processing Options Server Processes	Parallel Processing Options Server Run On Grid	1	1		0	
+	Parallel Processing Options Server Processes	StringType	2	0	1		0	
+	Parallel Processing Options Server Run On Grid	BoolType	2	2	Parallel Processing Options Server Run On Grid Queue Name	Parallel Processing Options Server Run On Grid Grid Options	0	1	True	2	True	False	
+	Parallel Processing Options Server Run On Grid Queue Name	StringType	2	0	1		0	
+	Parallel Processing Options Server Run On Grid Grid Options	StringType	2	0	1		0	
+	Parallel Processing Options Preserve Order	BoolType	2	0	1	True	2	True	False	
+	HasNoMode	StringType	7	0	1	Citation	1	Citation	
+	ComponentAttributes	StringType	14	0	2	ComponentReturnsPass	ComponentReturnsFail	4	ComponentTakesInput	ComponentReturnsPass	ComponentReturnsFail	ComponentRunsLocal	
+	OnDataTypeError	StringType	11	0	1	Halt	3	Halt	Fail	Pass	
+	OnGeneralError	StringType	11	0	1	Halt	3	Halt	Fail	Pass	
+	ComponentDisplayName	StringType	8	0	1	CSD Text Numeric Search	0	
+	ComponentDisabled	LongType	8	0	1	0	0	
+	ComponentGUID	StringType	8	0	1	{588AD664-4296-4755-B523-1C37173EC07D}	0	
+	Protocol Options	StringType	8	0	0	1	Owner Access Only	
+*****
+Derive Script Path
+	Script Filename	StringType	3	0	1		0	
+	Script Global Name	StringType	3	0	1	_script	0	
+	Script Folder	DirectoryType	2	0	1		0	
+	Tempfiles	StringType	2	0	1		0	
+	DeclareLocal	StringType	2	0	1	_csd_maj, _csd_min, _csd_build, _script_found	0	
+	RunToCompletion	StringType	2	1	RunToCompletion Categorize Using	0	1	False	3	False	True - For Each Data Record	True - For Each Category	
+	RunToCompletion Categorize Using	StringType	2	0	1		0	
+	Parallel Processing Options Batch Size	LongType	3	0	1		0	
+	Parallel Processing Options Server	StringType	6	2	Parallel Processing Options Server Processes	Parallel Processing Options Server Run On Grid	1	1		0	
+	Parallel Processing Options Server Processes	StringType	2	0	1		0	
+	Parallel Processing Options Server Run On Grid	BoolType	2	2	Parallel Processing Options Server Run On Grid Queue Name	Parallel Processing Options Server Run On Grid Grid Options	0	1	True	2	True	False	
+	Parallel Processing Options Server Run On Grid Queue Name	StringType	2	0	1		0	
+	Parallel Processing Options Server Run On Grid Grid Options	StringType	2	0	1		0	
+	Parallel Processing Options Preserve Order	BoolType	2	0	1	True	2	True	False	
+	ComponentAttributes	StringType	14	0	0	4	ComponentTakesInput	ComponentReturnsPass	ComponentReturnsFail	ComponentRunsLocal	
+	OnDataTypeError	StringType	11	0	1	Halt	3	Halt	Fail	Pass	
+	OnGeneralError	StringType	11	0	1	Halt	3	Halt	Fail	Pass	
+	ComponentDisplayName	StringType	8	0	1	Derive Script Path	0	
+	ComponentDisabled	LongType	8	0	1	0	0	
+	ComponentGUID	StringType	8	0	1	{515FFE29-C2D7-4606-A903-417BB319036C}	0	
+	Protocol Options	StringType	8	0	0	1	Owner Access Only	
+*****
+Gather Database Names
+	Tempfiles	StringType	2	0	1		0	
+	Protocol Form	ProtocolType	2	0	1		0	
+	Advanced Options	GroupType	2	1	__PoolID	1	1		0	
+	__PoolID	StringType	2	0	1		0	
+	Reporting	GroupType	2	1	Reporting Stylesheet	1	1		0	
+	Reporting Stylesheet	StylesheetType	2	0	1	{44C6ECA7-D7C8-4BD8-A0C6-450FF605F58B}	0	
+	Run On Grid	BoolType	2	2	Queue Name	Grid Options	0	1	False	2	True	False	
+	Queue Name	StringType	2	0	1		0	
+	Grid Options	StringType	2	0	1		0	
+	ComponentAttributes	StringType	14	0	0	4	ComponentTakesInput	ComponentReturnsPass	ComponentReturnsFail	ComponentRunsLocal	
+	OnDataTypeError	StringType	11	0	1	Halt	3	Halt	Fail	Pass	
+	OnGeneralError	StringType	11	0	1	Halt	3	Halt	Fail	Pass	
+	WebExports	StringType	8	0	1	Names:SciTegic.value.StringArrayValue	0	
+	Keep Alive	BoolType	8	0	1	True	2	True	False	
+	ComponentDisplayName	StringType	8	0	1	Gather Database Names	0	
+	ComponentGUID	StringType	8	0	1	{6D1202BB-73A9-4808-8C19-8B3C6472D43B}	0	
+	Protocol Options	StringType	8	0	0	1	Owner Access Only	
+	ComponentDisabled	LongType	8	0	1	0	0	
+*****
+Generate Enrichment Plot
+	Input Options	GroupType	2	2	Active Source	Decoy Source	1	1		0	
+	Active Source	StringType	2	2	Active Source Source	Active Source Test for Active	1	1	From File	2	From File	From Tag	
+	Active Source Source	URLType	3	0	1		0	
+	Active Source Test for Active	ExpressionType	3	0	1	IsActive Is Defined	0	
+	Decoy Source	StringType	2	2	Decoy Source Source	Decoy Source Test for Decoy	1	1	From File	2	From File	From Tag	
+	Decoy Source Source	URLType	3	0	1		0	
+	Decoy Source Test for Decoy	ExpressionType	3	0	1	IsDecoy Is Defined	0	
+	Screening Validation Options	GroupType	2	2	Max Number of Conformers	Number of Threads	1	1		0	
+	Number of Threads	LongType	3	0	1	1	0	
+	Max Number of Conformers	LongType	3	0	1	25	0	
+	Output Options	GroupType	2	2	Screening Score Property	Options	1	1		0	
+	Screening Score Property	StringType	3	0	1	Virtual_Screen_Score	0	
+	Options	StringType	6	0	1	Output Reporting Element	2	Show Plot in Browser	Output Reporting Element	
+	Format	StringType	3	0	1	MOL2	2	SDF	MOL2	
+	Tempfiles	StringType	2	0	1	_tmpActive, _tmpDecoy, _tmpQuery	0	
+	DeclareLocal	StringType	2	0	1	_active_file, _decoy_file, _query_file	0	
+	RunToCompletion	StringType	2	1	RunToCompletion Categorize Using	0	1	False	3	False	True - For Each Data Record	True - For Each Category	
+	RunToCompletion Categorize Using	StringType	2	0	1		0	
+	Parallel Processing Options Batch Size	LongType	3	0	1		0	
+	Parallel Processing Options Server	StringType	6	2	Parallel Processing Options Server Processes	Parallel Processing Options Server Run On Grid	1	1		0	
+	Parallel Processing Options Server Processes	StringType	2	0	1		0	
+	Parallel Processing Options Server Run On Grid	BoolType	2	2	Parallel Processing Options Server Run On Grid Queue Name	Parallel Processing Options Server Run On Grid Grid Options	0	1	True	2	True	False	
+	Parallel Processing Options Server Run On Grid Queue Name	StringType	2	0	1		0	
+	Parallel Processing Options Server Run On Grid Grid Options	StringType	2	0	1		0	
+	Parallel Processing Options Preserve Order	BoolType	2	0	1	True	2	True	False	
+	ComponentAttributes	StringType	14	0	3	ComponentTakesInput	ComponentReturnsPass	ComponentReturnsFail	4	ComponentTakesInput	ComponentReturnsPass	ComponentReturnsFail	ComponentRunsLocal	
+	OnDataTypeError	StringType	11	0	1	Halt	3	Halt	Fail	Pass	
+	OnGeneralError	StringType	11	0	1	Halt	3	Halt	Fail	Pass	
+	ComponentDisplayName	StringType	8	0	1	Generate Enrichment Plot	0	
+	ComponentDisabled	LongType	8	0	1	0	0	
+	ComponentGUID	StringType	8	0	1	{B7103805-7B3C-4B55-B697-3A51D3E54206}	0	
+	Protocol Options	StringType	8	0	0	1	Owner Access Only	
+*****
+Generate ROC Plot
+	Input Options	GroupType	2	2	Active Source	Decoy Source	1	1		0	
+	Active Source	StringType	2	2	Active Source Source	Active Source Test for Active	1	1	From File	2	From File	From Tag	
+	Active Source Source	URLType	3	0	1		0	
+	Active Source Test for Active	ExpressionType	3	0	1	IsActive Is Defined	0	
+	Decoy Source	StringType	2	2	Decoy Source Source	Decoy Source Test for Decoy	1	1	From File	2	From File	From Tag	
+	Decoy Source Source	URLType	3	0	1		0	
+	Decoy Source Test for Decoy	ExpressionType	3	0	1	IsDecoy Is Defined	0	
+	Screening Validation Options	GroupType	2	2	Max Number of Conformers	Number of Threads	1	1		0	
+	Number of Threads	LongType	3	0	1	1	0	
+	Max Number of Conformers	LongType	3	0	1	25	0	
+	Output Options	GroupType	2	2	Screening Score Property	Options	1	1		0	
+	Screening Score Property	StringType	3	0	1	Virtual_Screen_Score	0	
+	Options	StringType	6	0	1	Output Reporting Element	2	Show Plot in Browser	Output Reporting Element	
+	Format	StringType	3	0	1	MOL2	2	SDF	MOL2	
+	Tempfiles	StringType	2	0	1	_tmpActive, _tmpDecoy, _tmpQuery	0	
+	DeclareLocal	StringType	2	0	1	_active_file, _decoy_file, _query_file	0	
+	RunToCompletion	StringType	2	1	RunToCompletion Categorize Using	0	1	False	3	False	True - For Each Data Record	True - For Each Category	
+	RunToCompletion Categorize Using	StringType	2	0	1		0	
+	Parallel Processing Options Batch Size	LongType	3	0	1		0	
+	Parallel Processing Options Server	StringType	6	2	Parallel Processing Options Server Processes	Parallel Processing Options Server Run On Grid	1	1		0	
+	Parallel Processing Options Server Processes	StringType	2	0	1		0	
+	Parallel Processing Options Server Run On Grid	BoolType	2	2	Parallel Processing Options Server Run On Grid Queue Name	Parallel Processing Options Server Run On Grid Grid Options	0	1	True	2	True	False	
+	Parallel Processing Options Server Run On Grid Queue Name	StringType	2	0	1		0	
+	Parallel Processing Options Server Run On Grid Grid Options	StringType	2	0	1		0	
+	Parallel Processing Options Preserve Order	BoolType	2	0	1	True	2	True	False	
+	ComponentAttributes	StringType	14	0	3	ComponentTakesInput	ComponentReturnsPass	ComponentReturnsFail	4	ComponentTakesInput	ComponentReturnsPass	ComponentReturnsFail	ComponentRunsLocal	
+	OnDataTypeError	StringType	11	0	1	Halt	3	Halt	Fail	Pass	
+	OnGeneralError	StringType	11	0	1	Halt	3	Halt	Fail	Pass	
+	ComponentDisplayName	StringType	8	0	1	Generate ROC Plot	0	
+	ComponentDisabled	LongType	8	0	1	0	0	
+	ComponentGUID	StringType	8	0	1	{7B1341D0-DA46-47D7-B5DC-4FFB163C5BD1}	0	
+	Protocol Options	StringType	8	0	0	1	Owner Access Only	
+*****
+Get CSD Crystal Attributes
+	CSD Refcode Property	StringType	3	1	CSD Database	1	1	csd_refcode	0	
+	CSD Database	StringType	2	0	1		0	
+	Options	StringType	6	0	1	Output unfound compounds from fail port	1	Output unfound compounds from fail port	
+	Attributes	StringType	7	0	12	Cell Angles	Cell Lengths	Cell Volume	Disordered Molecule CTAB	Formula	Has Disorder	Lattice Centring	Molecule CTAB	Packing Coefficient	Void Volume	Z Prime	Z Value	14	Cell Angles	Cell Lengths	Cell Volume	Disordered Molecule CTAB	Disordered Molecule MOL2	Formula	Has Disorder	Lattice Centring	Molecule CTAB	Molecule MOL2	Packing Coefficient	Void Volume	Z Prime	Z Value	
+	Tempfiles	StringType	2	0	1		0	
+	DeclareLocal	StringType	2	0	1	_attributes, _script, _rename, _d_switch, _databases	0	
+	RunToCompletion	StringType	2	1	RunToCompletion Categorize Using	0	1	False	3	False	True - For Each Data Record	True - For Each Category	
+	RunToCompletion Categorize Using	StringType	2	0	1		0	
+	Parallel Processing Options Batch Size	LongType	3	0	1		0	
+	Parallel Processing Options Server	StringType	6	2	Parallel Processing Options Server Processes	Parallel Processing Options Server Run On Grid	1	1		0	
+	Parallel Processing Options Server Processes	StringType	2	0	1		0	
+	Parallel Processing Options Server Run On Grid	BoolType	2	2	Parallel Processing Options Server Run On Grid Queue Name	Parallel Processing Options Server Run On Grid Grid Options	0	1	True	2	True	False	
+	Parallel Processing Options Server Run On Grid Queue Name	StringType	2	0	1		0	
+	Parallel Processing Options Server Run On Grid Grid Options	StringType	2	0	1		0	
+	Parallel Processing Options Preserve Order	BoolType	2	0	1	True	2	True	False	
+	ComponentAttributes	StringType	14	0	3	ComponentTakesInput	ComponentReturnsPass	ComponentReturnsFail	4	ComponentTakesInput	ComponentReturnsPass	ComponentReturnsFail	ComponentRunsLocal	
+	OnDataTypeError	StringType	11	0	1	Halt	3	Halt	Fail	Pass	
+	OnGeneralError	StringType	11	0	1	Halt	3	Halt	Fail	Pass	
+	ComponentDisplayName	StringType	8	0	1	Get CSD Crystal Attributes	0	
+	ComponentDisabled	LongType	8	0	1	0	0	
+	ComponentGUID	StringType	8	0	1	{F4896D81-42FD-4F6C-A2A8-53885FB2D860}	0	
+	Protocol Options	StringType	8	0	0	1	Owner Access Only	
+*****
+Get CSD Entry Attributes
+	CSD Refcode Property	StringType	3	1	CSD Database	1	1	csd_refcode	0	
+	CSD Database	StringType	2	0	1		0	
+	Options	StringType	6	0	1	Output unfound compounds from fail port	1	Output unfound compounds from fail port	
+	Attributes	StringType	7	0	10	Bioactivity	CCDC Number	Chemical Name	Has 3D Structure	Is Organic	Is Organometallic	Is Polymeric	Is Powder Study	Publications	Synonyms	25	Bioactivity	Calculate Density	CCDC Number	Chemical Name	Color	Deposition Date	Disorder Details	DOI	Formula	Habit	Has 3D Structure	Has Disorder	Is Organic	Is Organometallic	Is Polymeric	Is Powder Study	Melting Point	Peptide Sequence	Phase Transition	Polymorph	Pressure	Publications	Remarks	Solvent	Synonyms	
+	Tempfiles	StringType	2	0	1		0	
+	DeclareLocal	StringType	2	0	1	_attributes, _script, _d_switch, _databases	0	
+	RunToCompletion	StringType	2	1	RunToCompletion Categorize Using	0	1	False	3	False	True - For Each Data Record	True - For Each Category	
+	RunToCompletion Categorize Using	StringType	2	0	1		0	
+	Parallel Processing Options Batch Size	LongType	3	0	1		0	
+	Parallel Processing Options Server	StringType	6	2	Parallel Processing Options Server Processes	Parallel Processing Options Server Run On Grid	1	1		0	
+	Parallel Processing Options Server Processes	StringType	2	0	1		0	
+	Parallel Processing Options Server Run On Grid	BoolType	2	2	Parallel Processing Options Server Run On Grid Queue Name	Parallel Processing Options Server Run On Grid Grid Options	0	1	True	2	True	False	
+	Parallel Processing Options Server Run On Grid Queue Name	StringType	2	0	1		0	
+	Parallel Processing Options Server Run On Grid Grid Options	StringType	2	0	1		0	
+	Parallel Processing Options Preserve Order	BoolType	2	0	1	True	2	True	False	
+	ComponentAttributes	StringType	14	0	3	ComponentTakesInput	ComponentReturnsPass	ComponentReturnsFail	4	ComponentTakesInput	ComponentReturnsPass	ComponentReturnsFail	ComponentRunsLocal	
+	OnDataTypeError	StringType	11	0	1	Halt	3	Halt	Fail	Pass	
+	OnGeneralError	StringType	11	0	1	Halt	3	Halt	Fail	Pass	
+	ComponentDisplayName	StringType	8	0	1	Get CSD Entry Attributes	0	
+	ComponentDisabled	LongType	8	0	1	0	0	
+	ComponentGUID	StringType	8	0	1	{A2DA55F8-8ED8-4917-9AD2-18DF2C71CEC3}	0	
+	Protocol Options	StringType	8	0	0	1	Owner Access Only	
+*****
+Get CSD Molecule Attributes
+	CSD Refcode Property	StringType	3	1	CSD Database	1	1	csd_refcode	0	
+	CSD Database	StringType	2	0	1		0	
+	Options	StringType	6	0	1	Output unfound compounds from fail port	1	Output unfound compounds from fail port	
+	Attributes	StringType	7	0	10	CTAB	Formal Charge	Formula	Heavy Atoms	Is 3D	Is Organometallic	Is Polymeric	Largest Ring Size	Molecular Weight	SMILES	11	CTAB	Formal Charge	Formula	Heavy Atoms	Is 3D	Is Organometallic	Is Polymeric	Largest Ring Size	MOL2	Molecular Weight	SMILES	
+	Tempfiles	StringType	2	0	1		0	
+	DeclareLocal	StringType	2	0	1	_attributes, _script ,_d_switch, _databases	0	
+	RunToCompletion	StringType	2	1	RunToCompletion Categorize Using	0	1	False	3	False	True - For Each Data Record	True - For Each Category	
+	RunToCompletion Categorize Using	StringType	2	0	1		0	
+	Parallel Processing Options Batch Size	LongType	3	0	1		0	
+	Parallel Processing Options Server	StringType	6	2	Parallel Processing Options Server Processes	Parallel Processing Options Server Run On Grid	1	1		0	
+	Parallel Processing Options Server Processes	StringType	2	0	1		0	
+	Parallel Processing Options Server Run On Grid	BoolType	2	2	Parallel Processing Options Server Run On Grid Queue Name	Parallel Processing Options Server Run On Grid Grid Options	0	1	True	2	True	False	
+	Parallel Processing Options Server Run On Grid Queue Name	StringType	2	0	1		0	
+	Parallel Processing Options Server Run On Grid Grid Options	StringType	2	0	1		0	
+	Parallel Processing Options Preserve Order	BoolType	2	0	1	True	2	True	False	
+	ComponentAttributes	StringType	14	0	3	ComponentTakesInput	ComponentReturnsPass	ComponentReturnsFail	4	ComponentTakesInput	ComponentReturnsPass	ComponentReturnsFail	ComponentRunsLocal	
+	OnDataTypeError	StringType	11	0	1	Halt	3	Halt	Fail	Pass	
+	OnGeneralError	StringType	11	0	1	Halt	3	Halt	Fail	Pass	
+	ComponentDisplayName	StringType	8	0	1	Get CSD Molecule Attributes	0	
+	ComponentDisabled	LongType	8	0	1	0	0	
+	ComponentGUID	StringType	8	0	1	{4353BE77-5678-4BE8-A7CF-C05A299C6DE1}	0	
+	Protocol Options	StringType	8	0	0	1	Owner Access Only	
+*****
+Get Molecule Structure
+	CSD Refcode Property	StringType	3	1	CSD Database	1	1	csd_refcode	0	
+	CSD Database	StringType	2	0	1		0	
+	Tempfiles	StringType	2	0	1		0	
+	DeclareLocal	StringType	2	0	1		0	
+	RunToCompletion	StringType	2	1	RunToCompletion Categorize Using	0	1	False	3	False	True - For Each Data Record	True - For Each Category	
+	RunToCompletion Categorize Using	StringType	2	0	1		0	
+	Parallel Processing Options Batch Size	LongType	3	0	1		0	
+	Parallel Processing Options Server	StringType	6	2	Parallel Processing Options Server Processes	Parallel Processing Options Server Run On Grid	1	1		0	
+	Parallel Processing Options Server Processes	StringType	2	0	1		0	
+	Parallel Processing Options Server Run On Grid	BoolType	2	2	Parallel Processing Options Server Run On Grid Queue Name	Parallel Processing Options Server Run On Grid Grid Options	0	1	True	2	True	False	
+	Parallel Processing Options Server Run On Grid Queue Name	StringType	2	0	1		0	
+	Parallel Processing Options Server Run On Grid Grid Options	StringType	2	0	1		0	
+	Parallel Processing Options Preserve Order	BoolType	2	0	1	True	2	True	False	
+	ComponentAttributes	StringType	14	0	3	ComponentTakesInput	ComponentReturnsPass	ComponentReturnsFail	4	ComponentTakesInput	ComponentReturnsPass	ComponentReturnsFail	ComponentRunsLocal	
+	OnDataTypeError	StringType	11	0	1	Halt	3	Halt	Fail	Pass	
+	OnGeneralError	StringType	11	0	1	Halt	3	Halt	Fail	Pass	
+	ComponentDisplayName	StringType	8	0	1	Get Molecule Structure	0	
+	ComponentDisabled	LongType	8	0	1	0	0	
+	ComponentGUID	StringType	8	0	1	{DBA2DDE5-E27A-48B6-B880-BDFE88D9D656}	0	
+	Protocol Options	StringType	8	0	0	1	Owner Access Only	
+*****
+Hermes Viewer
+	Data View	StringType	3	2	Dataset Name	Dataset Group By	1	1	Single	2	Single	Multiple	
+	Dataset Name	StringType	2	0	1		0	
+	Dataset Group By	StringType	3	0	1		0	
+	Use Shared Instance	BoolType	3	0	1	False	2	True	False	
+	Tempfiles	StringType	2	0	1		0	
+	DeclareLocal	StringType	2	0	1	_count,_shared, _input_file_list	0	
+	RunToCompletion	StringType	2	1	RunToCompletion Categorize Using	0	1	False	3	False	True - For Each Data Record	True - For Each Category	
+	RunToCompletion Categorize Using	StringType	2	0	1		0	
+	Parallel Processing Options Batch Size	LongType	3	0	1		0	
+	Parallel Processing Options Server	StringType	6	2	Parallel Processing Options Server Processes	Parallel Processing Options Server Run On Grid	1	1		0	
+	Parallel Processing Options Server Processes	StringType	2	0	1		0	
+	Parallel Processing Options Server Run On Grid	BoolType	2	2	Parallel Processing Options Server Run On Grid Queue Name	Parallel Processing Options Server Run On Grid Grid Options	0	1	True	2	True	False	
+	Parallel Processing Options Server Run On Grid Queue Name	StringType	2	0	1		0	
+	Parallel Processing Options Server Run On Grid Grid Options	StringType	2	0	1		0	
+	Parallel Processing Options Preserve Order	BoolType	2	0	1	True	2	True	False	
+	ComponentAttributes	StringType	14	0	1	ComponentTakesInput	4	ComponentTakesInput	ComponentReturnsPass	ComponentReturnsFail	ComponentRunsLocal	
+	OnDataTypeError	StringType	11	0	1	Halt	3	Halt	Fail	Pass	
+	OnGeneralError	StringType	11	0	1	Halt	3	Halt	Fail	Pass	
+	ComponentDisplayName	StringType	8	0	1	Hermes Viewer	0	
+	ComponentDisabled	LongType	8	0	1	0	0	
+	ComponentGUID	StringType	8	0	1	{87E83BA6-312F-4490-B35C-F5D396131E86}	0	
+	Protocol Options	StringType	8	0	0	1	Owner Access Only	
+*****
+Join Data from JSON
+	Source	URLType	3	1	Keep Properties	1	1		0	
+	Keep Properties	TextType	2	0	1		0	
+	JoinUsing	StringType	3	4	JoinUsingListType	IgnoreCase	AcceptNonNumericStringsAsNumbers	JoinPropertyType	1	1		0	
+	JoinUsingListType	StringType	3	0	1	UseAllValues	2	UseFirstDefinedValue	UseAllValues	
+	JoinPropertyType	StringType	3	0	1	IsText	3	IsNumeric	IsText	IsDate	
+	IgnoreCase	BoolType	3	0	1	True	2	True	False	
+	Tempfiles	StringType	2	0	1		0	
+	DeclareLocal	StringType	2	0	1		0	
+	RunToCompletion	StringType	2	1	RunToCompletion Categorize Using	0	1	False	3	False	True - For Each Data Record	True - For Each Category	
+	RunToCompletion Categorize Using	StringType	2	0	1		0	
+	Parallel Processing Options Batch Size	LongType	3	0	1		0	
+	Parallel Processing Options Server	StringType	6	2	Parallel Processing Options Server Processes	Parallel Processing Options Server Run On Grid	1	1		0	
+	Parallel Processing Options Server Processes	StringType	2	0	1		0	
+	Parallel Processing Options Server Run On Grid	BoolType	2	2	Parallel Processing Options Server Run On Grid Queue Name	Parallel Processing Options Server Run On Grid Grid Options	0	1	True	2	True	False	
+	Parallel Processing Options Server Run On Grid Queue Name	StringType	2	0	1		0	
+	Parallel Processing Options Server Run On Grid Grid Options	StringType	2	0	1		0	
+	Parallel Processing Options Preserve Order	BoolType	2	0	1	True	2	True	False	
+	ComponentAttributes	StringType	14	0	3	ComponentTakesInput	ComponentReturnsFail	ComponentReturnsPass	4	ComponentTakesInput	ComponentReturnsPass	ComponentReturnsFail	ComponentRunsLocal	
+	OnDataTypeError	StringType	11	0	1	Halt	3	Halt	Fail	Pass	
+	OnGeneralError	StringType	11	0	1	Halt	3	Halt	Fail	Pass	
+	ComponentDisplayName	StringType	8	0	1	Join Data from JSON	0	
+	ComponentDisabled	LongType	8	0	1	0	0	
+	ComponentGUID	StringType	8	0	1	{4B59B843-5F62-4AB1-B790-83624142E4DD}	0	
+	Protocol Options	StringType	8	0	0	1	Owner Access Only	
+	AcceptNonNumericStringsAsNumbers	BoolType	8	0	1	False	2	True	False	
+*****
+Mercury Viewer
+	Data View	StringType	3	2	Dataset Name	Dataset Group By	1	1	Single	2	Single	Multiple	
+	Dataset Name	StringType	2	0	1		0	
+	Dataset Group By	StringType	3	0	1		0	
+	Use Shared Instance	BoolType	3	0	1	False	2	True	False	
+	Tempfiles	StringType	2	0	1		0	
+	DeclareLocal	StringType	2	0	1	_count,_shared, _input_file_list	0	
+	RunToCompletion	StringType	2	1	RunToCompletion Categorize Using	0	1	False	3	False	True - For Each Data Record	True - For Each Category	
+	RunToCompletion Categorize Using	StringType	2	0	1		0	
+	Parallel Processing Options Batch Size	LongType	3	0	1		0	
+	Parallel Processing Options Server	StringType	6	2	Parallel Processing Options Server Processes	Parallel Processing Options Server Run On Grid	1	1		0	
+	Parallel Processing Options Server Processes	StringType	2	0	1		0	
+	Parallel Processing Options Server Run On Grid	BoolType	2	2	Parallel Processing Options Server Run On Grid Queue Name	Parallel Processing Options Server Run On Grid Grid Options	0	1	True	2	True	False	
+	Parallel Processing Options Server Run On Grid Queue Name	StringType	2	0	1		0	
+	Parallel Processing Options Server Run On Grid Grid Options	StringType	2	0	1		0	
+	Parallel Processing Options Preserve Order	BoolType	2	0	1	True	2	True	False	
+	ComponentAttributes	StringType	14	0	1	ComponentTakesInput	4	ComponentTakesInput	ComponentReturnsPass	ComponentReturnsFail	ComponentRunsLocal	
+	OnDataTypeError	StringType	11	0	1	Halt	3	Halt	Fail	Pass	
+	OnGeneralError	StringType	11	0	1	Halt	3	Halt	Fail	Pass	
+	ComponentDisplayName	StringType	8	0	1	Mercury Viewer	0	
+	ComponentDisabled	LongType	8	0	1	0	0	
+	ComponentGUID	StringType	8	0	1	{97E83BA6-312F-4490-B35C-F5D396131E86}	0	
+	Protocol Options	StringType	8	0	0	1	Owner Access Only	
+*****
+Parse Citation
+	Citation Property	StringType	3	1	Remove Once Parsed	1	1	publications	0	
+	Remove Once Parsed	BoolType	3	0	1	False	2	True	False	
+	Expression	ExpressionType	3	3	Initial Expression	Final Expression	Keep Calculated Properties	0	1	/*&#xA;looks something like this:&#xA;(Citation(&#xA;&#x9;authors=u'K.K.Chacko, R.Zand', &#xA;&#x9;journal="Journal(Acta Crystallographica,Section B:Struct.Crystallogr.Cryst.Chem.)", &#xA;&#x9;volume=u'29', &#xA;&#x9;year=1973, &#xA;&#x9;first_page=u'2681', &#xA;&#x9;doi=u'10.1107/S0567740873007363'),)&#xA;(Citation(&#xA;&#x9;authors=u'M.W.Wieczorek, W.S.Sheldrick, J.Karolak-Wojciechowska, M.Mikolajczyk, B.Ziemnicka', &#xA;&#x9;journal="Journal(Acta Crystallographica,Section B:Struct.Crystallogr.Cryst.Chem.)", &#xA;&#x9;volume=u'35', &#xA;&#x9;year=1979, &#xA;&#x9;first_page=u'2339', &#xA;&#x9;doi=u'10.1107/S0567740879009250'),)&#xA;*/&#xA;If Property(#pCit) Is Defined Then&#xA;&#x9;#citation := Property(#pCit);&#xA;&#x9;&#xA;&#x9;If #citation RLike '^\(Citation\(' Then&#xA;&#x9;&#x9;// Looks like a citation.&#xA;&#x9;&#x9;// Parse&#xA;&#x9;&#x9;For #i In 1 .. HashNumValues(#patterns) Loop&#xA;&#x9;&#x9;&#x9;#p := HashIthKey(#patterns, #i);&#xA;&#x9;&#x9;&#x9;#regex := HashIthValue(#patterns, #i);&#xA;&#x9;&#x9;&#x9;#vals := RMatch(#citation, #regex);&#xA;&#x9;&#x9;&#x9;If NumValues(#vals) > 1 Then&#xA;&#x9;&#x9;&#x9;&#x9;Property(#p) := #vals[2];&#xA;&#x9;&#x9;&#x9;End If;&#xA;&#x9;&#x9;End Loop;&#xA;&#x9;&#x9;&#xA;&#x9;&#x9;If #remove Then&#xA;&#x9;&#x9;&#x9;Remove(#pCit);&#xA;&#x9;&#x9;End If;&#xA;&#x9;End If;&#xA;End If;	0	
+	Initial Expression	ExpressionType	2	0	1	#pCit := Parameter('Citation Property');&#xA;#remove := Parameter('Remove Once Parsed');&#xA;&#xA;#patterns := HashValueCreate(true);&#xA;HashAdd(#patterns, 'Authors', 'authors=u''(.*?)''');&#xA;HashAdd(#patterns, 'Journal', 'journal="Journal\((.*?)\)');&#xA;HashAdd(#patterns, 'Volume', 'volume=u''(.*?)''');&#xA;HashAdd(#patterns, 'Year', 'year=(\d{4})');&#xA;HashAdd(#patterns, 'First_Page', 'first_page=u''(.*?)'''); // Page not always number (e.g. C75)&#xA;HashAdd(#patterns, 'DOI', 'doi=u''(.*?)''');	0	
+	Final Expression	ExpressionType	2	0	1		0	
+	Keep Calculated Properties	BoolType	3	0	1	True	2	True	False	
+	ComponentAttributes	StringType	14	0	2	ComponentTakesInput	ComponentReturnsPass	4	ComponentTakesInput	ComponentReturnsPass	ComponentReturnsFail	ComponentRunsLocal	
+	OnDataTypeError	StringType	11	0	1	Halt	3	Halt	Fail	Pass	
+	OnGeneralError	StringType	11	0	1	Halt	3	Halt	Fail	Pass	
+	Do Screen	BoolType	8	0	1	False	2	True	False	
+	ExpressionVersion	LongType	8	0	1	2	0	
+	ComponentDisplayName	StringType	8	0	1	Parse Citation	0	
+	ComponentDisabled	LongType	8	0	1	0	0	
+	ComponentGUID	StringType	8	0	1	{20CB5742-037C-4D19-8718-C5EFEF84F2E9}	0	
+*****
+Parse Synonyms
+	Synonyms Property	StringType	3	0	1	synonyms	0	
+	Expression	ExpressionType	3	3	Initial Expression	Final Expression	Keep Calculated Properties	0	1	/*&#xA;Examples:&#xA;(u'PDB Chemical Component code: AC0',)&#xA;(u"6'-O-Trityl-\u03b1-cellobiose hepta-acetate",)&#xA;(u'N-Acetyl-lactosamine monohydrate', u'PDB Chemical Component code: NLC')&#xA;*/&#xA;If Property(#pSyn) Is Defined Then&#xA;&#x9;#synonyms := Property(#pSyn);&#xA;&#x9;&#xA;&#x9;If #synonyms Eq '()' Then&#xA;&#x9;&#x9;// Empty&#xA;&#x9;&#x9;#synonyms := '';&#xA;&#x9;Else&#xA;&#x9;&#x9;// Remove leading (u' or (u"&#xA;&#x9;&#x9;#synonyms := RSubst(#synonyms, '^\(u(''|")', '');&#xA;&#x9;&#x9;// Remove trailing ') or ")  - optionally with comma&#xA;&#x9;&#x9;#synonyms := RSubst(#synonyms, '(''|"),?\)$', '');&#xA;&#x9;&#x9;// Split on ', u' or ", u" or any combination of ' and "&#xA;&#x9;&#x9;#synonyms := RSplit(#synonyms, '(''|"), u(''|")', 'g');&#xA;&#x9;End If;&#xA;&#x9;&#xA;&#x9;Property(#pSyn) := #synonyms;&#xA;End If;	0	
+	Initial Expression	ExpressionType	2	0	1	#pSyn := Parameter('Synonyms Property');	0	
+	Final Expression	ExpressionType	2	0	1		0	
+	Keep Calculated Properties	BoolType	3	0	1	True	2	True	False	
+	ComponentAttributes	StringType	14	0	2	ComponentTakesInput	ComponentReturnsPass	4	ComponentTakesInput	ComponentReturnsPass	ComponentReturnsFail	ComponentRunsLocal	
+	OnDataTypeError	StringType	11	0	1	Halt	3	Halt	Fail	Pass	
+	OnGeneralError	StringType	11	0	1	Halt	3	Halt	Fail	Pass	
+	Do Screen	BoolType	8	0	1	False	2	True	False	
+	ExpressionVersion	LongType	8	0	1	2	0	
+	ComponentDisplayName	StringType	8	0	1	Parse Synonyms	0	
+	ComponentDisabled	LongType	8	0	1	0	0	
+	ComponentGUID	StringType	8	0	1	{93A7ED79-30B5-4F32-90F7-0ECA4726ABC3}	0	
+*****
+Perform Conformer Generation
+	Conformer Options	GroupType	2	4	Max Number of Conformers	Number of Threads	Maximum Unusual Torsions	Superimpose	1	1		0	
+	Max Number of Conformers	LongType	3	0	1	25	0	
+	Number of Threads	LongType	3	0	1	1	0	
+	Maximum Unusual Torsions	LongType	3	0	1	2	0	
+	Superimpose	BoolType	3	1	Aggregate Superimposed Structures	1	1	True	2	True	False	
+	Aggregate Superimposed Structures	BoolType	3	0	1	True	2	True	False	
+	Output Options	GroupType	2	1	Output What	1	1		0	
+	Output What	StringType	7	1	Summary Tag	1	2	Molecules	Summary	2	Molecules	Summary	
+	Summary Tag	StringType	3	0	1	IsSummary	0	
+	Format	StringType	3	0	1	MOL2	2	SDF	MOL2	
+	Tempfiles	StringType	2	0	1		0	
+	DeclareLocal	StringType	2	0	1	_conformer_file	0	
+	RunToCompletion	StringType	2	1	RunToCompletion Categorize Using	0	1	False	3	False	True - For Each Data Record	True - For Each Category	
+	RunToCompletion Categorize Using	StringType	2	0	1		0	
+	Parallel Processing Options Batch Size	LongType	3	0	1		0	
+	Parallel Processing Options Server	StringType	6	2	Parallel Processing Options Server Processes	Parallel Processing Options Server Run On Grid	1	1		0	
+	Parallel Processing Options Server Processes	StringType	2	0	1		0	
+	Parallel Processing Options Server Run On Grid	BoolType	2	2	Parallel Processing Options Server Run On Grid Queue Name	Parallel Processing Options Server Run On Grid Grid Options	0	1	True	2	True	False	
+	Parallel Processing Options Server Run On Grid Queue Name	StringType	2	0	1		0	
+	Parallel Processing Options Server Run On Grid Grid Options	StringType	2	0	1		0	
+	Parallel Processing Options Preserve Order	BoolType	2	0	1	True	2	True	False	
+	ComponentAttributes	StringType	14	0	3	ComponentReturnsPass	ComponentReturnsFail	ComponentTakesInput	4	ComponentTakesInput	ComponentReturnsPass	ComponentReturnsFail	ComponentRunsLocal	
+	OnDataTypeError	StringType	11	0	1	Halt	3	Halt	Fail	Pass	
+	OnGeneralError	StringType	11	0	1	Halt	3	Halt	Fail	Pass	
+	ComponentDisplayName	StringType	8	0	1	Perform Conformer Generation	0	
+	ComponentDisabled	LongType	8	0	1	0	0	
+	ComponentGUID	StringType	8	0	1	{974AFB33-4FEC-4F3E-801A-F400CBEC7A65}	0	
+	Protocol Options	StringType	8	0	0	1	Owner Access Only	
+*****
+Perform Virtual Screening
+	Query Source	StringType	2	2	Source	Test for Query	1	1	From File	2	From File	From Tag	
+	Source	URLType	3	0	1		0	
+	Test for Query	ExpressionType	3	0	1	IsQuery Is Defined	0	
+	Screening Options	GroupType	2	2	Max Number of Conformers	Number of Threads	1	1		0	
+	Number of Threads	LongType	3	0	1	1	0	
+	Max Number of Conformers	LongType	3	0	1	25	0	
+	Output Options	GroupType	2	2	Screening Score Property	Ranked Score File	1	1		0	
+	Screening Score Property	StringType	3	0	1	Virtual_Screen_Score	0	
+	Ranked Score File	DestinationURLType	2	0	1		0	
+	Format	StringType	3	0	1	MOL2	2	SDF	MOL2	
+	Tempfiles	StringType	2	0	1	_tmpQuery, _tmpScreening	0	
+	DeclareLocal	StringType	2	0	1	_screening_file, _query_file	0	
+	RunToCompletion	StringType	2	1	RunToCompletion Categorize Using	0	1	False	3	False	True - For Each Data Record	True - For Each Category	
+	RunToCompletion Categorize Using	StringType	2	0	1		0	
+	Parallel Processing Options Batch Size	LongType	3	0	1		0	
+	Parallel Processing Options Server	StringType	6	2	Parallel Processing Options Server Processes	Parallel Processing Options Server Run On Grid	1	1		0	
+	Parallel Processing Options Server Processes	StringType	2	0	1		0	
+	Parallel Processing Options Server Run On Grid	BoolType	2	2	Parallel Processing Options Server Run On Grid Queue Name	Parallel Processing Options Server Run On Grid Grid Options	0	1	True	2	True	False	
+	Parallel Processing Options Server Run On Grid Queue Name	StringType	2	0	1		0	
+	Parallel Processing Options Server Run On Grid Grid Options	StringType	2	0	1		0	
+	Parallel Processing Options Preserve Order	BoolType	2	0	1	True	2	True	False	
+	ComponentAttributes	StringType	14	0	2	ComponentReturnsPass	ComponentTakesInput	4	ComponentTakesInput	ComponentReturnsPass	ComponentReturnsFail	ComponentRunsLocal	
+	OnDataTypeError	StringType	11	0	1	Halt	3	Halt	Fail	Pass	
+	OnGeneralError	StringType	11	0	1	Halt	3	Halt	Fail	Pass	
+	ComponentDisplayName	StringType	8	0	1	Perform Virtual Screening	0	
+	ComponentDisabled	LongType	8	0	1	0	0	
+	ComponentGUID	StringType	8	0	1	{F4B50AC5-CA25-41B8-AB85-F60E9727AC32}	0	
+	Protocol Options	StringType	8	0	0	1	Owner Access Only	
+*****
+Perform Virtual Screening Validation
+	Input Options	GroupType	2	2	Active Source	Decoy Source	1	1		0	
+	Active Source	StringType	2	2	Active Source Source	Active Source Test for Active	1	1	From File	2	From File	From Tag	
+	Active Source Source	URLType	3	0	1		0	
+	Active Source Test for Active	ExpressionType	3	0	1	IsActive Is Defined	0	
+	Decoy Source	StringType	2	2	Decoy Source Source	Decoy Source Test for Decoy	1	1	From File	2	From File	From Tag	
+	Decoy Source Source	URLType	3	0	1		0	
+	Decoy Source Test for Decoy	ExpressionType	3	0	1	IsDecoy Is Defined	0	
+	Screening Validation Options	GroupType	2	2	Max Number of Conformers	Number of Threads	1	1		0	
+	Number of Threads	LongType	3	0	1	1	0	
+	Max Number of Conformers	LongType	3	0	1	25	0	
+	Output Options	GroupType	2	2	Active Tag	Screening Score Property	1	1		0	
+	Active Tag	StringType	2	0	1	Is_Active	0	
+	Screening Score Property	StringType	3	0	1	Virtual_Screen_Score	0	
+	Format	StringType	3	0	1	MOL2	2	SDF	MOL2	
+	Tempfiles	StringType	2	0	1	_tmpActive, _tmpDecoy, _tmpQuery, _name_hash, _name_idx	0	
+	DeclareLocal	StringType	2	0	1	_active_file, _decoy_file, _query_file	0	
+	RunToCompletion	StringType	2	1	RunToCompletion Categorize Using	0	1	False	3	False	True - For Each Data Record	True - For Each Category	
+	RunToCompletion Categorize Using	StringType	2	0	1		0	
+	Parallel Processing Options Batch Size	LongType	3	0	1		0	
+	Parallel Processing Options Server	StringType	6	2	Parallel Processing Options Server Processes	Parallel Processing Options Server Run On Grid	1	1		0	
+	Parallel Processing Options Server Processes	StringType	2	0	1		0	
+	Parallel Processing Options Server Run On Grid	BoolType	2	2	Parallel Processing Options Server Run On Grid Queue Name	Parallel Processing Options Server Run On Grid Grid Options	0	1	True	2	True	False	
+	Parallel Processing Options Server Run On Grid Queue Name	StringType	2	0	1		0	
+	Parallel Processing Options Server Run On Grid Grid Options	StringType	2	0	1		0	
+	Parallel Processing Options Preserve Order	BoolType	2	0	1	True	2	True	False	
+	ComponentAttributes	StringType	14	0	3	ComponentTakesInput	ComponentReturnsPass	ComponentReturnsFail	4	ComponentTakesInput	ComponentReturnsPass	ComponentReturnsFail	ComponentRunsLocal	
+	OnDataTypeError	StringType	11	0	1	Halt	3	Halt	Fail	Pass	
+	OnGeneralError	StringType	11	0	1	Halt	3	Halt	Fail	Pass	
+	ComponentDisplayName	StringType	8	0	1	Perform Virtual Screening Validation	0	
+	ComponentDisabled	LongType	8	0	1	0	0	
+	ComponentGUID	StringType	8	0	1	{564281DA-81F7-4EDE-B610-6681A43A2845}	0	
+	Protocol Options	StringType	8	0	0	1	Owner Access Only	
+*****
+Run Generate Conformers
+	Conformers Set	URLType	3	0	1		0	
+	Conformer Options	GroupType	2	4	Max Number of Conformers	Number of Threads	Maximum Unusual Torsions	Superimpose	1	1		0	
+	Max Number of Conformers	LongType	3	0	1	25	0	
+	Number of Threads	LongType	3	0	1	1	0	
+	Maximum Unusual Torsions	LongType	3	0	1	2	0	
+	Superimpose	BoolType	3	0	1	False	2	True	False	
+	Output Options	GroupType	2	2	Output Directory	Output What	1	1		0	
+	Output What	StringType	7	0	2	Molecules	Summary	2	Molecules	Summary	
+	Output Directory	DirectoryType	3	1	Split Output	1	1		0	
+	Split Output	BoolType	3	0	1	False	2	True	False	
+	Tempfiles	StringType	2	0	1		0	
+	DeclareLocal	StringType	2	0	1	_is_valid, _validation_msg, _script, _conformer_path, _s, _o, _summary_file, _d, _directory	0	
+	RunToCompletion	StringType	2	1	RunToCompletion Categorize Using	0	1	False	3	False	True - For Each Data Record	True - For Each Category	
+	RunToCompletion Categorize Using	StringType	2	0	1		0	
+	Parallel Processing Options Batch Size	LongType	3	0	1		0	
+	Parallel Processing Options Server	StringType	6	2	Parallel Processing Options Server Processes	Parallel Processing Options Server Run On Grid	1	1		0	
+	Parallel Processing Options Server Processes	StringType	2	0	1		0	
+	Parallel Processing Options Server Run On Grid	BoolType	2	2	Parallel Processing Options Server Run On Grid Queue Name	Parallel Processing Options Server Run On Grid Grid Options	0	1	True	2	True	False	
+	Parallel Processing Options Server Run On Grid Queue Name	StringType	2	0	1		0	
+	Parallel Processing Options Server Run On Grid Grid Options	StringType	2	0	1		0	
+	Parallel Processing Options Preserve Order	BoolType	2	0	1	True	2	True	False	
+	ComponentAttributes	StringType	14	0	0	4	ComponentTakesInput	ComponentReturnsPass	ComponentReturnsFail	ComponentRunsLocal	
+	OnDataTypeError	StringType	11	0	1	Halt	3	Halt	Fail	Pass	
+	OnGeneralError	StringType	11	0	1	Halt	3	Halt	Fail	Pass	
+	ComponentDisplayName	StringType	8	0	1	Run Conformer Generation	0	
+	ComponentDisabled	LongType	8	0	1	0	0	
+	ComponentGUID	StringType	8	0	1	{1D55FF75-1EE4-4FF3-8147-5B7F982B984F}	0	
+	Protocol Options	StringType	8	0	0	1	Owner Access Only	
+*****
+Run Python Script
+	Python	GroupType	2	3	Python Script	Python Script File	CustomMessageToClient	1	1		0	
+	Python Script	TextType	2	0	1		0	
+	Python Script File	URLType	3	0	1		0	
+	CustomMessageToClient	StringType	2	0	1		0	
+	Arguments	GroupType	6	1	Arguments Argument 1	0	1		0	
+	Arguments Argument 1	GroupType	2	2	Arguments Argument 1 Switch	Arguments Argument 1 Value	1	1		0	
+	Arguments Argument 1 Switch	StringType	2	0	1		0	
+	Arguments Argument 1 Value	StringType	2	0	1		0	
+	Output	GroupType	2	3	Stdout Property Name	Stderr Property Name	Output Command	1	1		0	
+	Stdout Property Name	StringType	2	0	1	script_out	0	
+	Stderr Property Name	StringType	2	0	1	script_err	0	
+	Output Command	BoolType	3	0	1	False	2	True	False	
+	Tempfiles	StringType	2	0	1		0	
+	DeclareLocal	StringType	2	0	1	_script_file, _args	0	
+	RunToCompletion	StringType	2	1	RunToCompletion Categorize Using	0	1	False	3	False	True - For Each Data Record	True - For Each Category	
+	RunToCompletion Categorize Using	StringType	2	0	1		0	
+	Parallel Processing Options Batch Size	LongType	3	0	1		0	
+	Parallel Processing Options Server	StringType	6	2	Parallel Processing Options Server Processes	Parallel Processing Options Server Run On Grid	1	1		0	
+	Parallel Processing Options Server Processes	StringType	2	0	1		0	
+	Parallel Processing Options Server Run On Grid	BoolType	2	2	Parallel Processing Options Server Run On Grid Queue Name	Parallel Processing Options Server Run On Grid Grid Options	0	1	True	2	True	False	
+	Parallel Processing Options Server Run On Grid Queue Name	StringType	2	0	1		0	
+	Parallel Processing Options Server Run On Grid Grid Options	StringType	2	0	1		0	
+	Parallel Processing Options Preserve Order	BoolType	2	0	1	True	2	True	False	
+	Python Home	DirectoryType	2	0	1		0	
+	ComponentAttributes	StringType	14	0	2	ComponentReturnsPass	ComponentReturnsFail	4	ComponentTakesInput	ComponentReturnsPass	ComponentReturnsFail	ComponentRunsLocal	
+	OnDataTypeError	StringType	11	0	1	Halt	3	Halt	Fail	Pass	
+	OnGeneralError	StringType	11	0	1	Halt	3	Halt	Fail	Pass	
+	ComponentDisplayName	StringType	8	0	1	Run Python Script	0	
+	ComponentDisabled	LongType	8	0	1	0	0	
+	ComponentGUID	StringType	8	0	1	{394FD2CF-2D37-474E-9F12-2A5969CFE9AF}	0	
+	Protocol Options	StringType	8	0	0	1	Owner Access Only	
+*****
+Run Virtual Screening
+	Screening Set	URLType	3	0	1		0	
+	Query Set	URLType	3	0	1		0	
+	Screening Options	GroupType	2	2	Max Number of Conformers	Number of Threads	1	1		0	
+	Number of Threads	LongType	3	0	1	1	0	
+	Max Number of Conformers	LongType	3	0	1	25	0	
+	Output Options	GroupType	2	2	Screening Score Property	Ranked Score File	1	1		0	
+	Screening Score Property	StringType	3	0	1	Virtual_Screen_Score	0	
+	Tempfiles	StringType	2	0	1	tmpWithColumns	0	
+	DeclareLocal	StringType	2	0	1	_is_valid, _validation_msg, _script, _query_path, _screening_path, _output_dir, _screened_molecules, _screening_scores, _ranked_score_file	0	
+	RunToCompletion	StringType	2	1	RunToCompletion Categorize Using	0	1	False	3	False	True - For Each Data Record	True - For Each Category	
+	RunToCompletion Categorize Using	StringType	2	0	1		0	
+	Parallel Processing Options Batch Size	LongType	3	0	1		0	
+	Parallel Processing Options Server	StringType	6	2	Parallel Processing Options Server Processes	Parallel Processing Options Server Run On Grid	1	1		0	
+	Parallel Processing Options Server Processes	StringType	2	0	1		0	
+	Parallel Processing Options Server Run On Grid	BoolType	2	2	Parallel Processing Options Server Run On Grid Queue Name	Parallel Processing Options Server Run On Grid Grid Options	0	1	True	2	True	False	
+	Parallel Processing Options Server Run On Grid Queue Name	StringType	2	0	1		0	
+	Parallel Processing Options Server Run On Grid Grid Options	StringType	2	0	1		0	
+	Parallel Processing Options Preserve Order	BoolType	2	0	1	True	2	True	False	
+	ComponentAttributes	StringType	14	0	2	ComponentReturnsPass	ComponentReturnsFail	4	ComponentTakesInput	ComponentReturnsPass	ComponentReturnsFail	ComponentRunsLocal	
+	Ranked Score File	DestinationURLType	2	0	1		0	
+	OnDataTypeError	StringType	11	0	1	Halt	3	Halt	Fail	Pass	
+	OnGeneralError	StringType	11	0	1	Halt	3	Halt	Fail	Pass	
+	ComponentDisplayName	StringType	8	0	1	Run Virtual Screening	0	
+	ComponentDisabled	LongType	8	0	1	0	0	
+	ComponentGUID	StringType	8	0	1	{6695E504-DF6B-4391-9179-BA4B78BC3B16}	0	
+	Protocol Options	StringType	8	0	0	1	Owner Access Only	
+*****
+Run Virtual Screening Validation
+	Query Set	URLType	3	0	1		0	
+	Active Set	URLType	3	0	1		0	
+	Decoy Set	URLType	3	0	1		0	
+	Screening Validation Options	GroupType	2	2	Max Number of Conformers	Number of Threads	1	1		0	
+	Number of Threads	LongType	3	0	1	1	0	
+	Max Number of Conformers	LongType	3	0	1	25	0	
+	Output Options	GroupType	2	2	Active Tag	Screening Score Property	1	1		0	
+	Active Tag	StringType	2	0	1		0	
+	Screening Score Property	StringType	3	0	1	Virtual_Screen_Score	0	
+	Tempfiles	StringType	2	0	1	tmpWithColumns	0	
+	DeclareLocal	StringType	2	0	1	_is_valid, _validation_msg, _script, _output_dir, _query_path, _active_path, _decoy_path, _active_screened_molecules, _decoy_screened_molecules, _screening_scores	0	
+	RunToCompletion	StringType	2	1	RunToCompletion Categorize Using	0	1	False	3	False	True - For Each Data Record	True - For Each Category	
+	RunToCompletion Categorize Using	StringType	2	0	1		0	
+	Parallel Processing Options Batch Size	LongType	3	0	1		0	
+	Parallel Processing Options Server	StringType	6	2	Parallel Processing Options Server Processes	Parallel Processing Options Server Run On Grid	1	1		0	
+	Parallel Processing Options Server Processes	StringType	2	0	1		0	
+	Parallel Processing Options Server Run On Grid	BoolType	2	2	Parallel Processing Options Server Run On Grid Queue Name	Parallel Processing Options Server Run On Grid Grid Options	0	1	True	2	True	False	
+	Parallel Processing Options Server Run On Grid Queue Name	StringType	2	0	1		0	
+	Parallel Processing Options Server Run On Grid Grid Options	StringType	2	0	1		0	
+	Parallel Processing Options Preserve Order	BoolType	2	0	1	True	2	True	False	
+	ComponentAttributes	StringType	14	0	2	ComponentReturnsPass	ComponentReturnsFail	4	ComponentTakesInput	ComponentReturnsPass	ComponentReturnsFail	ComponentRunsLocal	
+	OnDataTypeError	StringType	11	0	1	Halt	3	Halt	Fail	Pass	
+	OnGeneralError	StringType	11	0	1	Halt	3	Halt	Fail	Pass	
+	ComponentDisplayName	StringType	8	0	1	Run Validate Screening	0	
+	ComponentDisabled	LongType	8	0	1	0	0	
+	ComponentGUID	StringType	8	0	1	{10D7A804-CF72-476F-8C1F-05DAC0DE49BA}	0	
+	Protocol Options	StringType	8	0	0	1	Owner Access Only	
+*****
+Throw Script Error Message
+	Expression	ExpressionType	3	3	Initial Expression	Final Expression	Keep Calculated Properties	1	1	If Property(#prop) Is Defined Then&#xA;&#x9;#script_err := Property(#prop);&#xA;&#xA;&#x9;If #script_err RLike 'RuntimeError: ' Then&#xA;&#x9;&#x9;#lines := RSplit(#script_err, '\n', 'g');&#xA;&#x9;&#x9;#in_err := false;&#xA;&#xA;&#x9;&#x9;#error_msg := '';&#xA;&#x9;&#x9;For #i In 1 .. NumValues(#lines) Loop&#xA;&#x9;&#x9;&#x9;#l := #lines[#i];&#xA;&#x9;&#x9;&#x9;&#xA;&#x9;&#x9;&#x9;If #l RLike '^\s*RuntimeError:' Then&#xA;&#x9;&#x9;&#x9;&#x9;#in_err := true;&#xA;&#x9;&#x9;&#x9;Elsif #in_err And Trim(#l) Eq '' Then&#xA;&#x9;&#x9;&#x9;&#x9;#in_err := false;&#xA;&#x9;&#x9;&#x9;End If;&#xA;&#x9;&#x9;&#x9;&#xA;&#x9;&#x9;&#x9;If #in_err Then&#xA;&#x9;&#x9;&#x9;&#x9;#error_msg .= #l . "\n";&#xA;&#x9;&#x9;&#x9;End If;&#xA;&#x9;&#x9;End Loop;&#xA;&#x9;&#x9;Error(#error_msg . "\nFull Message was:\n" . #script_err);&#xA;&#x9;Else&#xA;&#x9;&#x9;Error('Error running script: ' . "\n" . #script_err);&#xA;&#x9;End If;&#xA;End If;&#xA;	0	
+	Initial Expression	ExpressionType	2	0	1	#prop := Parameter('Error Property');	0	
+	Final Expression	ExpressionType	2	0	1		0	
+	Keep Calculated Properties	BoolType	3	0	1	True	2	True	False	
+	Error Property	StringType	3	0	1		0	
+	ComponentAttributes	StringType	14	0	1	ComponentTakesInput	4	ComponentTakesInput	ComponentReturnsPass	ComponentReturnsFail	ComponentRunsLocal	
+	OnDataTypeError	StringType	11	0	1	Halt	3	Halt	Fail	Pass	
+	OnGeneralError	StringType	11	0	1	Halt	3	Halt	Fail	Pass	
+	Do Screen	BoolType	8	0	1	False	2	True	False	
+	ExpressionVersion	LongType	8	0	1	2	0	
+	ComponentDisplayName	StringType	8	0	1	Throw Script Error Message	0	
+	ComponentDisabled	LongType	8	0	1	0	0	
+	ComponentGUID	StringType	8	0	1	{750968B5-0E81-4AB4-9FE9-8EFC6C5D61EA}	0	
+*****
+Validate Journal Name
+	Journal Name	StringType	3	0	1		0	
+	Tempfiles	StringType	2	0	1		0	
+	Protocol Form	ProtocolType	2	0	1		0	
+	Advanced Options	GroupType	2	1	__PoolID	1	1		0	
+	__PoolID	StringType	2	0	1		0	
+	Run On Grid	BoolType	2	2	Queue Name	Grid Options	0	1	False	2	True	False	
+	Queue Name	StringType	2	0	1		0	
+	Grid Options	StringType	2	0	1		0	
+	ComponentAttributes	StringType	14	0	0	4	ComponentTakesInput	ComponentReturnsPass	ComponentReturnsFail	ComponentRunsLocal	
+	OnDataTypeError	StringType	11	0	1	Halt	3	Halt	Fail	Pass	
+	OnGeneralError	StringType	11	0	1	Halt	3	Halt	Fail	Pass	
+	WebExports	StringType	8	0	1	is_valid:SciTegic.value.BooleanValue	0	
+	Keep Alive	BoolType	8	0	1	True	2	True	False	
+	ComponentDisplayName	StringType	8	0	1	Validate Journal Name	0	
+	ComponentGUID	StringType	8	0	1	{123CE412-F938-427C-884C-A0E8A3DB263D}	0	
+	Protocol Options	StringType	8	0	0	1	Owner Access Only	
+	ComponentDisabled	LongType	8	0	1	0	0	
+*****
+Virtual Screening Report Viewer
+	Query Source	StringType	2	2	Source	Test for Query	1	1	From File	2	From File	From Tag	
+	Source	URLType	3	0	1		0	
+	Test for Query	ExpressionType	3	0	1	IsQuery Is Defined	0	
+	Screening Options	GroupType	2	2	Max Number of Conformers	Number of Threads	1	1		0	
+	Number of Threads	LongType	3	0	1	1	0	
+	Max Number of Conformers	LongType	3	0	1	25	0	
+	Output Options	GroupType	2	3	Screening Score Property	Report Title	Reporting Options	1	1		0	
+	Screening Score Property	StringType	3	0	1	Virtual_Screen_Score	0	
+	Report Title	StringType	2	0	1	Virtual Screening Report	0	
+	Reporting Options	StringType	6	0	2	Show Plot in Browser	Output Reporting Element	2	Show Plot in Browser	Output Reporting Element	
+	Format	StringType	3	0	1	MOL2	2	SDF	MOL2	
+	Tempfiles	StringType	2	0	1	_tmpQuery, _tmpScreening	0	
+	DeclareLocal	StringType	2	0	1	_screening_file, _query_file	0	
+	RunToCompletion	StringType	2	1	RunToCompletion Categorize Using	0	1	False	3	False	True - For Each Data Record	True - For Each Category	
+	RunToCompletion Categorize Using	StringType	2	0	1		0	
+	Parallel Processing Options Batch Size	LongType	3	0	1		0	
+	Parallel Processing Options Server	StringType	6	2	Parallel Processing Options Server Processes	Parallel Processing Options Server Run On Grid	1	1		0	
+	Parallel Processing Options Server Processes	StringType	2	0	1		0	
+	Parallel Processing Options Server Run On Grid	BoolType	2	2	Parallel Processing Options Server Run On Grid Queue Name	Parallel Processing Options Server Run On Grid Grid Options	0	1	True	2	True	False	
+	Parallel Processing Options Server Run On Grid Queue Name	StringType	2	0	1		0	
+	Parallel Processing Options Server Run On Grid Grid Options	StringType	2	0	1		0	
+	Parallel Processing Options Preserve Order	BoolType	2	0	1	True	2	True	False	
+	ComponentAttributes	StringType	14	0	1	ComponentTakesInput	4	ComponentTakesInput	ComponentReturnsPass	ComponentReturnsFail	ComponentRunsLocal	
+	OnDataTypeError	StringType	11	0	1	Halt	3	Halt	Fail	Pass	
+	OnGeneralError	StringType	11	0	1	Halt	3	Halt	Fail	Pass	
+	ComponentDisplayName	StringType	8	0	1	Virtual Screening Report	0	
+	ComponentDisabled	LongType	8	0	1	0	0	
+	ComponentGUID	StringType	8	0	1	{2D93B1C0-C18E-44BD-96FB-B53B0A14F2FA}	0	
+	Protocol Options	StringType	8	0	0	1	Owner Access Only	
+*****

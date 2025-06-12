@@ -1,0 +1,2 @@
+ErrorText	success	inference
+Screening Set file not not a recognized format (SDF or MOL2).	true	Expected validation error.

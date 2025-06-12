@@ -1,0 +1,9 @@
+beautifulsoup4==4.12.2
+pytest
+pytest-flake8
+pytest-profiling
+pytest-xdist
+six
+lxml==4.6.3
+numpy==1.21.6
+Pillow==9.5.0

@@ -1,0 +1,3 @@
+score_calculated	inference
+true	Score completed and the data had the correct properties defined.
+true	Score completed and the data had the correct properties defined.

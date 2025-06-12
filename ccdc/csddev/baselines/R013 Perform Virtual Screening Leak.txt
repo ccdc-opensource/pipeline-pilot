@@ -1,0 +1,2 @@
+success	inference
+true	Perform Virtual Screening not leaking variables.

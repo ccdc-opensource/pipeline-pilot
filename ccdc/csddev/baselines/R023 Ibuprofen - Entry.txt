@@ -1,0 +1,2 @@
+text	bioactivity	ccdc_number	chemical_name	has_3d_structure	is_organic	is_organometallic	is_polymeric	is_powder_study	publications	synonyms[1]	synonyms[2]	synonyms[3]	synonyms[4]	synonyms[5]	synonyms[6]
+IBPRAC	analgesic and antiinflammatory agent	1179382	2-(4-Isobutylphenyl)propionic acid	true	true	false	false	false	J.F.McConnell	Ibuprofen	Advil	Motrin	Nurofen	DrugBank: DB01050	PDB Chemical Component code: IZP

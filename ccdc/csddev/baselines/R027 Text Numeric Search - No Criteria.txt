@@ -1,0 +1,9 @@
+ErrorText	ErrorDetails
+No criteria were set for this query. Please ensure that at least one query parameter has a value in it.	"CEvaluateExpression::onProcess: Pipeline Pilot exception rethrown
+-> 'Custom Manipulator (PilotScript)' ('Parse Query Object'); Location: 8:0:3 - error during Data Record Processing phase
+CProtocolRtc::onProcess: Pipeline Pilot exception rethrown
+CProtocol::onProcess: Pipeline Pilot exception rethrown
+-> 'CSD Text Numeric Search' ('CSD Text Numeric Search'); Location: 8:0 - error during Data Record Processing phase
+CProtocolStd::onProcess: Pipeline Pilot exception rethrown
+CProtocol::onProcess: Pipeline Pilot exception rethrown
+-> 'Subprotocol' ('No Criteria Test'); Location: 8 - Handled error during Data Record Processing phase (in 'R027 Text Numeric Search' ('R027 Text Numeric Search'); Location: <Main protocol>): sent record to fail port"

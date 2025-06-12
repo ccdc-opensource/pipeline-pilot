@@ -1,0 +1,2 @@
+success	inference
+True	No globals leaked from the perform conformer generation component
