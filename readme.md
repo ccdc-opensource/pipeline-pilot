@@ -32,7 +32,7 @@ The Pipeline Pilot server host must have installed:
 
 - Pipeline Pilot server (version 19.1 or later).
 
-- The 2022 release of the CSD, including required licenses.
+- A 2022 or later release of the CSD, including required licenses.
 
 - The Pipeline Pilot components run under operating systems including Windows Server 2019
 and CentOS 7, although CentOS 8 and RHEL 7 and 8 are also
